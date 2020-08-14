@@ -30,7 +30,7 @@ router.route("/:username").get((req, res) => {
         if (usernameFind) {
             res.status(200).json(usernameFind);
         } else {
-            res.status(400).json("No valid entry found for Title :" + err)
+            res.status(400).json("No valid entry found for Username :" + err)
         }
     })
     .catch(err => {
