@@ -1,6 +1,6 @@
 const router = require("express").Router();
-let Question = require("../models/question.model");
-let Answer = require("../models/answer.model");
+const Question = require("../models/question.model");
+const Answer = require("../models/answer.model");
 
 // all the questions:
 router.route("/").get((req, res) => {
