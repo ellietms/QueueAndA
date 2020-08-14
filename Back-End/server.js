@@ -51,7 +51,7 @@ client.connect(() => {
     // it should be params or body?
     const {questionId} = request.params;
     const {userName} = request.body;
-    const {answer} = request.answer;
+    const {answer} = request.body;
     
     const answerQuestion = {
         questionId:questionId,
