@@ -7,7 +7,7 @@ const questionSchema = new Schema({
     title: {type: String, required: true},
     question: {type: String, required: true},
     module: {type: String, required: true},
-    answers:[{type:String,ref:"Answer"}],
+    answers:[{ype: Schema.Types.ObjectId, ref:"Answer"}],
     resolved: {type: Boolean, default: false}
 }, {
     timestamps: true,
