@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
-
+const Answer = require("../models/answer.model")
 const Schema = mongoose.Schema;
 
 const questionSchema = new Schema({
-    username: {type: String, required: true},
+    userEmail: {type: String, required: true},
     title: {type: String, required: true},
     question: {type: String, required: true},
-    date: {type: Date, required: true},
     module: {type: String, required: true},
-    answers: {type: Array, required: true}
+    answers:[{type:String,ref:"Answer"}],
+    resolved: {type: Boolean, default: false}
 }, {
     timestamps: true,
 });
