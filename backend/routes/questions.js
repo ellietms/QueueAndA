@@ -4,17 +4,11 @@ const Answer = require("../models/answer.model");
 
 // all the questions:
 router.route("/").get((req, res) => {
-  Question.find()
-    .populate("answers")
-    .select("answers")
-    .then((Find, err) => {
-      if (Find) {
-        res.status(200).send(Find);
-      } else {
-        res.status(400).send("No valid entry found for Data :" + err);
-      }
-    });
+  Question.find().populate("answer")
+	.then(questions => res.json(questions))
+	.catch(err => res.status(400).json("Error:"+err))
 });
+
 
 //create new Question :
 router.route("/ask").post((req, res) => {
