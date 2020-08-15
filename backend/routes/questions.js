@@ -64,6 +64,8 @@ router.route("/:id/answer").post((req, res) => {
   });
 });
 
+module.exports = router;
+
 // search by title of question
 // router.route("/:questionsTitle").get((req, res) => {
 //     const title = req.params.questionsTitle;
@@ -84,4 +86,4 @@ router.route("/:id/answer").post((req, res) => {
 //     });
 // });
 
-module.exports = router;
+
