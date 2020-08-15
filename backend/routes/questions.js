@@ -1,7 +1,7 @@
-const router = require('express').Router();
-const Question = require('../models/question.model');
-const Answer = require('../models/answer.model');
-const { isValidObjectId } = require('mongoose');
+
+const router = require("express").Router();
+const Question = require("../models/question.model");
+const Answer = require("../models/answer.model");
 
 // all the questions:
 router.route('/').get((req, res) => {
@@ -86,5 +86,6 @@ router.route('/:questionId').get((req, res) => {
 //         res.status(500).json({error: err });
 //     });
 // });
+
 
 module.exports = router;
