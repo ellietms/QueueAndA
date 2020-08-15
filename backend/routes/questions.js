@@ -8,7 +8,6 @@ router.route("/").get((req, res) => {
     .populate("answers")
     .select("answers")
     .then((Find, err) => {
-      console.log("Form database ", Find);
       if (Find) {
         res.status(200).send(Find);
       } else {
@@ -20,7 +19,6 @@ router.route("/").get((req, res) => {
 //create new Question :
 router.route("/ask").post((req, res) => {
   const newQuestion = new Question(req.body.question);
-  console.log(newQuestion);
   newQuestion.save((err, question) => {
     if (err) {
       return res.status(500).json({ "something is wrong": err });
@@ -33,17 +31,14 @@ router.route("/ask").post((req, res) => {
 // Get Question By ID
 router.route("/:questionId").get((req, res) => {
   const questionId = req.params.questionId;
-  console.log(questionId);
   Question.findById(req.params.questionId, (err, questionWithId) => {
     console.log(questionWithId);
-    console.log("Form database ", questionWithId);
     if (questionWithId) {
       res.status(200).json(questionWithId);
     } else {
       res.status(400).json("No valid entry found for ID ");
     }
   }).catch((err) => {
-    console.log(err);
     res.status(500).json({ error: err });
   });
 });
