@@ -45,7 +45,6 @@ router.route("/:questionId").get((req, res) => {
 //Answer part:
 router.route("/:id/answer").post((req, res) => {
   Question.findById(req.params.id, (err, question) => {
-    console.log(question);
     const newAnswer = new Answer(req.body.answers);
     newAnswer.save((err, answer) => {
       if (err) {
