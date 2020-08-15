@@ -32,7 +32,6 @@ router.route("/ask").post((req, res) => {
 router.route("/:questionId").get((req, res) => {
   const questionId = req.params.questionId;
   Question.findById(req.params.questionId, (err, questionWithId) => {
-    console.log(questionWithId);
     if (questionWithId) {
       res.status(200).json(questionWithId);
     } else {
