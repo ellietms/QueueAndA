@@ -6,7 +6,6 @@ const Answer = require("../models/answer.model");
 router.route("/").get((request, response) => {
   Question.find()
     .populate("answers")
-    // .select("answers")
     .then(questions => response.json({ questions }))
     .catch(err => response.send({ Error: err }));
 });
