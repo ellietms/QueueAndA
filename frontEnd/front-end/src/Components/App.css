@@ -1,0 +1,36 @@
+.main_style{
+  background-color: rgb(219, 215, 215);
+  border-radius: 10px;
+}
+
+.title_font{
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.question_font{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.answer_font{
+  font-size: 20px;
+  font-weight:bold;
+}
+
+.nameOfPerson{
+  font-size: 15px;
+  font-weight:bolder;
+  padding-top: 10px;
+  color: green;
+}
+
+
+.header{
+  background-color: rgb(219, 215, 215);
+}
+
+.category{
+  width:fit-content;
+}
+
