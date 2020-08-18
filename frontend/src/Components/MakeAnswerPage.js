@@ -7,7 +7,6 @@ import AnswerForm from './AnswerForm';
 const MakeAnswerPage = () => {
     return(
         <div className="mt-2">
-            <Header/>
             <label className="title_font m-4 pl-5">
             <i class="far fa-lightbulb"></i>
                 Answer a Question
