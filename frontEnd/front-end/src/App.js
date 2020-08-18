@@ -5,18 +5,21 @@ import 'bootstrap/dist/css/bootstrap.css';
 import AskQuestionPage from './Components/AskQuestionPage';
 import ShowQuestionPage from './Components/ShowQuestionPage'
 import MakeAnswerPage from './Components/MakeAnswerPage';
+import {BrowserRouter, Route, Switch } from  "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-     <Header /> 
-     <QuestionCard />
-     <QuestionCard />
-     <QuestionCard />
-     <AskQuestionPage/>
-     <ShowQuestionPage/>
-     <MakeAnswerPage/>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header /> 
+        <Switch>
+          <Route exact path="/" component={QuestionCard} />
+          <Route path="/ask" component={AskQuestionPage} />
+          <Route path="/showQuestion" component={ShowQuestionPage} />
+          <Route path="/answer" component={MakeAnswerPage} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
