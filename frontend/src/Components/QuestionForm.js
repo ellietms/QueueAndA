@@ -7,13 +7,13 @@ const QuestionForm = () => {
     <div className="container main_style">
       <form className="m-5">
         <div className="form-group">
-          <label for="Name" className="pt-2">
+          <label htmlFor="Name" className="pt-2">
             Name
           </label>
           <input type="password" className="form-control" id="Name" />
         </div>
         <div className="form-group">
-          <label for="Email">Email address</label>
+          <label htmlFor="Email">Email address</label>
           <input
             type="email"
             className="form-control"
@@ -22,7 +22,7 @@ const QuestionForm = () => {
           />
         </div>
         <div className="form-group">
-          <label for="category">Category</label>
+          <label htmlFor="category">Category</label>
           <select className="form-control" id="category">
             <option>Html</option>
             <option>Css</option>
@@ -34,15 +34,15 @@ const QuestionForm = () => {
           </select>
         </div>
         <div className="form-group">
-          <label for="Name" className="mr-auto">
+          <label htmlFor="Name" className="mr-auto">
             Title
           </label>
           <input type="text" className="form-control" id="Name" />
         </div>
-        <div class="form-group">
-          <label for="textArea">Question</label>
+        <div className="form-group">
+          <label htmlFor="textArea">Question</label>
           <textarea
-            class="form-control"
+            className="form-control"
             id="TextArea"
             rows="3"
           >

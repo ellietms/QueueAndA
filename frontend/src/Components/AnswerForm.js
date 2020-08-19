@@ -7,15 +7,15 @@ const AnswerForm = () => {
     <div className="container main_style">
       <form className="m-5">
         <div className="form-group">
-          <label for="Name" className="mr-auto pt-2">
+          <label htmlFor="Name" className="mr-auto pt-2">
             Title
           </label>
           <input type="text" className="form-control" id="Name" />
         </div>
-        <div class="form-group">
-          <label for="textArea">Answer</label>
+        <div className="form-group">
+          <label htmlFor="textArea">Answer</label>
           <textarea
-            class="form-control"
+            className="form-control"
             id="TextArea"
             rows="3"
           >
