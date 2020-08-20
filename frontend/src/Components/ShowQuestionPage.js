@@ -5,7 +5,8 @@ import Answers from "./Answers";
 import Checked from './Checked';
 import { Link } from "react-router-dom";
 
-const ShowQuestionPage = () => {
+const ShowQuestionPage = (props) => {
+  console.log(props.match.params.id);
   return (
     <div>
       <div>
@@ -16,7 +17,7 @@ const ShowQuestionPage = () => {
       <div className="container">
         <QuestionCard />
         <div className="d-flex justify-content-center">
-          <Link to="/answer" style={{ textDecoration: 'none',color: 'black'}}>
+          <Link to={`/questions/${props.match.params.id}/answer`} style={{ textDecoration: 'none',color: 'black'}}>
             <button type="button" className="buttonColor">
               Answer
             </button>

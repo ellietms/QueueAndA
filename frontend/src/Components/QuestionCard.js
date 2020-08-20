@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const QuestionCard = () => {
     return(
-        <Link to="/showQuestion" style={{ textDecoration: 'none',color: 'black'}}>  
+        <Link to="/questions/1234" style={{ textDecoration: 'none',color: 'black'}}>  
         <div className="container main_style mt-4">
             <div className="pt-4 pl-3">
             <Category />
