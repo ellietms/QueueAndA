@@ -18,6 +18,7 @@ function App() {
           <Route exact path="/" component={QuestionCard} />
           <Route path="/ask" component={AskQuestionPage} />
           <Route path="/questions/:id/answer" component={MakeAnswerPage} />
+          <Route exact path="/questions" component={QuestionCard} />
           <Route path="/questions/:id"  component={ShowQuestionPage} />
         </Switch>
       </div>

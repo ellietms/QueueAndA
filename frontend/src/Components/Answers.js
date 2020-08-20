@@ -5,11 +5,11 @@ import AnswerBoxes from './AnswerBoxes';
 
 
 
-const Answers = () => {
+const Answers = ({answer}) => {
     return(
         <div className="container">   
         <div>
-        <AnswerBoxes />
+        <AnswerBoxes answer={answer}/>
         </div>
         </div>
     )

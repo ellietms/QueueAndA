@@ -3,10 +3,10 @@ import "bootstrap/dist/css/bootstrap.css";
 
 
 
-const Question = () => {
+const Question = ({questionBody}) => {
     return(
         <div className="question_font">
-            How Can I use map ? 
+            {questionBody}
         </div>
     )
 }
