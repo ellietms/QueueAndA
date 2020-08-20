@@ -1,6 +1,16 @@
 .main_style{
   background-color: rgb(219, 215, 215);
   border-radius: 10px;
+  width: 50%;
+}
+
+.buttonColor{
+  background-color: rgb(56, 134, 56);
+}
+
+.logo{
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .title_font{
@@ -16,6 +26,12 @@
 .answer_font{
   font-size: 20px;
   font-weight:bold;
+}
+
+.answer_box{
+  background-color: rgb(219, 215, 215);
+  border-radius: 10px;
+  width: 80%;
 }
 
 .nameOfPerson{

@@ -6,6 +6,7 @@ import AskQuestionPage from './Components/AskQuestionPage';
 import ShowQuestionPage from './Components/ShowQuestionPage'
 import MakeAnswerPage from './Components/MakeAnswerPage';
 import {BrowserRouter, Route, Switch } from  "react-router-dom";
+import '../src/App'
 
 function App() {
   return (

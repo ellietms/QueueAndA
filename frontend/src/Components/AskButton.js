@@ -6,7 +6,7 @@ const Button = () => {
     return(
     <div>
         <button type="button" className="btn btn-success">
-        <Link to="/ask">Ask a question</Link> 
+        <Link to="/ask" style={{ textDecoration: 'none',color: 'black'}}>Ask a question</Link> 
         </button>
     </div>
     )
