@@ -2,12 +2,12 @@
   "name": "QueueAndA",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "npm run start  backend",
-    "client": "npm run start  frontend"
+    "server": "npm run start --prefix backend",
+    "client": "npm run start --prefix frontend"
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.css";
 import Category from './Category';
 import TitleOfQuestion from './TitleOfQuestion';
@@ -7,6 +8,23 @@ import Question from './Question';
 import { Link } from "react-router-dom";
 
 const QuestionCard = () => {
+    const [question, setQuestion] = useState([]);
+
+    useEffect(() => {
+        axios.get('https://status200.glitch.me/questions')
+        .then(response => {
+            console.log(response.data);
+            setQuestion(response.data)
+        }, error => {
+            console.log(error);
+        })
+     
+        
+      }, []);
+      console.log(question)
+     
+
+
     return(
         <Link to="/questions/1234" style={{ textDecoration: 'none',color: 'black'}}>  
         <div className="container main_style mt-4">
