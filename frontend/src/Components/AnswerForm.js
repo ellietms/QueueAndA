@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SubmitButton from "./SubmitButton";
 import "bootstrap/dist/css/bootstrap.css";
+import axios from 'axios';
 
-const AnswerForm = () => {
+const AnswerForm = ({match}) => {
+
+  const [state, setState] = useState({answer: " "});
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    
+    axios.post(`https://status200.glitch.me/questions/${match.param.id}/answer`, state)
+      .then(res=>{
+        console.log(res);
+        console.log(res.data);
+        window.location = "/" //This line of code will redirect you once the submission is succeed
+      })
+      .catch(error => console.log(error))
+  }
+
+  const handleChange = (e) => {
+    setState({...state, [e.target.name]: e.target.value });
+  }
+
   return (
     <div className="container main_style">
-      <form className="m-5">
+      <form className="m-5" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="Name" className="mr-auto pt-2">
             Title
@@ -18,6 +38,8 @@ const AnswerForm = () => {
             className="form-control"
             id="TextArea"
             rows="3"
+            name="answer"
+            onChange={handleChange}
           >
           </textarea>
           </div>
