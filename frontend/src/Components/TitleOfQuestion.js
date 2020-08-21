@@ -1,11 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
-const TitleOfQuestion = () => {
+const TitleOfQuestion = ({title}) => {
     return(
         <div>
             <label className="px-2 title_font">
-            Title Of The Question
+            {title}
             </label>
         </div>
     )
