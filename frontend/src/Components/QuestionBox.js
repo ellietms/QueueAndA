@@ -5,8 +5,6 @@ import TitleOfQuestion from "./TitleOfQuestion";
 import "../Components/App.css";
 import Question from "./Question";
 
- 
-
 const QuestionBox = ({questionDetails}) => {
     return(
         <div>
@@ -22,7 +20,6 @@ const QuestionBox = ({questionDetails}) => {
             </div>
             <div className="mb-2"></div>
           </div>
-
         </div>
     )
 }
