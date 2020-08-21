@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 const SubmitButton = () => {
     return(
     <div>
-        <button type="button" className="btn btn-success">
+        <button type="submit" className="btn btn-success">   
            Submit 
         </button>
     </div>

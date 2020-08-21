@@ -41,8 +41,8 @@ const ShowQuestionPage = (props) => {
               Answers
           </label>
           <Answers />
-        </div>
-      </div>
+        </div> 
+    </div>
     </div>
   );
 };
