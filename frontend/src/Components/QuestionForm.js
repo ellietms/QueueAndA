@@ -4,7 +4,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import QuestionCard from "./QuestionCard";
 
-const QuestionForm = ({showMainPage,setShowForm,setShowMainPage}) => {
+// const QuestionForm = ({setShowMainPage,setShowForm}) => {
+  const QuestionForm = () => {
 
   const [newQuestion, setNewQuestion] = useState({
     userEmail: "",
@@ -17,8 +18,8 @@ const QuestionForm = ({showMainPage,setShowForm,setShowMainPage}) => {
      event.preventDefault();
      axios.post("http://localhost:5000/questions/ask",newQuestion)
      .then(response => {console.log(response)})
-     setShowForm(false);
-     setShowMainPage(true);
+    //  setShowMainPage(true);
+    //  setShowForm(false);
   };
 
   const handleUserEmail = (event) => {
@@ -92,9 +93,6 @@ const QuestionForm = ({showMainPage,setShowForm,setShowMainPage}) => {
         </div>
       </form>
     </div>
-   {showMainPage &&
-     <QuestionCard />
-     }
   </div>
  )
 };
