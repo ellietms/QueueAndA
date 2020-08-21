@@ -6,15 +6,15 @@ import '../Components/App.css';
 import Question from './Question';
 import { Link } from "react-router-dom";
 
-const QuestionCard = () => {
+const QuestionCard = (props) => {
     return(
-        <Link to="/questions/1234" style={{ textDecoration: 'none',color: 'black'}}>  
+        <Link to="/questions/5f384ffe2a242f056ccee8e0" style={{ textDecoration: 'none',color: 'black'}}>  
         <div className="container main_style mt-4">
             <div className="pt-4 pl-3">
             <Category />
             </div>
             <div className="d-flex justify-content-between pl-2">
-            <TitleOfQuestion />
+            <TitleOfQuestion/>
             </div>
             <div className="pl-3 pb-4">
             <Question/>
