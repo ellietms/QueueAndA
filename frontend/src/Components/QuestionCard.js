@@ -1,12 +1,14 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import Category from "./Category";
 import TitleOfQuestion from "./TitleOfQuestion";
 import "../Components/App.css";
 import Question from "./Question";
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
+
+
 
 const QuestionCard = () => {
   const [questions, setQuestions] = useState([]);
@@ -19,16 +21,14 @@ const QuestionCard = () => {
       .catch((error) => console.log(error));
   }, [questions]);
 
-
-
   return(
     questions.map((question, index) => {
       return (
         <Link
-          to="/questions/1234"
+          to={`/questions/${question._id}`}
           style={{ textDecoration: "none", color: "black" }}
         >
-          <div key={index} className="container main_style mt-4">
+          <div key={index} className="container question_card mt-4">
             <div className="pt-4 pl-3">
               <Category category={question.module} />
             </div>
