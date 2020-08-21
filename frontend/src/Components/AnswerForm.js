@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 const AnswerForm = () => {
   return (
-    <div className="container main_style">
+    <div className="container form_style">
       <form className="m-5">
         <div className="form-group">
           <label htmlFor="Name" className="mr-auto pt-2">

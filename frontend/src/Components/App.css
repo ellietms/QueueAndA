@@ -11,6 +11,11 @@
   width:fit-content;
 }
 
+.form_style{
+  background-color: rgb(235, 231, 231);
+  border-radius: 2px;
+}
+
 .question_card{
   background-color: rgb(235, 231, 231);
 }
