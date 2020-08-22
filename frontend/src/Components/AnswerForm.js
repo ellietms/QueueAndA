@@ -9,7 +9,6 @@ const AnswerForm = ({match}) => {
  
   const handleSubmit = event => {
     event.preventDefault();
-    clearData();
     
     
         axios.post(`https://status200.glitch.me/questions/${match.params.id}/answer`, state)
