@@ -9,13 +9,12 @@ const AnswerForm = (props) => {
 	});
 
 	function submitHandler(e) {
+    e.preventDefault();
 		axios
 			.post(`http://localhost:5000/questions/${props.match.params.id}/answer`, newAnswer)
 			.then((response) => console.log(response))
 			.catch((err) => console.log(err));
-
-		e.preventDefault();
-		clearData();
+    clearData();
 	}
 	function clearData() {
 		setNewAnswer({ userEmail: '', answer: '' });
