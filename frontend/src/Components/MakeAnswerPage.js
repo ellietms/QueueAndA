@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import AnswerForm from "./AnswerForm";
 import { Link } from "react-router-dom";
 
-const MakeAnswerPage = () => {
+const MakeAnswerPage = ({match}) => {
   return (
     <div className="mt-2">
       <div>
@@ -15,7 +15,7 @@ const MakeAnswerPage = () => {
         <i className="far fa-lightbulb"></i>
         Answer a Question
       </label>
-      <AnswerForm />
+      <AnswerForm match={match}/>
     </div>
   );
 };

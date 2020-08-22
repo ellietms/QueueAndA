@@ -17,9 +17,9 @@ function App() {
         <Switch>
           <Route exact path="/" component={QuestionCard} />
           <Route path="/ask" component={AskQuestionPage} />
-          <Route path="/questions/:id/answer" component={MakeAnswerPage} />
           <Route exact path="/questions" component={QuestionCard} />
-          <Route path="/questions/:id"  component={ShowQuestionPage} />
+          <Route exact  path="/questions/:id"  component={ShowQuestionPage} />
+          <Route path="/questions/:id/answer" component={MakeAnswerPage} />
         </Switch>
       </div>
     </BrowserRouter>

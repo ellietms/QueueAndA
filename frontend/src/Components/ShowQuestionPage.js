@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import QuestionCard from "./QuestionCard";
 import Answers from "./Answers";
 import Checked from './Checked';
 import { Link } from "react-router-dom";

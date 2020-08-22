@@ -6,18 +6,28 @@ import axios from 'axios';
 const AnswerForm = ({match}) => {
 
   const [state, setState] = useState({answer: " "});
-
+ 
   const handleSubmit = event => {
     event.preventDefault();
+    clearData();
     
-    axios.post(`https://status200.glitch.me/questions/${match.param.id}/answer`, state)
+    
+        axios.post(`https://status200.glitch.me/questions/${match.params.id}/answer`, state)
       .then(res=>{
         console.log(res);
         console.log(res.data);
-        window.location = "/" //This line of code will redirect you once the submission is succeed
+        console.log(match.params.id)
+        // window.location = `https://status200.glitch.me/questions/${match.params.id}` //This line of code will redirect you once the submission is succeed
       })
       .catch(error => console.log(error))
+
+      
+  
   }
+
+  const clearData =() => {
+		setState({ answer: '' });
+	}
 
   const handleChange = (e) => {
     setState({...state, [e.target.name]: e.target.value });
