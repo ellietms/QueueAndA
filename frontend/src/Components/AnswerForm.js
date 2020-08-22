@@ -10,7 +10,7 @@ const AnswerForm = (props) => {
 
 	function submitHandler(e) {
 		axios
-			.post(`http://localhost:5000/questions/5f384e748636d105348ee1b5/answer`, newAnswer)
+			.post(`http://localhost:5000/questions/${props.match.params.id}/answer`, newAnswer)
 			.then((response) => console.log(response))
 			.catch((err) => console.log(err));
 
