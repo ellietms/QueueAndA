@@ -4,7 +4,7 @@ import AnswerForm from "./AnswerForm";
 import { Link } from "react-router-dom";
 
 const MakeAnswerPage = (props) => {
-  console.log(props.match.params.id)
+
   return (
     <div className="mt-2">
       <div>

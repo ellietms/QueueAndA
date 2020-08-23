@@ -1,11 +1,5 @@
-.main_style{
+.header{
   background-color: rgb(219, 215, 215);
-  border-radius: 10px;
-  width: 50%;
-}
-
-.buttonColor{
-  background-color: rgb(56, 134, 56);
 }
 
 .logo{
@@ -13,14 +7,36 @@
   font-weight: bold;
 }
 
+.category{
+  width:fit-content;
+}
+
+.form_style{
+  background-color: rgb(235, 231, 231);
+  border-radius: 2px;
+}
+
+.question_card{
+  background-color: rgb(235, 231, 231);
+}
+
+.buttonColor{
+  background-color: rgb(56, 134, 56);
+}
+
 .title_font{
-  font-size: 40px;
+  font-size: 30px;
+  color: rgb(29, 80, 63);
   font-weight: bolder;
 }
 
 .question_font{
   font-size: 25px;
   font-weight: bold;
+}
+
+.question_box{
+  background-color: rgb(235, 231, 231);
 }
 
 .answer_font{
@@ -41,12 +57,4 @@
   color: green;
 }
 
-
-.header{
-  background-color: rgb(219, 215, 215);
-}
-
-.category{
-  width:fit-content;
-}
 
