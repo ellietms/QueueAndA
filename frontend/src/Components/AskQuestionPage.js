@@ -1,10 +1,17 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import QuestionForm from "./QuestionForm";
-import { Link } from "react-router-dom";
+// import QuestionCard from "./QuestionCard";
 
 const AskQuestionPage = () => {
+  // const [showMainPage,setShowMainPage]=useState(false);
+  // const [showForm,setShowForm]=useState(true);
+
   return (
+    <div>
+    {/* { showForm && 
+      ( */}
     <div className="mt-2">
         <div>
         <button type="button" className="ml-3">
@@ -15,9 +22,19 @@ const AskQuestionPage = () => {
         <i className="fas fa-question-circle"></i>
         Ask a Question
       </label>
-      <QuestionForm />
-    </div>
-  );
+      <QuestionForm/>
+      {/* <QuestionForm setShowMainPage={setShowMainPage}
+      setShowForm={setShowForm}/> */}
+      {/* ) */}
+     
+    {/* {showMainPage &&
+     <QuestionCard />
+     } */}
+     </div>
+    {/* )
+   } */}
+   </div>
+  )
 };
 
 export default AskQuestionPage;

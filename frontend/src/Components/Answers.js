@@ -9,8 +9,8 @@ const Answers = ({ questionDetails }) => {
 				<div>
 					{questionDetails.map((answer, index) => {
 						return (
-							<div className="container">
-								<div key={index}>
+							<div className="container" key={index}>
+								<div >
 									<AnswerBoxes answer={answer} />
 								</div>
 							</div>
