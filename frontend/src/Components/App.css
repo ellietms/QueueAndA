@@ -21,14 +21,33 @@
   background-color: rgb(235, 231, 231);
 }
 
-.buttonColor {
-  background-color: rgb(56, 134, 56);
+.button {
+  margin:10px 10px;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(15, 109, 15);
 }
 
 .title_font {
   font-size: 30px;
   color: rgb(29, 80, 63);
   font-weight: bolder;
+}
+
+.title_Answer {
+  font-size: 30px;
+  color: rgb(29, 80, 63);
+  font-weight: bolder;
+  margin-left: 12%;
+}
+
+.title_question{
+  font-size: 30px;
+  color: rgb(29, 80, 63);
+  font-weight: bolder;
+  margin-left: 13%;
+  margin-top:10px;
 }
 
 .question_font {

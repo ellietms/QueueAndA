@@ -8,13 +8,13 @@ const AskQuestionPage = () => {
     <div>
       <div className="mt-2">
         <div>
-          <button type="button" className="ml-3">
+          <button type="button" className="ml-3 button ">
             <Link to="/" style={{ textDecoration: "none", color: "black" }}>
               Back
             </Link>
           </button>
         </div>
-        <label className="title_font m-4 pl-5">
+        <label className="title_question">
           <i className="fas fa-question-circle"></i>
           Ask a Question
         </label>
