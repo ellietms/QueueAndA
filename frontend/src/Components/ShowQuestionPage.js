@@ -17,6 +17,7 @@ const ShowQuestionPage = (props) => {
 			.catch((error) => console.log(error));
 	}, []);
 
+
 	return (
 		<div>
 			{specificQuestion ? (
@@ -54,6 +55,7 @@ const ShowQuestionPage = (props) => {
 			)}
 		</div>
 	);
+
 };
 
 export default ShowQuestionPage;
