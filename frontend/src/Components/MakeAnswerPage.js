@@ -4,6 +4,7 @@ import AnswerForm from "./AnswerForm";
 import { Link } from "react-router-dom";
 
 const MakeAnswerPage = (props) => {
+
   return (
     <div className="mt-2">
       <div>
@@ -15,7 +16,7 @@ const MakeAnswerPage = (props) => {
         <i className="far fa-lightbulb"></i>
         Answer a Question
       </label>
-      <AnswerForm />
+      <AnswerForm id={props.match.params.id}/>
     </div>
   );
 };

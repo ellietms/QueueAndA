@@ -22,6 +22,7 @@ const QuestionCard = () => {
 		[]
 	);
 
+
 	return questions.map((question, index) => {
 		return (
 			<Link to={`/questions/${question._id}`} style={{ textDecoration: 'none', color: 'black' }}>
