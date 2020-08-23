@@ -9,6 +9,8 @@ const AnswerForm = ({match}) => {
  
   const handleSubmit = event => {
     event.preventDefault();
+    event.target.reset();
+    setState({ answer: " " });
     
     
         axios.post(`https://status200.glitch.me/questions/${match.params.id}/answer`, state)
@@ -23,10 +25,6 @@ const AnswerForm = ({match}) => {
       
   
   }
-
-  const clearData =() => {
-		setState({ answer: '' });
-	}
 
   const handleChange = (e) => {
     setState({...state, [e.target.name]: e.target.value });
