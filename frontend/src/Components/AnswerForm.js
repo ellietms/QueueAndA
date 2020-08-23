@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import axios from 'axios';
 
 
-const AnswerForm = (props) => {
+const AnswerForm = ({id}) => {
 	const [ newAnswer, setNewAnswer ] = useState({
 		userEmail: '',
 		answer: ''
@@ -12,7 +12,7 @@ const AnswerForm = (props) => {
 	function submitHandler(e) {
     e.preventDefault();
 		axios
-			.post(`http://localhost:5000/questions/${props.match.params.id}/answer`, newAnswer)
+			.post(`http://localhost:5000/questions/${id}/answer`, newAnswer)
 			.then((response) => console.log(response))
 			.catch((err) => console.log(err));
     clearData();
