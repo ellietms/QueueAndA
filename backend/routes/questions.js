@@ -23,6 +23,7 @@ router.route("/ask").post((request, response) => {
 router.route("/:questionId").get((request, response) => {
   const questionId = request.params.questionId;
   Question.findById(questionId)
+    .populate("answers")
     .then(questionWithId => response.json({ questionWithId }))
     .catch(error => {
       response.status(500).json({ error });
