@@ -23,23 +23,34 @@ const QuestionCard = () => {
 	);
 
 
-	return questions.map((question, index) => {
-		return (
-			<Link to={`/questions/${question._id}`} style={{ textDecoration: 'none', color: 'black' }}>
-				<div key={index} className="container question_card mt-4">
-					<div className="pt-4 pl-3">
-						<Category category={question.module} />
-					</div>
-					<div className="d-flex justify-content-between pl-2">
-						<TitleOfQuestion title={question.title} />
-					</div>
-					<div className="pl-3 pb-4">
-						<Question question={question.question} />
-					</div>
-					<div className="mb-2" />
-				</div>
-			</Link>
-		);
-	});
+	return(
+        <React.Fragment>
+       
+       { questions.map(question => (
+           <div key={question._id}>
+           <Link to={`/questions/${question._id}`} style={{ textDecoration: 'none',color: 'black'}}> 
+                   <div className="container main_style mt-4" id={question._id}>
+
+                   <div className="pt-4 pl-3">
+                       
+                   <Category module={question.module}/>
+                   </div>
+                   <div className="d-flex justify-content-between pl-2">
+                   <TitleOfQuestion title={question.title}/>
+                   </div>
+                   <div className="pl-3 pb-4">
+                   <Question questionBody={question.question}/>
+                   </div>
+                   <div className="mb-2">
+                   </div>
+                   </div>
+           </Link>
+           </div> 
+
+        ))}
+           
+        </React.Fragment>
+       
+   )
 };
 export default QuestionCard;
