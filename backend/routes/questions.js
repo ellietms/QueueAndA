@@ -30,23 +30,36 @@ router.route("/:questionId").get((request, response) => {
 });
 
 //Answer a specific question with specific answer:
-router.route("/:id/answer").post((request, response) => {
-  const newAnswer = new Answer(request.body);
-  Question.findById(request.params.id)
-    .then(question => {
-      newAnswer
-        .save()
-        .then(answer => {
-          question.answers.push(answer);
-          question
-            .save()
-            .then(question => response.json({ question, answer }))
-            .catch(err => response.status(500).json({ Error: err }));
-        })
-        .catch(err => response.status(500).json({ Error: err }));
-    })
+// router.route("/:id/answer").post((request, response) => {
+//   const newAnswer = new Answer(request.body);
+//   Question.findById(request.params.id)
+//     .then(question => {
+//       newAnswer
+//         .save()
+//         .then(answer => {
+//           question.answers.push(answer);
+//           question
+//             .save()
+//             .then(question => response.json({ question, answer }))
+//             .catch(err => response.status(500).json({ Error: err }));
+//         })
+//         .catch(err => response.status(500).json({ Error: err }));
+//     })
 
-    .catch(err => response.status(404).json({ Error: err }));
+//     .catch(err => response.status(404).json({ Error: err }));
+// });
+
+router.route("/:questionId/answer").post((req, res) => {
+  Question.findById(req.params.questionId)
+    .populate("answers", "answer")
+    .then(async question => {
+      const newAnswer = new Answer(req.body);
+      question.answers.push(newAnswer);
+      await question.save();
+      await newAnswer.save();
+      res.json(question);
+    })
+    .catch(err => res.status(500).json({ Error: err }));
 });
 
 module.exports = router;
