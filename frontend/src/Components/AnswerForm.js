@@ -3,24 +3,23 @@ import SubmitButton from "./SubmitButton";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from 'axios';
 
-const AnswerForm = ({match}) => {
+const AnswerForm = ({ match }) => {
 
   const [state, setState] = useState({answer: " "});
  
   const handleSubmit = event => {
     event.preventDefault();
     event.target.reset();
-    setState({ answer: " " });
-    
-    
+   // setState({ answer: " " });
+       
         axios.post(`https://status200.glitch.me/questions/${match.params.id}/answer`, state)
       .then(res=>{
         console.log(res);
         console.log(res.data);
-        console.log(match.params.id)
-        // window.location = `https://status200.glitch.me/questions/${match.params.id}` //This line of code will redirect you once the submission is succeed
+       // console.log(match.params.id)
+        
       })
-      .catch(error => console.log(error))
+      .catch(error => console.log(error));
 
       
   

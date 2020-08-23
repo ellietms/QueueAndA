@@ -14,6 +14,7 @@ import axios from "axios";
   console.log(newQuestion)
   const addNewQuestion = (event) => {
      event.preventDefault();
+     event.target.reset(); 
      axios.post("https://status200.glitch.me/questions/ask",newQuestion)
      .then(response => {console.log(response)})
     
@@ -34,8 +35,7 @@ import axios from "axios";
   };
  return(
    <div>
-  {/* { showForm && 
-   ( */}
+  
     <div className="container form_style">
       <form className="m-5" onSubmit={addNewQuestion}>
         <div className="form-group">
