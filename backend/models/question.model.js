@@ -6,7 +6,7 @@ const questionSchema = new Schema(
     userEmail: { type: String, required: true },
     title: { type: String, required: true },
     question: { type: String, required: true },
-    module: { type: String, required: true },
+    category: { type: String, required: true },
     answers: [{ 
        type: Schema.Types.ObjectId, ref: "Answer"
     }],
