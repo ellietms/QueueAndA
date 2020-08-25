@@ -20,7 +20,7 @@ const ShowQuestionPage = (props) => {
       {specificQuestion ? (
         <div>
           <div>
-            <button type="button" className="mx-3 mt-3">
+            <button type="button" className="mx-3 mt-3 button">
               <Link to="/" style={{ textDecoration: "none", color: "black" }}>
                 Back
               </Link>
@@ -33,7 +33,7 @@ const ShowQuestionPage = (props) => {
                 to={`/questions/${props.match.params.id}/answer`}
                 style={{ textDecoration: "none", color: "black" }}
               >
-                <button type="button" className="buttonColor">
+                <button type="button" className="button">
                   Answer
                 </button>
               </Link>
