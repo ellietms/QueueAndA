@@ -7,6 +7,7 @@ import Category from "./Category";
 import TitleOfQuestion from "./TitleOfQuestion";
 import "../Components/App.css";
 import Question from "./Question";
+import AnswerNo from "./AnswerNo"
 
 const QuestionCard = () => {
   const [questions, setQuestions] = useState([]);
@@ -29,6 +30,7 @@ const QuestionCard = () => {
         <div key={index} className="container question_card mt-4">
           <div className="pt-4 pl-3">
             <Category category={question.category} />
+            <AnswerNo answerNo={question.answers.length}/>
           </div>
           <div className="d-flex justify-content-between pl-2">
             <TitleOfQuestion title={question.title} />
