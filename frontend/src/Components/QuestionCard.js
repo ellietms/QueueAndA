@@ -25,6 +25,7 @@ const QuestionCard = () => {
         to={`/questions/${question._id}`}
         style={{ textDecoration: "none", color: "black" }}
       >
+        <div>
         <div key={index} className="container question_card mt-4">
           <div className="pt-4 pl-3">
             <Category category={question.category} />
@@ -36,6 +37,7 @@ const QuestionCard = () => {
             <Question question={question.question} />
           </div>
           <div className="mb-2" />
+        </div>
         </div>
       </Link>
     );

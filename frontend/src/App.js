@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "../src/App";
 import Header from "./Components/Header";
+import MainPage from './Components/MainPage';
 import QuestionCard from "./Components/QuestionCard";
 import "bootstrap/dist/css/bootstrap.css";
 import AskQuestionPage from "./Components/AskQuestionPage";
@@ -12,9 +13,9 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        <Header/>
         <Switch>
-          <Route exact path="/" component={QuestionCard} />
+          <Route exact path="/" component={MainPage} />
           <Route path="/ask" component={AskQuestionPage} />
           <Route path="/questions/:id/answer" component={MakeAnswerPage} />
           <Route path="/questions/:id" component={ShowQuestionPage} />
