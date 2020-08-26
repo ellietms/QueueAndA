@@ -18,7 +18,7 @@ const Answers = ({ questionDetails }) => {
           })}
         </div>
       ) : (
-        <div className="no_answer">Please Waiting . . . </div>
+        <div className="no_answer">No answer</div>
       )}
     </div>
   );
