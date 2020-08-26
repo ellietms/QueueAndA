@@ -13,7 +13,7 @@ const ShowQuestionPage = (props) => {
       .get(`http://localhost:5000/questions/${props.match.params.id}`)
       .then((response) => setSpecificQuestions(response.data.questionWithId))
       .catch((error) => console.log(error));
-  }, []);
+  }, [props.match.params.id]);
 
   return (
     <div>

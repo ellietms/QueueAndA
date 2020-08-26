@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "../src/App";
 import Header from "./Components/Header";
 import MainPage from './Components/MainPage';
-import QuestionCard from "./Components/QuestionCard";
 import "bootstrap/dist/css/bootstrap.css";
 import AskQuestionPage from "./Components/AskQuestionPage";
 import ShowQuestionPage from "./Components/ShowQuestionPage";
