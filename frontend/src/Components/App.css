@@ -95,16 +95,20 @@
 	margin-left: auto;
 }
 
-.no_answer {
-	font-size: 45px;
-	color: rgb(10, 105, 26);
-	text-align: center;
+.has_answers {
+	border: 1px solid #000;
+	background-color: green;
+	width: fit-content;
+	padding: 10px 6px;
+	font-size: 15px;
 	font-weight: bold;
 }
-.ul_answer {
+
+.No_answers{
 	border: 1px solid #000;
-	padding: 20px;
-	width: 10%;
-	background-color: green;
-	list-style-type: none;
+	background-color: red;
+	width: fit-content;
+	padding: 10px 6px;
+	font-size: 15px;
+	font-weight: bold;
 }
