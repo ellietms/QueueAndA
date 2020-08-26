@@ -1,18 +1,27 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import AnswerBoxes from './AnswerBoxes';
+import AnswerBoxes from "./AnswerBoxes";
 
-
-
-
-const Answers = () => {
-    return(
-        <div className="container">   
+const Answers = ({ questionDetails }) => {
+  return (
+    <div className="container">
+      {questionDetails ? (
         <div>
-        <AnswerBoxes />
+          {questionDetails.map((answer, index) => {
+            return (
+              <div className="container" key={index}>
+                <div>
+                  <AnswerBoxes answer={answer} />
+                </div>
+              </div>
+            );
+          })}
         </div>
-        </div>
-    )
-}
+      ) : (
+        <div className="no_answer">No answer</div>
+      )}
+    </div>
+  );
+};
 
 export default Answers;

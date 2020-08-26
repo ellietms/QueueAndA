@@ -1,18 +1,14 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-
+import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
 
 const SubmitButton = () => {
-    return(
+  return (
     <div>
-        <button type="button" className="btn btn-success">
-           Submit 
-        </button>
+      <button type="submit" className="btn btn-success m-4">
+        Submit
+      </button>
     </div>
-    )
-}
-
-
-
+  );
+};
 
 export default SubmitButton;
