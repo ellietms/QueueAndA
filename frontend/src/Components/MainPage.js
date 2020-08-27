@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import AskButton from "./AskButton";
 import QuestionCard from "./QuestionCard";
 import axios from "axios";
-import Pagination from './Pagination';
+import Pagination from "./Pagination";
 
 const MainPage = () => {
   const [questions, setQuestions] = useState([]);
@@ -13,7 +13,7 @@ const MainPage = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: "http://localhost:5000/questions",
+      url: "https://queueanda.herokuapp.com/questions",
     })
       .then((response) => setQuestions(response.data.questions))
       .catch((error) => console.log(error));
@@ -24,19 +24,15 @@ const MainPage = () => {
   const currentQuestions = questions.slice(indexOfFirstQs, indexOfLastQs);
 
   const paginate = (pageNumber) => setCurrentQsPage(pageNumber);
-  const previousPage = (pageNumber) => setCurrentQsPage(pageNumber - 1);
-  const nextPage = (pageNumber) => setCurrentQsPage(pageNumber + 1);
 
   return (
     <div>
       <AskButton />
-      <QuestionCard currentQuestions={currentQuestions}/>
+      <QuestionCard currentQuestions={currentQuestions} />
       <Pagination
         questionsPerPage={questionsPerPage}
         totalQs={questions.length}
         paginate={paginate}
-        previousPage={previousPage}
-        nextPage={nextPage}
       />
     </div>
   );
