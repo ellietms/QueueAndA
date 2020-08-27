@@ -19,7 +19,7 @@ const QuestionForm = () => {
       .then((response) => {
         console.log(response);
       });
-    window.location.assign("http://localhost:3000/");
+    
   };
 
   const handleUserEmail = (event) => {

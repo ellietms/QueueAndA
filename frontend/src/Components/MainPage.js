@@ -8,7 +8,7 @@ import Pagination from './Pagination';
 const MainPage = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQsPage, setCurrentQsPage] = useState(1);
-  const [questionsPerPage] = useState(2);
+  const [questionsPerPage] = useState(5);
 
   useEffect(() => {
     axios({
@@ -24,6 +24,8 @@ const MainPage = () => {
   const currentQuestions = questions.slice(indexOfFirstQs, indexOfLastQs);
 
   const paginate = (pageNumber) => setCurrentQsPage(pageNumber);
+  const previousPage = (pageNumber) => setCurrentQsPage(pageNumber - 1);
+  const nextPage = (pageNumber) => setCurrentQsPage(pageNumber + 1);
 
   return (
     <div>
@@ -33,6 +35,8 @@ const MainPage = () => {
         questionsPerPage={questionsPerPage}
         totalQs={questions.length}
         paginate={paginate}
+        previousPage={previousPage}
+        nextPage={nextPage}
       />
     </div>
   );

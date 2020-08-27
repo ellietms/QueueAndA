@@ -8,7 +8,6 @@ router.route("/").get((request, response) => {
     .sort({
       createdAt: -1,
     })
-    
     .populate("answers")
     .then((questions) => response.json({ questions }))
     .catch((err) => response.send({ Error: err }));

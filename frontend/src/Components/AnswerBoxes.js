@@ -12,7 +12,7 @@ const AnswerBoxes = ({ answer }) => {
     <div className="container answer_box my-4">
       <label className="px-3 nameOfPerson">{answer.userEmail}</label>
       <div className="answer_font px-3 py-2">{answer.answer}</div>
-      <div>{timeStamp()}</div>
+      <div>{answer.createdAt}</div>
     </div>
   );
 };

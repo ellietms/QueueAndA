@@ -1,5 +1,4 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import Category from "./Category";
@@ -29,6 +28,7 @@ const QuestionCard = ({currentQuestions}) => {
             <Question question={question.question} />
           </div>
           <div className="mb-2" />
+          {question.createdAt}
         </div>
         </div>
       </Link>
