@@ -8,7 +8,7 @@ import Checked from "./Checked";
 
 const ShowQuestionPage = (props) => {
   const [specificQuestion, setSpecificQuestions] = useState([]);
-  useEffect(() => {
+    useEffect(() => {
     axios
       .get(`http://localhost:5000/questions/${props.match.params.id}`)
       .then((response) => setSpecificQuestions(response.data.questionWithId))

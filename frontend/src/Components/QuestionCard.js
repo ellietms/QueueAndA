@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import Category from "./Category";
@@ -8,19 +7,12 @@ import TitleOfQuestion from "./TitleOfQuestion";
 import "../Components/App.css";
 import Question from "./Question";
 
-const QuestionCard = () => {
-  const [questions, setQuestions] = useState([]);
-  useEffect(() => {
-    axios({
-      method: "GET",
-      url: "http://localhost:5000/questions",
-    })
-      .then((response) => setQuestions(response.data.questions))
-      .catch((error) => console.log(error));
-  }, []);
 
-  return questions.map((question, index) => {
+const QuestionCard = ({currentQuestions}) => {
+  
+  return currentQuestions.map((question, index) => {
     return (
+      
       <Link
         to={`/questions/${question._id}`}
         style={{ textDecoration: "none", color: "black" }}
@@ -40,6 +32,7 @@ const QuestionCard = () => {
         </div>
         </div>
       </Link>
+      
     );
   });
 };
