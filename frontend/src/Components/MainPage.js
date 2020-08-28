@@ -3,11 +3,11 @@ import AskButton from './AskButton';
 import QuestionCard from './QuestionCard';
 
 
-const MainPage = () => {
+const MainPage = (props) => {
     return(
         <div>
             <AskButton/>
-            <QuestionCard/>
+            <QuestionCard searchQuestionCard={props.searchMain}/>
         </div>
     )
 }
