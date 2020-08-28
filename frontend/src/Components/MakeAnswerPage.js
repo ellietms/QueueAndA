@@ -7,10 +7,10 @@ const MakeAnswerPage = (props) => {
   return (
     <div className="mt-2">
       <div>
-        <button type="button" className="m-3">
+        <button type="button" className="m-3 button">
           <Link
             to={`/questions/${props.match.params.id}`}
-            style={{ textDecoration: "none", color: "black" }}
+            style={{ textDecoration: "none", color: "white" }}
           >
             Back
           </Link>
