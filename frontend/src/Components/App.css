@@ -126,3 +126,13 @@
 	font-size: 20px;
 	font-weight: bold;
 }
+.time{
+	margin-right:20px;
+	font-weight: bold;
+	color: rgb(131, 131, 131);
+}
+
+.date{
+	font-weight: bold;
+	color: rgb(131, 131, 131);
+}
