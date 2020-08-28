@@ -14,7 +14,6 @@ const ShowQuestionPage = (props) => {
       .then((response) => setSpecificQuestions(response.data.questionWithId))
       .catch((error) => console.log(error));
   }, [props.match.params.id]);
-
   return (
     <div>
       {specificQuestion ? (
