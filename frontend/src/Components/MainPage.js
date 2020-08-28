@@ -24,6 +24,8 @@ const MainPage = () => {
   const currentQuestions = questions.slice(indexOfFirstQs, indexOfLastQs);
 
   const paginate = (pageNumber) => setCurrentQsPage(pageNumber);
+  const next = () => setCurrentQsPage(currentQsPage +  1);
+  const prev = () => setCurrentQsPage(currentQsPage -  1);
 
   return (
     <div>
@@ -33,6 +35,8 @@ const MainPage = () => {
         questionsPerPage={questionsPerPage}
         totalQs={questions.length}
         paginate={paginate}
+        next={next}
+        prev={prev}
       />
     </div>
   );
