@@ -1,5 +1,10 @@
 /node_modules
 node_modules
 
-ATLAS_URI=mongodb+srv://cyf:1234mongodb@cluster0.6bqdo.mongodb.net/test?retryWrites=true&w=majority
-PORT = 5000
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
