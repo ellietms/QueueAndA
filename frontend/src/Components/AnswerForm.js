@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import SubmitButton from "./SubmitButton";
+import ContactUs from "./SendEmail";
 
 const AnswerForm = ({ id }) => {
   const [newAnswer, setNewAnswer] = useState({
@@ -15,7 +16,7 @@ const AnswerForm = ({ id }) => {
       .post(`https://queueanda.herokuapp.com/questions/${id}/answer`, newAnswer)
       .then((response) => console.log(response))
       .catch((err) => console.log(err));
-    window.location.assign(`http://localhost:3000/questions/${id}`);
+    window.location.assign(`/questions/${id}`);
     clearData();
   }
 
@@ -60,6 +61,7 @@ const AnswerForm = ({ id }) => {
             onChange={handelForm}
           />
         </div>
+        <ContactUs />
         <SubmitButton />
       </form>
     </div>

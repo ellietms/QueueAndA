@@ -13,7 +13,7 @@ const QuestionCard = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: "http://localhost:5000/questions",
+      url: "https://queueanda.herokuapp.com/questions",
     })
       .then((response) => setQuestions(response.data.questions))
       .catch((error) => console.log(error));
@@ -21,7 +21,7 @@ const QuestionCard = () => {
 
   return questions.map((question, index) => {
     return (
-      <Link
+      <Link 
         to={`/questions/${question._id}`}
         style={{ textDecoration: "none", color: "black" }}
       >

@@ -2,7 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import AnswerBoxes from "./AnswerBoxes";
 
-const Answers = ({ questionDetails }) => {
+const Answers = ({ questionDetails, nameEmail }) => {
+  console.log(nameEmail , "name ");
   return (
     <div className="container">
       {questionDetails ? (

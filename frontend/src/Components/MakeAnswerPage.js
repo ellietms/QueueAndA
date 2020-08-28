@@ -17,7 +17,7 @@ const MakeAnswerPage = (props) => {
         </button>
       </div>
       <label className="title_Answer">
-        <i className="far fa-lightbulb"></i>
+        <i className="far fa-light bulb"></i>
        <span> Answer a Question</span>
       </label>
       <AnswerForm id={props.match.params.id} />

@@ -41,7 +41,7 @@ const ShowQuestionPage = (props) => {
           </div>
           <div>
             <Checked questionDetails={specificQuestion.answers} />
-            <Answers questionDetails={specificQuestion.answers} />
+            <Answers questionDetails={specificQuestion.answers} nameEmail={specificQuestion.nameEmail}/>
           </div>
         </div>
       ) : (
