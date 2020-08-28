@@ -17,12 +17,12 @@ const Pagination = ({ questionsPerPage, totalQs, paginate }) => {
           aria-label="Previous"
         >
           <span aria-hidden="true">&laquo;</span>
-          <span class="sr-only">Previous</span>
+          <span class="sr-only">First Page</span>
         </a>
 
         {pageNumbers.map((number) => (
           <li key={number} className="page-item">
-            <a onClick={() => paginate(number)} className="page-link">
+            <a onClick={(e) => {e.preventDefault(); paginate(number)}} className="page-link">
               {number}
             </a>
           </li>
@@ -34,7 +34,7 @@ const Pagination = ({ questionsPerPage, totalQs, paginate }) => {
           aria-label="Next"
         >
           <span aria-hidden="true">&raquo;</span>
-          <span class="sr-only">Next</span>
+          <span class="sr-only">Last Page</span>
         </a>
       </ul>
     </nav>
