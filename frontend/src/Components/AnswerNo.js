@@ -1,19 +1,26 @@
 import React from 'react';
 
 const AnswerNo = (props) => {
-	console.log(typeof props.answerNo);
 	let NumAnswers;
-	 if(props.answerNo !== 0) {
+	 if(props.answerNo === 1) {
 	 	NumAnswers = (
 	 		<div className="has_answers d-flex ml-auto">
-	 		<span>Answer {props.answerNo}</span>
+	 		<span>{props.answerNo} Answer</span>
 	 	</div>
 	 	)
 	 }
+	 else if (props.answerNo > 1){
+		NumAnswers = (
+			<div className="has_answers d-flex ml-auto">
+			<span>{props.answerNo} Answers</span>
+		</div>
+		)
+	 }
+
 	 else{
 	 	NumAnswers = (
 			<div className="No_answers d-flex ml-auto">
-	 		<span>Answer {props.answerNo}</span>
+	 		<span>Needs Answer</span>
 	 	</div>
 	 	)
 	 }

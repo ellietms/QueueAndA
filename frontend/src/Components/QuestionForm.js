@@ -10,7 +10,6 @@ const QuestionForm = () => {
     question: "",
     category: "",
   });
-  console.log(newQuestion);
   const addNewQuestion = (event) => {
     event.preventDefault();
     event.target.reset();

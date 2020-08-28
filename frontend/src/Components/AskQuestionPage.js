@@ -9,7 +9,7 @@ const AskQuestionPage = () => {
       <div className="mt-2">
         <div>
           <button type="button" className="ml-3 button ">
-            <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+            <Link to="/" style={{ textDecoration: "none", color: "white" }}>
               Back
             </Link>
           </button>

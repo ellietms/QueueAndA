@@ -10,8 +10,8 @@ const Button = () => {
       <div className="text">
         All Questions
       </div>
-      <button type="button" className="btn btn-success mt-3">
-        <Link to="/ask" style={{ textDecoration: "none", color: "black" }}>
+      <button type="button" className="button mt-3">
+        <Link to="/ask" style={{ textDecoration: "none",color:"white"}}>
           Ask a question
         </Link>
       </button>

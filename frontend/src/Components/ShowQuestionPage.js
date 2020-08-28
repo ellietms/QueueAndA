@@ -21,7 +21,7 @@ const ShowQuestionPage = (props) => {
         <div>
           <div>
             <button type="button" className="mx-3 mt-3 button">
-              <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
                 Back
               </Link>
             </button>
