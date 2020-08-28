@@ -19,7 +19,11 @@
 }
 
 .category {
-	width: fit-content;
+	width: 3cm;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	background-color: rgb(150, 158, 231);
 }
 
 .form_style {
@@ -32,18 +36,33 @@
 	background-color: rgb(235, 231, 231);
 }
 
-.button {
+.button{
+	border-radius: 8px;
 	margin: 10px 10px;
 	padding: 5px 10px;
-	font-size: 15px;
+	font-size: 18px;
 	font-weight: bold;
-	color: rgb(15, 109, 15);
+	color: white;
+	background-color: #0095ff
 }
+
+.button:hover {
+    border-radius: 8px;
+    background-color: #065794;
+    color: white;
+}
+
 
 .title_font {
 	font-size: 30px;
-	color: rgb(29, 80, 63);
+	color: rgb(36, 31, 90);
 	font-weight: bolder;
+}
+
+.question_font {
+	font-size: 25px;
+	font-weight: bold;
+	color: rgb(53, 47, 47);
 }
 
 .title_Answer {
@@ -61,10 +80,6 @@
 	margin-top: 10px;
 }
 
-.question_font {
-	font-size: 25px;
-	font-weight: bold;
-}
 
 .question_box {
 	background-color: rgb(235, 231, 231);
@@ -96,19 +111,17 @@
 }
 
 .has_answers {
-	border: 1px solid #000;
-	background-color: green;
+	color: rgb(11, 124, 11);
 	width: fit-content;
 	padding: 10px 6px;
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: bold;
 }
 
 .No_answers{
-	border: 1px solid #000;
-	background-color: red;
+	color: red;
 	width: fit-content;
 	padding: 10px 6px;
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: bold;
 }

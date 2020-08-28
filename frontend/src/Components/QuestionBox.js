@@ -6,7 +6,6 @@ import "../Components/App.css";
 import Question from "./Question";
 
 const QuestionBox = ({ questionDetails }) => {
-  console.log(questionDetails);
   return (
     <div>
       <div className="container question_box mt-4">

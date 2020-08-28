@@ -30,13 +30,13 @@ const QuestionCard = () => {
         <div key={index} className="container question_card mt-4">
           <div className="pt-4 pl-3">
             <Category category={question.category} />
-            <AnswerNo answerNo={question.answers.length}/>
           </div>
           <div className="d-flex justify-content-between pl-2">
             <TitleOfQuestion title={question.title} />
           </div>
           <div className="pl-3 pb-4">
             <Question question={question.question} />
+            <AnswerNo answerNo={question.answers.length}/>
           </div>
           <div className="mb-2" />
         </div>
