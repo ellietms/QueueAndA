@@ -15,7 +15,7 @@ const QuestionForm = () => {
     event.preventDefault();
     event.target.reset();
     axios
-      .post("http://localhost:5000/questions/ask", newQuestion)
+      .post("https://queueanda.herokuapp.com/questions/ask", newQuestion)
       .then((response) => {
         console.log(response);
       });

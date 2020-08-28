@@ -13,7 +13,7 @@ const AnswerForm = ({ id }) => {
     event.preventDefault();
     
     axios
-      .post(`http://localhost:5000/questions/${id}/answer`, newAnswer)
+      .post(`https://queueanda.herokuapp.com/questions/${id}/answer`, newAnswer)
       .then((response) => console.log(response))
       .catch((err) => console.log(err));
       
