@@ -12,7 +12,7 @@ const Checked = ({ questionDetails }) => {
 					) : (
 						<div className="title_font pl-2 d-flex m-3">
 							<div className="fas fa-check-square h1 checked rounded" />
-							<span className="pl-2">Answers</span>
+					    <span className="pl-2">{questionDetails.length} Answers</span>
 						</div>
 					)}
 				</div>
