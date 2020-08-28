@@ -15,6 +15,7 @@ const AnswerForm = ({ id }) => {
       .post(`https://queueanda.herokuapp.com/questions/${id}/answer`, newAnswer)
       .then((response) => console.log(response))
       .catch((err) => console.log(err));
+      window.location.assign(`/questions/${id}`);
     
     clearData();
   }
