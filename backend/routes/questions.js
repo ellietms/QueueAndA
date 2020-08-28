@@ -1,53 +1,18 @@
 const router = require("express").Router();
 const Question = require("../models/question.model");
 const Answer = require("../models/answer.model");
+const QuestionsController = require('../controllers/questions')
 
 // all the questions:
-router.route("/").get((request, response) => {
-  Question.find()
-    .populate("answers")
-    .then(questions => response.json({ questions }))
-    .catch(err => response.send({ Error: err }));
-});
+router.route("/").get(QuestionsController.allQuestions);
 
 //create new Question :
-router.route("/ask").post((request, response) => {
-  const newQuestion = new Question(request.body);
-  newQuestion
-    .save()
-    .then(question => response.json({ question }))
-    .catch(error => response.json({ error }));
-});
+router.route("/ask").post(QuestionsController.askQuestion);
 
 // Get Question By ID
-router.route("/:questionId").get((request, response) => {
-  const questionId = request.params.questionId;
-  Question.findById(questionId)
-    .populate("answers")
-    .then(questionWithId => response.json({ questionWithId }))
-    .catch(error => {
-      response.status(500).json({ error });
-    });
-});
+router.route("/:questionId").get(QuestionsController.getQuestionById);
 
 //Answer a specific question with specific answer:
-router.route("/:id/answer").post((request, response) => {
-  const newAnswer = new Answer(request.body);
-  Question.findById(request.params.id)
-    .then(question => {
-      newAnswer
-        .save()
-        .then(answer => {
-          question.answers.push(answer);
-          question
-            .save()
-            .then(question => response.json({ question, answer }))
-            .catch(err => response.status(500).json({ Error: err }));
-        })
-        .catch(err => response.status(500).json({ Error: err }));
-    })
-
-    .catch(err => response.status(404).json({ Error: err }));
-});
+router.route("/:id/answer").post(QuestionsController.answerTheSpecificQuestion);
 
 module.exports = router;
