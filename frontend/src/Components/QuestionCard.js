@@ -38,11 +38,8 @@ const QuestionCard = () => {
             <Question question={question.question} />
             <AnswerNo answerNo={question.answers.length}/>
           </div>
-           <div className="d-flex date">
+           <div className="d-flex date-main">
             Date:{question.createdAt.split("T")[0]}
-          </div>
-          <div className="d-flex  time">
-            Time:{question.createdAt.split("T")[1].split(".")[0]}
           </div>
           <div className="mb-2" />
         </div>
