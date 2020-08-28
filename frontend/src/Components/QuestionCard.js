@@ -17,7 +17,7 @@ const QuestionCard = () => {
       url: "https://queueanda.herokuapp.com/questions",
     })
       .then((response) => setQuestions(response.data.questions))
-      .catch((error) => console.log(error));
+      .catch((error) => console.log("this is error",error));
   }, []);
 
   return questions.map((question, index) => {

@@ -12,13 +12,13 @@ const QuestionForm = () => {
   });
   const addNewQuestion = (event) => {
     event.preventDefault();
-    event.target.reset();
     axios
       .post("https://queueanda.herokuapp.com/questions/ask", newQuestion)
       .then((response) => {
-        console.log(response);
-      });
-    window.location.assign("/");
+        console.log(response); window.location.assign("/");event.target.reset();
+      })
+      .catch(err => console.log("this is the error",err))
+      
   };
 
   const handleUserEmail = (event) => {
