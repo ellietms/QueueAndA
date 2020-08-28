@@ -24,6 +24,8 @@
 	font-weight: bold;
 	text-align: center;
 	background-color: rgb(150, 158, 231);
+	padding-bottom: 5px;
+	padding-top: 5px;
 }
 
 .form_style {
@@ -34,6 +36,8 @@
 
 .question_card {
 	background-color: rgb(235, 231, 231);
+	margin-top: 20px;
+	padding-top: 30px;
 }
 
 .button{
