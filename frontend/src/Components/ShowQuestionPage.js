@@ -10,7 +10,7 @@ const ShowQuestionPage = (props) => {
   const [specificQuestion, setSpecificQuestions] = useState([]);
     useEffect(() => {
     axios
-      .get(`https://queueanda.herokuapp.com/questions/${props.match.params.id}`)
+      .get(`http://localhost:5000/questions/${props.match.params.id}`)
       .then((response) => setSpecificQuestions(response.data.questionWithId))
       .catch((error) => console.log(error));
   }, [props.match.params.id]);

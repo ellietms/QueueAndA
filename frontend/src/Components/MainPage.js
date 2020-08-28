@@ -13,7 +13,7 @@ const MainPage = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: "https://queueanda.herokuapp.com/questions",
+      url: "http://localhost:5000/questions",
     })
       .then((response) => setQuestions(response.data.questions))
       .catch((error) => console.log(error));

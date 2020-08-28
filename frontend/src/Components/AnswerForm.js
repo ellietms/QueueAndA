@@ -11,12 +11,14 @@ const AnswerForm = ({ id }) => {
 
   function submitHandler(event) {
     event.preventDefault();
+    
     axios
-      .post(`https://queueanda.herokuapp.com/questions/${id}/answer`, newAnswer)
+      .post(`http://localhost:5000/questions/${id}/answer`, newAnswer)
       .then((response) => console.log(response))
       .catch((err) => console.log(err));
       
-    clearData();
+      clearData();
+    
   }
 
   function clearData() {
