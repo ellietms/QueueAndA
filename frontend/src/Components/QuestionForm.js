@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import SubmitButton from "./SubmitButton";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
+import ReactQuill, { Quill } from 'react-quill';
+import "react-quill/dist/quill.snow.css";
 
 const QuestionForm = () => {
   const [newQuestion, setNewQuestion] = useState({
@@ -10,6 +12,24 @@ const QuestionForm = () => {
     question: "",
     category: "",
   });
+
+ const modules = {
+    toolbar: [
+      [{ 'header': [1, 2, false] }],
+      ['bold', 'italic', 'underline','strike', 'blockquote'],
+      [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
+      ['link', 'image', 'code-block'],
+      ['clean']
+    ],
+  }
+
+ const formats = [
+    'header',
+    'bold', 'italic', 'underline', 'strike', 'blockquote',
+    'list', 'bullet', 'indent',
+    'link', 'image', 'code-block'
+  ]
+
   const addNewQuestion = (event) => {
     event.preventDefault();
     event.target.reset();
@@ -34,6 +54,8 @@ const QuestionForm = () => {
   const handleCategory = (event) => {
     setNewQuestion({ ...newQuestion, category: event.target.value });
   };
+
+  
   return (
     <div>
       <div className="container form_style">
@@ -91,6 +113,11 @@ const QuestionForm = () => {
               onChange={(event) => handleQuestion(event)}
             ></textarea>
           </div>
+          <ReactQuill theme="snow"
+                    modules={modules}
+                    formats={formats}
+                    placeholder={"Start Asking Something"}>
+        </ReactQuill>
           <div className="pb-3">
             <SubmitButton />
           </div>
