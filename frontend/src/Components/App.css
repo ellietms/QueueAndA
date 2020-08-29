@@ -40,6 +40,11 @@
 	padding-top: 30px;
 }
 
+.title_question{
+	cursor: pointer;
+}
+
+
 .button{
 	border-radius: 8px;
 	border-color: white;
@@ -58,10 +63,16 @@
 }
 
 
-.title_font {
+.title_font{
 	font-size: 30px;
-	color: rgb(36, 31, 90);
+	color: rgb(32, 23, 138);
 	font-weight: bolder;
+}
+
+label.title_font:hover{
+	text-decoration: none;
+	color: blue;
+	cursor: pointer;
 }
 
 .question_font {
@@ -123,7 +134,7 @@
 	font-weight: bold;
 }
 
-.No_answers{
+.no_answers{
 	color: red;
 	width: fit-content;
 	padding: 10px 6px;

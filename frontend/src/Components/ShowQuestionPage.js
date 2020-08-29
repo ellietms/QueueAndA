@@ -14,9 +14,9 @@ const ShowQuestionPage = (props) => {
       .then((response) => setSpecificQuestions(response.data.questionWithId))
       .catch((error) => console.log(error));
   }, [props.match.params.id]);
+
   return (
     <div>
-      {specificQuestion ? (
         <div>
           <div>
             <button type="button" className="mx-3 mt-3 button">
@@ -43,9 +43,6 @@ const ShowQuestionPage = (props) => {
             <Answers questionDetails={specificQuestion.answers} />
           </div>
         </div>
-      ) : (
-        <div className="loading_text"> Loading page ...</div>
-      )}
     </div>
   );
 };

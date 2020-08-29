@@ -17,7 +17,7 @@ const Checked = ({ questionDetails }) => {
 					)}
 				</div>
 			) : (
-				<div className="loading_text"> Something Went Wrong </div>
+				<div className="loading_text"> Loading... </div>
 			)}
 		</div>
 	);

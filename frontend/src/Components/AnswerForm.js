@@ -13,9 +13,8 @@ const AnswerForm = ({ id }) => {
     event.preventDefault();
     axios
       .post(`https://queueanda.herokuapp.com/questions/${id}/answer`, newAnswer)
-      .then((response) => console.log(response))
+      .then((response) => {console.log(response); window.location.assign(`/questions/${id}`)})
       .catch((err) => console.log(err));
-    window.location.assign(`/questions/${id}`);
     clearData();
   }
 

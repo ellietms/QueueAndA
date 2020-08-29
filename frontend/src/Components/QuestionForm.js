@@ -15,10 +15,11 @@ const QuestionForm = () => {
     event.target.reset();
     axios
       .post("https://queueanda.herokuapp.com/questions/ask", newQuestion)
-      .then((response) => {
+      .then(response => {
         console.log(response);
-      });
-    window.location.assign("/");
+        window.location.assign("/");
+      })
+      .catch(err => console.log(err));
   };
 
   const handleUserEmail = (event) => {
