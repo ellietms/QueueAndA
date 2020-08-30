@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import MainPageSearch from "./MainPageSearch";
 
-const Header = ({handleSearchValue,value}) => {
+
+const PlainHeader = () => {
   return (
     <div className="header">
       <nav className="navbar ml-5">
@@ -16,12 +16,9 @@ const Header = ({handleSearchValue,value}) => {
           />
           <span className="navbar-brand mb-0 logo ml-1 mt-1">QueueAndA</span>
         </div>
-        <div className="d-flex my-2">
-        <MainPageSearch value={value} handleSearchValue={handleSearchValue}/>  
-        </div>
       </nav>
     </div>
   );
 };
 
-export default Header;
+export default PlainHeader;

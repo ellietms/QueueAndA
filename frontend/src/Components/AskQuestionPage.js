@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import QuestionForm from "./QuestionForm";
-import Header from './Header';
+import PlainHeader from './PlainHeader';
 
 const AskQuestionPage = () => {
   return (
     <div>
-       <Header/>
+       <PlainHeader/>
       <div className="mt-2">
         <div>
           <button type="button" className="ml-3 button ">

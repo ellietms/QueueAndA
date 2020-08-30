@@ -2,13 +2,13 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import AnswerForm from "./AnswerForm";
 import { Link } from "react-router-dom";
-import Header from './Header';
+import PlainHeader from './PlainHeader';
 
 
 const MakeAnswerPage = (props) => {
   return (
     <div>
-       <Header/>
+       <PlainHeader/>
       <div className="mt-2">
         <button type="button" className="m-3 button">
           <Link
