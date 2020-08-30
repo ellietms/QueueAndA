@@ -3,9 +3,9 @@ import "bootstrap/dist/css/bootstrap.css";
 
 const DropDownCategories = ({showSpecificModule}) => {
   return (
-    <div className="dropdown mt-3">
+    <div>
       <select
-        className="btn btn-danger dropDown_category"
+        className="btn dropDown_category"
         onChange={(event) => showSpecificModule(event.target.value)}
       >
         <option value={""}>

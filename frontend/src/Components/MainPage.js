@@ -2,12 +2,15 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import MainPageHeader from "./MainPageHeader";
+import DropDownAnswered from "./DropDownAnswered";
 import QuestionCard from "./QuestionCard";
+import DropDownCategories from './DropDownCategories';
 
 const MainPage = () => {
   const [questions, setQuestions] = useState();
   const [specificModule, setSpecificModule] = useState("");
   const [searchValue,setSearchValue]=useState("");
+  const [noAnswer,setNoAnswer]=useState("");
   useEffect(() => {
     axios
       .get("https://queueanda.herokuapp.com/questions")
@@ -19,16 +22,21 @@ const MainPage = () => {
   return (
     <div>
       <MainPageHeader
-        showSpecificModule={(category) => setSpecificModule(category)}
         value={searchValue}
         handleSearchValue={(newSearchValue) => setSearchValue(newSearchValue)}
       />
-      <div className="text container">All Questions</div>
       { questions ? (
         <div>
+          <div className="d-flex">
+          <DropDownAnswered 
+           showQuestionWithNoAnswer={(question) => setNoAnswer(question)}/>
+          <DropDownCategories showSpecificModule={(category) => setSpecificModule(category)}/>
+          </div>
           <QuestionCard questions={questions}
            specificModule={specificModule} 
-           searchValue={searchValue}/>
+           searchValue={searchValue}
+           noAnswer={noAnswer}
+           />
         </div>
       ) : (
         <div className="loading_text"> Loading... </div>
