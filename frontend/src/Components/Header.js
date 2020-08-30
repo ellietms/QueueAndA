@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import Search from "./Search";
 
 const Header = () => {
   return (
@@ -16,6 +17,7 @@ const Header = () => {
           />
           <span className="navbar-brand mb-0 logo ml-1 mt-1">QueueAndA</span>
         </span>
+        <Search/>
       </nav>
     </div>
   );
