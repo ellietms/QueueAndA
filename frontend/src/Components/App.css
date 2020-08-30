@@ -1,5 +1,17 @@
+body{
+	margin: 0px 0px;
+	padding: 0px 0px;
+}
+
 .header {
 	background-color: rgb(219, 215, 215);
+	width: 100%;
+	margin-right: auto;
+}
+
+img{
+	width: 50px;
+	height: 40px;
 }
 
 .logo {
@@ -44,6 +56,15 @@
 	cursor: pointer;
 }
 
+.ask_button{
+	border-radius: 8px;
+	border-color: white;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	background-color: #0095ff;
+	padding:4px 4px;
+}
 
 .button{
 	border-radius: 8px;
@@ -60,6 +81,39 @@
     border-radius: 8px;
     background-color: #065794;
     color: white;
+}
+
+.dropDown_category{
+	border-radius: 8px;
+	border-color: white;
+	font-size: 18px;
+	margin-top: 26px;
+	margin-right: 150px;
+	margin-left: -100px;
+	padding: 15px 5px;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	background-color: rgb(150, 158, 231);
+}
+
+.has_NoAnswer{
+	border-radius: 8px;
+	border-color: white;
+	margin-top: 26px;
+	margin-right: 100px;
+	padding: 5px 5px;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	background-color: rgb(150, 158, 231);
+}
+
+.search_mainPage{
+	margin-top: 20px;
+    margin-right: 20px;
+	width: 300px;
+	border: 3px solid rgb(73, 102, 231);
 }
 
 

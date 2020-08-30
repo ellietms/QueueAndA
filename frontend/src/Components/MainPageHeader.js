@@ -1,27 +1,27 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.css";
+import AskButton from './AskButton';
 import MainPageSearch from "./MainPageSearch";
+import "bootstrap/dist/css/bootstrap.css";
 
-const Header = ({handleSearchValue,value}) => {
+const MainPageHeader = ({handleSearchValue,value}) => {
   return (
     <div className="header">
-      <nav className="navbar ml-5">
+      <nav className="navbar">
         <div className="navbar-brand">
           <img
-           src="https://www.newsshopper.co.uk/resources/images/2669419.jpg"
-            width="50"
-            height="40"
+            src="https://www.newsshopper.co.uk/resources/images/2669419.jpg"
             className="d-inline-block align-top mt-1 rounded"
-            alt=""
+            alt="Q&A logo"
           />
           <span className="navbar-brand mb-0 logo ml-1 mt-1">QueueAndA</span>
         </div>
         <div className="d-flex my-2">
         <MainPageSearch value={value} handleSearchValue={handleSearchValue}/>  
+        <AskButton/>
         </div>
       </nav>
     </div>
   );
 };
 
-export default Header;
+export default MainPageHeader;

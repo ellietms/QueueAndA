@@ -19,7 +19,7 @@ const AnswerNo = (props) => {
 
 	 else{
 	 	NumAnswers = (
-			<div className="No_answers d-flex ml-auto">
+			<div className="no_answers d-flex ml-auto">
 	 		<span>Needs Answer</span>
 	 	</div>
 	 	)
