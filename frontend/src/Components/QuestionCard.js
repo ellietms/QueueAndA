@@ -1,6 +1,4 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import Category from "./Category";
@@ -9,18 +7,13 @@ import "../Components/App.css";
 import Question from "./Question";
 import AnswerNo from "./AnswerNo";
 
-const QuestionCard = () => {
-  const [questions, setQuestions] = useState([]);
-  useEffect(() => {
-    axios({
-      method: "GET",
-      url: "https://queueanda.herokuapp.com/questions",
-    })
-      .then((response) => setQuestions(response.data.questions))
-      .catch((error) => console.log(error));
-  }, []);
-
-  return questions.map((question, index) => {
+const QuestionCard = ({questions,specificModule,searchValue}) => {
+  return ( questions.filter(question => question.category === specificModule || specificModule === "")
+  .filter(question => searchValue === "" ||
+  question.title.toLowerCase().includes(searchValue.toLowerCase()) || 
+  question.question.toLowerCase().includes(searchValue.toLowerCase()) || 
+  question.category.toLowerCase().includes(searchValue.toLowerCase()))
+  .map((question, index) => {
     return (
       <Link
         to={`/questions/${question._id}`}
@@ -46,6 +39,6 @@ const QuestionCard = () => {
         </div>
       </Link>
     );
-  });
+  }));
 };
 export default QuestionCard;

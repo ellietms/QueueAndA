@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "../src/App";
-import Header from "./Components/Header";
 import MainPage from './Components/MainPage';
 import "bootstrap/dist/css/bootstrap.css";
 import AskQuestionPage from "./Components/AskQuestionPage";
@@ -11,8 +10,7 @@ import MakeAnswerPage from "./Components/MakeAnswerPage";
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <Header/>
+      <div>
         <Switch>
           <Route exact path="/" component={MainPage} />
           <Route path="/ask" component={AskQuestionPage} />

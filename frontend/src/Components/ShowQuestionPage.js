@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Header from './Header';
 import QuestionBox from "./QuestionBox";
 import Answers from "./Answers";
 import Checked from "./Checked";
@@ -17,6 +18,7 @@ const ShowQuestionPage = (props) => {
 
   return (
     <div>
+       <Header/>
         <div>
           <div>
             <button type="button" className="mx-3 mt-3 button">
