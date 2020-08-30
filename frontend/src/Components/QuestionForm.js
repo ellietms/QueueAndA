@@ -5,6 +5,8 @@ import axios from "axios";
 import ReactQuill, { Quill } from 'react-quill';
 import "react-quill/dist/quill.snow.css";
 
+
+
 const QuestionForm = () => {
   const [newQuestion, setNewQuestion] = useState({
     userEmail: "",
@@ -30,6 +32,8 @@ const QuestionForm = () => {
     'link', 'image', 'code-block'
   ]
 
+  
+
   const addNewQuestion = (event) => {
     event.preventDefault();
     event.target.reset();
@@ -48,12 +52,26 @@ const QuestionForm = () => {
     setNewQuestion({ ...newQuestion, title: event.target.value });
   };
 
-  const handleQuestion = (event) => {
-    setNewQuestion({ ...newQuestion, question: event.target.value });
-  };
+  // const handleQuestion = (event) => {
+  //   setNewQuestion({ ...newQuestion, question: event.target.value });
+    
+  // };
   const handleCategory = (event) => {
     setNewQuestion({ ...newQuestion, category: event.target.value });
+    
   };
+
+  const handleChange = (content, delta, source, editor) => {
+    console.log(editor.getHTML()); // HTML/rich text
+    let range = editor.getContents(); // plain text
+    console.log(editor.getSelection());
+     
+     
+    setNewQuestion({ ...newQuestion, question: editor.getHTML() });
+  }
+
+  console.log(newQuestion);
+  
 
   
   return (
@@ -106,19 +124,24 @@ const QuestionForm = () => {
             <label htmlFor="textArea" className="h4 p-2">
               Question
             </label>
-            <textarea
+            {/* <textarea
               className="form-control"
               id="TextArea"
               rows="3"
-              onChange={(event) => handleQuestion(event)}
-            ></textarea>
+              onChange={(event) => handleQuestion(event)}>
+              </textarea> */}
           </div>
           <ReactQuill theme="snow"
                     modules={modules}
                     formats={formats}
-                    placeholder={"Start Asking Something"}>
-        </ReactQuill>
+                    placeholder={"Start Asking Something"}
+                    onChange={handleChange}
+                    value={newQuestion.question}
+                    
+                   / >
+        
           <div className="pb-3">
+          
             <SubmitButton />
           </div>
         </form>

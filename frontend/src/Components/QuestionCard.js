@@ -8,6 +8,7 @@ import TitleOfQuestion from "./TitleOfQuestion";
 import "../Components/App.css";
 import Question from "./Question";
 import AnswerNo from "./AnswerNo"
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 
 const QuestionCard = () => {
   const [questions, setQuestions] = useState([]);
@@ -35,7 +36,7 @@ const QuestionCard = () => {
             <TitleOfQuestion title={question.title} />
           </div>
           <div className="pl-3 pb-4">
-            <Question question={question.question} />
+            <Question question={ReactHtmlParser(question.question)} />
             <AnswerNo answerNo={question.answers.length}/>
           </div>
            <div className="d-flex date-main">
