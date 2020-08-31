@@ -26,7 +26,7 @@ const MainPage = () => {
         handleSearchValue={(newSearchValue) => setSearchValue(newSearchValue)}
       />
       { questions ? (
-        <div>
+        <div className="container">
           <div className="d-flex">
           <DropDownAnswered 
            showQuestionWithNoAnswer={(question) => setNoAnswer(question)}/>

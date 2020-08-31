@@ -133,6 +133,7 @@ label.title_font:hover{
 	font-size: 25px;
 	font-weight: bold;
 	color: rgb(53, 47, 47);
+	overflow:scroll;
 }
 
 .title_Answer {
