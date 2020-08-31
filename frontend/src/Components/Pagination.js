@@ -10,24 +10,23 @@ const Pagination = ({ questionsPerPage, totalQs, paginate, next, prev }) => {
   return (
     <nav className="container mt-4">
       <ul className="pagination pagination-lg">
-        <a
+        <span
           onClick={() => paginate(pageNumbers[0])}
-          class="page-link"
-          href="#"
+          className="page-link"
           aria-label="Previous"
         >
           <span aria-hidden="true">&laquo;</span>
-          <span class="sr-only">First Page</span>
-        </a>
+          <span className="sr-only">First Page</span>
+        </span>
         <li className="page-item">
-          <a  onClick={(e) => {e.preventDefault(); prev()}} className="page-link" href="#">
+          <span  onClick={(e) => {e.preventDefault(); prev()}} className="page-link">
             Previous
-          </a>
+          </span>
         </li>
 
-        {pageNumbers.map((number) => (
-          <li key={number} className="page-item ">
-            <a
+        {pageNumbers.map((number,index) => (
+          <li key={index} className="page-item ">
+            <span
               onClick={(e) => {
                 e.preventDefault();
                 paginate(number);
@@ -35,24 +34,23 @@ const Pagination = ({ questionsPerPage, totalQs, paginate, next, prev }) => {
               className="page-link "
             >
               {number}
-            </a>
+            </span>
           </li>
         ))}
 
         <li className="page-item">
-          <a onClick={(e) => {e.preventDefault(); next()}} className="page-link" href="#">
+          <span onClick={(e) => {e.preventDefault(); next()}} className="page-link">
             Next
-          </a>
+          </span>
         </li>
-        <a
+        <span
           onClick={() => paginate(pageNumbers.length)}
-          class="page-link"
-          href="#"
+          className="page-link"
           aria-label="Next"
         >
           <span aria-hidden="true">&raquo;</span>
-          <span class="sr-only">Last Page</span>
-        </a>
+          <span className="sr-only">Last Page</span>
+        </span>
       </ul>
     </nav>
   );
