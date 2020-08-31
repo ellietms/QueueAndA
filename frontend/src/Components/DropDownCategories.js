@@ -9,7 +9,7 @@ const DropDownCategories = ({showSpecificModule}) => {
         onChange={(event) => showSpecificModule(event.target.value)}
       >
         <option value={""}>
-          All Categories
+         All Categories
         </option>
         <option value={"Html"}>
           Html
