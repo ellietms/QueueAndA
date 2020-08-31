@@ -83,36 +83,28 @@ img{
     color: white;
 }
 
-.dropDown_category{
+.header_button{
 	border-radius: 8px;
 	border-color: white;
 	font-size: 18px;
-	margin-top: 26px;
-	margin-left: -100px;
-	padding: 15px 5px;
-	font-size: 18px;
 	font-weight: bold;
 	color: white;
-	background-color: rgb(150, 158, 231);
+	background-color: #0095ff
 }
 
-.has_NoAnswer{
-	border-radius: 8px;
-	border-color: white;
-	margin-top: 26px;
-	margin-right: 100px;
-	padding: 5px 5px;
-	font-size: 18px;
-	font-weight: bold;
-	color: white;
-	background-color: rgb(150, 158, 231);
+.pagination_button{
+	margin-left: auto;
+	width: 8cm;
+	text-align: center;
+	padding: 6px 5px;
 }
+
 
 .search_mainPage{
-	margin-top: 20px;
-    margin-right: 20px;
-	width: 300px;
-	border: 3px solid rgb(73, 102, 231);
+	margin: 10px 10px;
+	padding: 5px 10px;
+	width: 500px;
+	border: 3px solid rgb(21, 60, 235);
 }
 
 

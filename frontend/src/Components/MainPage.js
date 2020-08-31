@@ -3,10 +3,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Pagination from "./Pagination";
 import MainPageHeader from "./MainPageHeader";
-import DropDownAnswered from "./DropDownAnswered";
+// import DropDownAnswered from "./DropDownAnswered";
 import QuestionCard from "./QuestionCard";
 import SelectedQs from "./SelectedQs";
-import DropDownCategories from './DropDownCategories';
+// import DropDownCategories from './DropDownCategories';
 
 const MainPage = () => {
   const [questions, setQuestions] = useState([]);
@@ -80,21 +80,22 @@ const MainPage = () => {
       <MainPageHeader
         value={searchValue}
         handleSearchValue={(newSearchValue) => setSearchValue(newSearchValue)}
+        setNoAnswer={setNoAnswer}
+        setSpecificModule={setSpecificModule}
       />
       { questions ? (
         <div className="container">
           <div className="d-flex">
-          <DropDownAnswered 
+          {/* <DropDownAnswered 
            showQuestionWithNoAnswer={(question) => setNoAnswer(question)}/>
-          <DropDownCategories showSpecificModule={(category) => setSpecificModule(category)}/>
+          <DropDownCategories showSpecificModule={(category) => setSpecificModule(category)}/> */}
           </div>
-
-          <div className='main-class'>
-       <div className='button text-center' onClick={() => {setClicked(!clicked) ; changeDisplay()}}>{clicked ? 'All in One Page' : 'PAGE by PAGE'}</div>
-        {renderInner()}
-      </div>
-                
-        </div>
+          <div className="d-flex mt-4">
+          <div className="container text ml-2 my-auto">All Questions</div>
+          <div className='button pagination_button' onClick={() => {setClicked(!clicked) ; changeDisplay()}}>{clicked ? 'All Questions in One Page' : 'PAGE by PAGE'}</div>
+          </div>
+          {renderInner()}
+         </div>
       ) : (
         <div className="loading_text"> Loading... </div>
       )}
