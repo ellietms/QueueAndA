@@ -3,10 +3,9 @@ import "bootstrap/dist/css/bootstrap.css";
 
 const DropDownAnswered = ({showQuestionWithNoAnswer}) => {
   return (
-    <div className="container mr-3 d-flex">
-    <div className="text container ml-2">All Questions</div>
+    <div className="container">
       <select
-        className="btn has_NoAnswer"
+        className="btn header_button py-2"
         onChange={(event) => showQuestionWithNoAnswer(event.target.value)}
       >
         <option value={""}>All Questions</option>

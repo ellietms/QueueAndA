@@ -1,214 +1,223 @@
-body{
-	margin: 0px 0px;
-	padding: 0px 0px;
+body {
+  margin: 0px 0px;
+  padding: 0px 0px;
 }
 
 .header {
-	background-color: rgb(219, 215, 215);
-	width: 100%;
-	margin-right: auto;
+  background-color: rgb(219, 215, 215);
+  width: 100%;
+  margin-right: auto;
 }
 
-img{
-	width: 50px;
-	height: 40px;
+img {
+  width: 50px;
+  height: 40px;
 }
 
 .logo {
-	font-size: 20px;
-	font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .ask_button {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .text {
-	font-size: 30px;
-	margin-top: 30px;
-	font-weight: bold;
+  font-size: 30px;
+  margin-top: 30px;
+  font-weight: bold;
 }
 
 .category {
-	width: 3cm;
-	font-size: 20px;
-	font-weight: bold;
-	text-align: center;
-	background-color: rgb(150, 158, 231);
-	padding-bottom: 5px;
-	padding-top: 5px;
+  width: 3cm;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(150, 158, 231);
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .form_style {
-	background-color: rgb(235, 231, 231);
-	border-radius: 2px;
-	border-radius: 10px;
+  background-color: rgb(235, 231, 231);
+  border-radius: 2px;
+  border-radius: 10px;
 }
 
 .question_card {
-	background-color: rgb(235, 231, 231);
-	margin-top: 20px;
-	padding-top: 30px;
-}
-
-.title_question{
-	cursor: pointer;
-}
-
-.ask_button{
-	border-radius: 8px;
-	border-color: white;
-	font-size: 18px;
-	font-weight: bold;
-	color: white;
-	background-color: #0095ff;
-	padding:4px 4px;
-}
-
-.button{
-	border-radius: 8px;
-	border-color: white;
-	margin: 10px 10px;
-	padding: 5px 10px;
-	font-size: 18px;
-	font-weight: bold;
-	color: white;
-	background-color: #0095ff
-}
-
-.button:hover {
-    border-radius: 8px;
-    background-color: #065794;
-    color: white;
-}
-
-.dropDown_category{
-	border-radius: 8px;
-	border-color: white;
-	font-size: 18px;
-	margin-top: 26px;
-	margin-left: -100px;
-	padding: 15px 5px;
-	font-size: 18px;
-	font-weight: bold;
-	color: white;
-	background-color: rgb(150, 158, 231);
-}
-
-.has_NoAnswer{
-	border-radius: 8px;
-	border-color: white;
-	margin-top: 26px;
-	margin-right: 100px;
-	padding: 5px 5px;
-	font-size: 18px;
-	font-weight: bold;
-	color: white;
-	background-color: rgb(150, 158, 231);
-}
-
-.search_mainPage{
-	margin-top: 20px;
-    margin-right: 20px;
-	width: 300px;
-	border: 3px solid rgb(73, 102, 231);
-}
-
-
-.title_font{
-	font-size: 30px;
-	color: rgb(32, 23, 138);
-	font-weight: bolder;
-}
-
-label.title_font:hover{
-	text-decoration: none;
-	color: blue;
-	cursor: pointer;
-}
-
-.question_font {
-	font-size: 25px;
-	font-weight: bold;
-	color: rgb(53, 47, 47);
-	overflow:scroll;
-}
-
-.title_Answer {
-	font-size: 30px;
-	color: rgb(29, 80, 63);
-	font-weight: bolder;
-	margin-left: 12%;
+  background-color: rgb(235, 231, 231);
+  margin-top: 20px;
+  padding-top: 30px;
 }
 
 .title_question {
-	font-size: 30px;
-	color: rgb(29, 80, 63);
-	font-weight: bolder;
-	margin-left: 13%;
-	margin-top: 10px;
+  cursor: pointer;
+}
+
+.ask_button {
+  border-radius: 8px;
+  border-color: white;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #0095ff;
+  padding: 4px 4px;
+}
+
+.button {
+  border-radius: 8px;
+  border-color: white;
+  margin: 10px 10px;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #0095ff;
+}
+
+.button:hover {
+  border-radius: 8px;
+  background-color: #065794;
+  color: white;
+}
+
+.header_button {
+  border-radius: 8px;
+  border-color: white;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #0095ff;
+}
+
+.header_button:hover {
+  border-radius: 8px;
+  background-color: #065794;
+  color: white;
+}
+
+.pagination_button {
+  margin-left: auto;
+  width: 8cm;
+  text-align: center;
+  padding: 6px 5px;
+}
+
+.pagination_button:hover{
+  border-radius: 8px;
+  background-color: #065794;
+  color: white;	
+  cursor: pointer;
 }
 
 
+.search_mainPage {
+  margin: 10px 10px;
+  padding: 5px 10px;
+  width:150px;
+  border: 3px solid rgb(21, 60, 235);
+}
+
+.title_font {
+  font-size: 30px;
+  color: rgb(32, 23, 138);
+  font-weight: bolder;
+}
+
+label.title_font:hover {
+  text-decoration: none;
+  color: blue;
+  cursor: pointer;
+}
+
+.question_font {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(53, 47, 47);
+  overflow: scroll;
+}
+
+.title_Answer {
+  font-size: 30px;
+  color: rgb(29, 80, 63);
+  font-weight: bolder;
+  margin-left: 12%;
+}
+
+.title_question {
+  font-size: 30px;
+  color: rgb(29, 80, 63);
+  font-weight: bolder;
+  margin-left: 13%;
+  margin-top: 10px;
+}
+
 .question_box {
-	background-color: rgb(235, 231, 231);
+  background-color: rgb(235, 231, 231);
 }
 
 .answer_font {
-	font-size: 20px;
-	font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .answer_box {
-	background-color: rgb(219, 215, 215);
-	border-radius: 10px;
-	width: 80%;
+  background-color: rgb(219, 215, 215);
+  border-radius: 10px;
+  width: 80%;
 }
 
 .nameOfPerson {
-	font-size: 15px;
-	font-weight: bolder;
-	padding-top: 10px;
-	color: green;
+  font-size: 15px;
+  font-weight: bolder;
+  padding-top: 10px;
+  color: green;
 }
 
 .loading_text {
-	font-size: 45px;
-	color: rgb(128, 26, 0);
-	margin: 20px;
-	margin-left: auto;
+  font-size: 45px;
+  color: rgb(128, 26, 0);
+  margin: 20px;
+  margin-left: auto;
 }
 
 .has_answers {
-	color: rgb(11, 124, 11);
-	width: fit-content;
-	padding: 10px 6px;
-	font-size: 20px;
-	font-weight: bold;
+  color: rgb(11, 124, 11);
+  width: fit-content;
+  padding: 10px 6px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.no_answers{
-	color: red;
-	width: fit-content;
-	padding: 10px 6px;
-	font-size: 20px;
-	font-weight: bold;
+.no_answers {
+  color: red;
+  width: fit-content;
+  padding: 10px 6px;
+  font-size: 20px;
+  font-weight: bold;
 }
-.time{
-	margin-right:20px;
-	font-weight: bold;
-	color: rgb(131, 131, 131);
-}
-
-.date{
-	font-weight: bold;
-	color: rgb(131, 131, 131);
+.time {
+  margin-right: 20px;
+  font-weight: bold;
+  color: rgb(131, 131, 131);
 }
 
-.date-main{
-	font-size: 20px;
-	font-weight: bold;
-	color: rgb(131, 131, 131);
-	padding-bottom: 10px;
+.date {
+  font-weight: bold;
+  color: rgb(131, 131, 131);
+}
+
+.date-main {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(131, 131, 131);
+  padding-bottom: 10px;
+}
+
+@media only screen and (min-width:1000px){ 
+  .search_mainPage{
+    width: 300px;
+  }
 }

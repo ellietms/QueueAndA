@@ -5,8 +5,8 @@ import "../App";
 
 const Button = () => {
   return (
-    <div className="container mt-3">
-      <button type="button" className="ask_button">
+    <div className="container">
+      <button type="button" className="btn header_button">
         <Link to="/ask" style={{ textDecoration: "none",color:"white"}}>
           Ask a question
         </Link>
