@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import Loader from "./Loader";
 
 const Checked = ({ questionDetails }) => {
 	return (
@@ -17,7 +18,7 @@ const Checked = ({ questionDetails }) => {
 					)}
 				</div>
 			) : (
-				<div className="loading_text"> Loading... </div>
+				<Loader/>
 			)}
 		</div>
 	);
