@@ -58,18 +58,17 @@ const MainPage = () => {
             dataLength={questions.length}
             next={fetchQs}
             hasMore={true}
-            loader={<Loader/>}
+            //loader={<Loader/>}
 
           >
           
+          </InfiniteScroll>
           <QuestionCard questions={questions}
            specificModule={specificModule} 
            searchValue={searchValue}
            noAnswer={noAnswer}
            
            />
-
-          </InfiniteScroll>
           
         </div>
       ) : (
