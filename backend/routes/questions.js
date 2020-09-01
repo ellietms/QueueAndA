@@ -5,6 +5,7 @@ const Answer = require("../models/answer.model");
 // all the questions:
 router.route("/").get((request, response) => {
   Question.find()
+  .limit(4)
     .populate("answers")
     .then(questions => response.json({ questions }))
     .catch(err => response.send({ Error: err }));
