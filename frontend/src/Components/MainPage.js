@@ -6,8 +6,6 @@ import MainPageHeader from "./MainPageHeader";
 import QuestionCard from "./QuestionCard";
 import SelectedQs from "./SelectedQs";
 import Loader from "./Loader";
-// import DropDownCategories from './DropDownCategories';
-// import DropDownAnswered from "./DropDownAnswered";
 
 const MainPage = () => {
   const [questions, setQuestions] = useState([]);
@@ -83,9 +81,6 @@ const MainPage = () => {
       {questions ? (
         <div className="container">
           <div className="d-flex">
-            {/* <DropDownAnswered 
-           showQuestionWithNoAnswer={(question) => setNoAnswer(question)}/>
-          <DropDownCategories showSpecificModule={(category) => setSpecificModule(category)}/> */}
           </div>
           <div className="d-flex mt-4">
             <div className="container text ml-2 my-auto">All Questions</div>

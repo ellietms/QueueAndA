@@ -9,9 +9,9 @@ const Checked = ({ questionDetails }) => {
 			{questionDetails ? (
 				<div>
 					{questionDetails.length === 0 ? (
-						<div className="title_font pl-2 d-flex m-3">This Question needs &nbsp; Answers </div>
+						<div className="question_needs_answer">This Question Needs &nbsp;Answers </div>
 					) : (
-						<div className="title_font pl-2 d-flex m-3">
+						<div className="question_has_answer">
 							<div className="fas fa-check-square h1 checked rounded" />
 					    <span className="pl-2">{questionDetails.length} Answers</span>
 						</div>

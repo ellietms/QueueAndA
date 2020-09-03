@@ -6,6 +6,7 @@ import Header from "./Header";
 import QuestionBox from "./QuestionBox";
 import Answers from "./Answers";
 import Checked from "./Checked";
+import MakeAnswerPage from './MakeAnswerPage'
 
 const ShowQuestionPage = (props) => {
   const [specificQuestion, setSpecificQuestions] = useState([]);
@@ -33,7 +34,7 @@ const ShowQuestionPage = (props) => {
         </div>
         <div className="container">
           <QuestionBox questionDetails={specificQuestion} />
-          <div className="d-flex justify-content-center">
+          {/* <div className="d-flex justify-content-center">
             <Link
               to={`/questions/${props.match.params.id}/answer`}
               style={{ textDecoration: "none", color: "black" }}
@@ -42,12 +43,15 @@ const ShowQuestionPage = (props) => {
                 Answer
               </button>
             </Link>
-          </div>
+          </div> */}
         </div>
         <div>
           <Checked questionDetails={specificQuestion.answers} />
           <Answers questionDetails={specificQuestion.answers} 
           searchValue={searchValue}/>
+        </div>
+        <div>
+        <MakeAnswerPage id={props.match.params.id}/>
         </div>
       </div>
     </div>
