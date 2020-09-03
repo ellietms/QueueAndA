@@ -4,7 +4,7 @@ import AnswerForm from "./AnswerForm";
 
 
 
-const MakeAnswerPage = ({id}) => {
+const MakeAnswerForm = ({id}) => {
   return (
     <div className="Answer_form">
       <label className="title_Answer">
@@ -16,4 +16,4 @@ const MakeAnswerPage = ({id}) => {
   );
 };
 
-export default MakeAnswerPage;
+export default MakeAnswerForm;

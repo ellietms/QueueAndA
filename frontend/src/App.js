@@ -5,7 +5,6 @@ import MainPage from './Components/MainPage';
 import "bootstrap/dist/css/bootstrap.css";
 import AskQuestionPage from "./Components/AskQuestionPage";
 import ShowQuestionPage from "./Components/ShowQuestionPage";
-import MakeAnswerPage from "./Components/MakeAnswerPage";
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
         <Switch>
           <Route exact path="/" component={MainPage} />
           <Route path="/ask" component={AskQuestionPage} />
-          <Route path="/questions/:id/answer" component={MakeAnswerPage} />
           <Route path="/questions/:id" component={ShowQuestionPage} />
         </Switch>
       </div>
