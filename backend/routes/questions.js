@@ -32,6 +32,7 @@ router.route("/:questionId").get((request, response) => {
 
 //Answer a specific question with specific answer:
 router.route("/:id/answer").post((request, response) => {
+  console.log(request.body);
   const newAnswer = new Answer(request.body);
   Question.findById(request.params.id)
     .then(question => {
