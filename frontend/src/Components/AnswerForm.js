@@ -1,18 +1,31 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import SubmitButton from "./SubmitButton";
 
 const AnswerForm = ({ id }) => {
+  
   const [newAnswer, setNewAnswer] = useState({
     userEmail: "",
     answer: "",
   });
 
+  useEffect(() => {
+    window.tinyMCE.remove("#TextArea");
+    window.tinyMCE.init({
+      selector: '#TextArea',
+      menubar: false
+    });
+  },[]);
+
   function submitHandler(event) {
     event.preventDefault();
+    const answerValue = {
+      ...newAnswer,
+      answer: window.tinyMCE.get("TextArea").getContent(),
+    };
     axios
-      .post(`https://queueanda.herokuapp.com/questions/${id}/answer`, newAnswer)
+      .post(`https://queueanda.herokuapp.com/questions/${id}/answer`, answerValue)
       .then((response) => {console.log(response); window.location.assign(`/questions/${id}`)})
       .catch((err) => console.log(err));
     clearData();
@@ -23,12 +36,14 @@ const AnswerForm = ({ id }) => {
   }
 
   const handelForm = (event) => {
+    console.log("event",event.target.value)
     const answerValue = {
       ...newAnswer,
       [event.target.name]: event.target.value,
     };
     setNewAnswer(answerValue);
   };
+
 
   return (
     <div className="container form_style">
@@ -50,13 +65,8 @@ const AnswerForm = ({ id }) => {
           <label htmlFor="textArea" className="h4 p-2">
             Answer
           </label>
-          <textarea
-            name="answer"
-            value={newAnswer.answer}
-            className="form-control"
+          <div
             id="TextArea"
-            rows="3"
-            onChange={handelForm}
           />
         </div>
         <SubmitButton />
