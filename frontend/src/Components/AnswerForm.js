@@ -25,7 +25,7 @@ const AnswerForm = ({ id }) => {
       answer: window.tinyMCE.get("TextArea").getContent(),
     };
     axios
-      .post(`http://localhost:5000/questions/${id}/answer`, answerValue)
+      .post(`https://queueanda.herokuapp.com/questions/${id}/answer`, answerValue)
       .then((response) => {console.log(response); window.location.assign(`/questions/${id}`)})
       .catch((err) => console.log(err));
     clearData();
