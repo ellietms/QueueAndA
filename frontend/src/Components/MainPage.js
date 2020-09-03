@@ -5,6 +5,7 @@ import Pagination from "./Pagination";
 import MainPageHeader from "./MainPageHeader";
 import QuestionCard from "./QuestionCard";
 import SelectedQs from "./SelectedQs";
+import Loader from "./Loader";
 // import DropDownCategories from './DropDownCategories';
 // import DropDownAnswered from "./DropDownAnswered";
 
@@ -101,7 +102,7 @@ const MainPage = () => {
           {renderInner()}
         </div>
       ) : (
-        <div className="loading_text"> Loading... </div>
+           <Loader/>
       )}
     </div>
   );
