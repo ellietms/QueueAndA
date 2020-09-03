@@ -6,6 +6,7 @@ import Header from "./Header";
 import QuestionBox from "./QuestionBox";
 import Answers from "./Answers";
 import Checked from "./Checked";
+import MakeAnswerForm from './MakeAnswerForm'
 
 const ShowQuestionPage = (props) => {
   const [specificQuestion, setSpecificQuestions] = useState([]);
@@ -33,21 +34,14 @@ const ShowQuestionPage = (props) => {
         </div>
         <div className="container">
           <QuestionBox questionDetails={specificQuestion} />
-          <div className="d-flex justify-content-center">
-            <Link
-              to={`/questions/${props.match.params.id}/answer`}
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <button type="button" className="button">
-                Answer
-              </button>
-            </Link>
-          </div>
         </div>
         <div>
           <Checked questionDetails={specificQuestion.answers} />
           <Answers questionDetails={specificQuestion.answers} 
           searchValue={searchValue}/>
+        </div>
+        <div>
+        <MakeAnswerForm id={props.match.params.id}/>
         </div>
       </div>
     </div>

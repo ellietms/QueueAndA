@@ -42,8 +42,11 @@ img {
 
 .form_style {
   background-color: rgb(235, 231, 231);
-  border-radius: 2px;
   border-radius: 10px;
+}
+
+.Answer_form{
+  margin-top: 100px;
 }
 
 .question_card {
@@ -126,6 +129,21 @@ img {
   font-weight: bolder;
 }
 
+.question_needs_answer{
+  font-size: 30px;
+  color: rgb(32, 23, 138);
+  text-align:center ;
+  font-weight: bolder;
+  margin:30px 2px;
+}
+
+.question_has_answer{
+  font-size: 30px;
+  color: rgb(32, 23, 138);
+  font-weight: bolder;
+  margin: 40px 5px;
+}
+
 label.title_font:hover {
   text-decoration: none;
   color: blue;
@@ -141,9 +159,11 @@ label.title_font:hover {
 
 .title_Answer {
   font-size: 30px;
-  color: rgb(29, 80, 63);
+  color: rgb(32, 23, 138);
   font-weight: bolder;
-  margin-left: 12%;
+  margin-left: 15%;
+  margin-bottom: 10px;
+  margin-top: auto;
 }
 
 .title_question {
@@ -156,6 +176,7 @@ label.title_font:hover {
 
 .question_box {
   background-color: rgb(235, 231, 231);
+  border-radius: 10px;
 }
 
 .answer_font {
@@ -164,16 +185,16 @@ label.title_font:hover {
 }
 
 .answer_box {
-  background-color: rgb(219, 215, 215);
+  background-color: rgb(235, 231, 231);
   border-radius: 10px;
   width: 80%;
 }
 
 .nameOfPerson {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bolder;
   padding-top: 10px;
-  color: green;
+  color: rgb(32, 23, 138);
 }
 
 .loading_text {

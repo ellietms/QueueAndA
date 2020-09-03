@@ -36,7 +36,6 @@ const AnswerForm = ({ id }) => {
   }
 
   const handelForm = (event) => {
-    console.log("event",event.target.value)
     const answerValue = {
       ...newAnswer,
       [event.target.name]: event.target.value,
@@ -47,7 +46,7 @@ const AnswerForm = ({ id }) => {
 
   return (
     <div className="container form_style">
-      <form className="m-5" onSubmit={submitHandler}>
+      <form onSubmit={submitHandler}>
         <div className="form-group">
           <label htmlFor="Name" className="mt-2 p-2 h4">
             Name
