@@ -51,7 +51,7 @@ router.route("/:id/answer").post((request, response) => {
             from: 'QueueAndA.uk@gmail.com',
             to: question.userEmail ,
             subject: 'Notification From QueueAndA', 
-            html:'<div><img src="https://www.newsshopper.co.uk/resources/images/2669419.jpg"/><h1>QueueAndA</h1><br><h2>Hi</h2><h3>your question has been answered by someone.</h3><h3>You can go to the link and get answer. </h3><div><a href="https://cyf-queueanda.netlify.app/">QueueAndA</a></div>Your question is: </div>'+question.question
+            html:`<div><img src="https://www.newsshopper.co.uk/resources/images/2669419.jpg"/><h1>QueueAndA</h1><br><h3>Hi, your question has been answered by someone.</h3><h3>Your question is: </h3><h2>${question.question}</h2><h3>You can go to the link and get answer. </h3><h3><a href="https://cyf-queueanda.netlify.app/">QueueAndA</a></h3></div>`
           };
           transporter.sendMail(mailOptions, function(error, info) {
             if (error) {
