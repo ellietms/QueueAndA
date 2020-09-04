@@ -83,7 +83,10 @@ const MainPage = () => {
           <div className="d-flex">
           </div>
           <div className="d-flex mt-4">
-            <div className="container text ml-2 my-auto">All Questions</div>
+          {clicked ? 
+          <div className="container text  my-auto" style={{color:'rgb(150, 158, 231)'}}>{questions.length} Questions</div>
+          : <div className="container text  my-auto" style={{color:'rgb(150, 158, 231)'}}>Questions Page By Page</div>
+          }
             <div
               className="button pagination_button"
               onClick={() => {
@@ -91,7 +94,7 @@ const MainPage = () => {
                 changeDisplay();
               }}
             >
-              {clicked ? "All Questions in One Page" : "PAGE by PAGE"}
+              {clicked ? "PAGE By PAGE" : "All Questions"}
             </div>
           </div>
           {renderInner()}

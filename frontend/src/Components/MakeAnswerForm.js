@@ -7,10 +7,10 @@ import AnswerForm from "./AnswerForm";
 const MakeAnswerForm = ({id}) => {
   return (
     <div className="Answer_form">
-      <label className="title_Answer">
+      <span className="answer_form_top_text">
         <i className="far fa-lightbulb"></i>
-       <span> Your Answer</span>
-      </label>
+        Your Answer
+      </span>
       <AnswerForm id={id} />
     </div>
   );

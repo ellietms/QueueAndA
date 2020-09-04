@@ -9,6 +9,7 @@ const QuestionBox = ({ questionDetails }) => {
 
   return (
     <div>
+      <span className="text" style={{color:'rgb(32, 23, 138)'}}>Question : </span>
       <div className="container question_box mt-4">
         <div className="pt-4 pl-3">
           <Category category={questionDetails.category} />

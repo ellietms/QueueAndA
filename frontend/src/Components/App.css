@@ -3,15 +3,38 @@ body {
   padding: 0px 0px;
 }
 
+img {
+  width: 50px;
+  height: 40px;
+}
+
+i{
+  padding: 0px 0px;
+  margin: 0px 0px;
+}
+
+label{
+  margin: 0px 0px;
+}
+
 .header {
+  display: flex;
+  flex-flow: wrap;
   background-color: rgb(219, 215, 215);
   width: 100%;
   margin-right: auto;
 }
 
-img {
-  width: 50px;
-  height: 40px;
+.plain_header{
+    display: flex;
+    flex-flow: wrap;
+    background-color: rgb(219, 215, 215);
+    width: 100%;
+    margin-right: auto;
+}
+
+.plain_header:hover{
+  color:rgb(59, 75, 221);
 }
 
 .logo {
@@ -25,7 +48,7 @@ img {
 }
 
 .text {
-  font-size: 30px;
+  font-size: 15px;
   margin-top: 30px;
   font-weight: bold;
 }
@@ -53,10 +76,6 @@ img {
   background-color: rgb(235, 231, 231);
   margin-top: 20px;
   padding-top: 30px;
-}
-
-.title_question {
-  cursor: pointer;
 }
 
 .ask_button {
@@ -89,7 +108,8 @@ img {
 .header_button {
   border-radius: 8px;
   border-color: white;
-  font-size: 18px;
+  padding: 0px 0px;
+  /* font-size: 18px; */
   font-weight: bold;
   color: white;
   background-color: #0095ff;
@@ -102,10 +122,11 @@ img {
 }
 
 .pagination_button {
-  margin-left: auto;
+  margin-left: 2px;
   width: 8cm;
   text-align: center;
-  padding: 6px 5px;
+  font-size: 12px;
+  padding: 0px 0px;
 }
 
 .pagination_button:hover{
@@ -115,9 +136,7 @@ img {
   cursor: pointer;
 }
 
-
 .search_mainPage {
-  margin: 10px 10px;
   padding: 5px 10px;
   width:150px;
   border: 3px solid rgb(21, 60, 235);
@@ -141,7 +160,8 @@ img {
   font-size: 30px;
   color: rgb(32, 23, 138);
   font-weight: bolder;
-  margin: 40px 5px;
+  margin: 40px;
+  margin-left: 10%;
 }
 
 label.title_font:hover {
@@ -166,12 +186,20 @@ label.title_font:hover {
   margin-top: auto;
 }
 
+.answer_form_top_text{
+  font-size: 30px;
+  color: rgb(32, 23, 138);
+  font-weight: bolder;
+  margin-left: 10%;
+  padding-bottom: 20px;
+  margin-top: auto;
+}
+
 .title_question {
   font-size: 30px;
   color: rgb(29, 80, 63);
   font-weight: bolder;
-  margin-left: 13%;
-  margin-top: 10px;
+  cursor: pointer;
 }
 
 .question_box {
@@ -241,4 +269,21 @@ label.title_font:hover {
   .search_mainPage{
     width: 300px;
   }
+
+.header_button {
+  font-size: 18px; 
+  font-weight: bold;
+  margin-left: 20px;
+  padding-left: 5px;
+  padding-right: 3px;
+}
+.text {
+  font-size: 30px;
+}
+.pagination_button {
+  margin-left: auto;
+  width: 8cm;
+  text-align: center;
+  padding: 6px 5px;
+}
 }
