@@ -286,4 +286,7 @@ label.title_font:hover {
   text-align: center;
   padding: 6px 5px;
 }
+.search_mainPage {
+  width: 500px;
+}
 }
