@@ -36,7 +36,10 @@ const QuestionForm = () => {
     setNewQuestion({ ...newQuestion, category: event.target.value });
   };
   return (
-    <div>
+    <div className="container mt-5">
+      <label className="title_question mt-3">
+          <i className="fas fa-question-circle">Ask a Question</i>
+      </label>
       <div className="container form_style">
         <form className="m-5" onSubmit={addNewQuestion}>
           <div className="form-group">

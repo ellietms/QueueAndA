@@ -5,13 +5,11 @@ import "../App";
 
 const Button = () => {
   return (
-    <div className="container">
-      <button type="button" className="btn header_button">
+      <button type="button" className="btn header_button py-2">
         <Link to="/ask" style={{ textDecoration: "none",color:"white"}}>
           Ask a question
         </Link>
       </button>
-    </div>
   );
 };
 

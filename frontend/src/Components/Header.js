@@ -1,25 +1,22 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import MainPageSearch from "./MainPageSearch";
+import { Link } from "react-router-dom";
 
 const Header = ({handleSearchValue,value}) => {
   return (
     <div className="header">
-      <nav className="navbar ml-5">
-        <div className="navbar-brand">
+      <Link to="/" style={{ textDecoration: "none", color: "black" , cursor:"pointer"}}>
           <img
            src="https://www.newsshopper.co.uk/resources/images/2669419.jpg"
             width="50"
             height="40"
-            className="d-inline-block align-top mt-1 rounded"
+            className="my-3 rounded-circle ml-4"
             alt=""
           />
-          <span className="navbar-brand mb-0 logo ml-1 mt-1">QueueAndA</span>
-        </div>
-        <div className="d-flex my-2">
+          <span className="logo my-3 pl-2 pt-1 pr-3">QueueAndA</span>
+      </Link>    
         <MainPageSearch value={value} handleSearchValue={handleSearchValue}/>  
-        </div>
-      </nav>
     </div>
   );
 };
