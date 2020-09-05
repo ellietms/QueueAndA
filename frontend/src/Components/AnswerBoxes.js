@@ -1,11 +1,12 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 
 const AnswerBoxes = ({ answer }) => {
   return (
     <div className="container answer_box my-4">
       <label className="px-3 nameOfPerson">{answer.userEmail}</label>
-      <div className="answer_font px-3 py-2">{answer.answer}</div>
+      <div className="answer_font px-3 py-2">{ReactHtmlParser(`${answer.answer}`)}</div>
       <div className="d-flex justify-content-end date">
         Date:{answer.createdAt.split("T")[0]}
       </div>
