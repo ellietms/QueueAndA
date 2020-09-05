@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import SubmitButton from "./SubmitButton";
+import EditorJS from '@editorjs/editorjs';
+import Code from '@editorjs/code';
 
 const AnswerForm = ({ id }) => {
   const [newAnswer, setNewAnswer] = useState({
@@ -29,6 +31,14 @@ const AnswerForm = ({ id }) => {
     };
     setNewAnswer(answerValue);
   };
+
+  const editor = new EditorJS({
+    holderId: editorjs,
+
+    tools: {
+      code: Code,
+    }
+  })
 
   return (
     <div className="container form_style">
@@ -58,9 +68,11 @@ const AnswerForm = ({ id }) => {
             rows="3"
             onChange={handelForm}
           />
+          
         </div>
         <SubmitButton />
       </form>
+      {editor}
     </div>
   );
 };
