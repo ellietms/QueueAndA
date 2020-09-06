@@ -27,6 +27,7 @@
     "moment": "^2.27.0",
     "moment-timezone": "^0.5.31",
     "nodemailer": "^6.4.11",
+    "react-html-parser": "^2.0.2",
     "react-infinite-scroll-component": "^5.0.5"
   }
 }
