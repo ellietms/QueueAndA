@@ -10,6 +10,7 @@ const questionSchema = new Schema(
     answers: [{ 
        type: Schema.Types.ObjectId, ref: "Answer"
     }],
+    
     resolved: { type: Boolean, default: false },
   },
   {

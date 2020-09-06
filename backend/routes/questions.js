@@ -31,7 +31,12 @@ router.route("/ask").post((request, response) => {
 router.route("/:questionId").get((request, response) => {
   const questionId = request.params.questionId;
   Question.findById(questionId)
-    .populate("answers")
+  .populate({ 
+    path: 'answers',
+    populate: {
+      path: 'comments'
+    } 
+ })
     .then(questionWithId => response.json({ questionWithId }))
     .catch(error => {
       response.status(500).json({ error });
@@ -70,5 +75,6 @@ router.route("/:id/answer").post((request, response) => {
 
     .catch(err => response.status(404).json({ Error: err }));
 });
+
 
 module.exports = router;

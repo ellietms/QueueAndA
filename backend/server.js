@@ -25,8 +25,10 @@ connection.once("open", () => {
 });
 
 const questionsRouter = require("./routes/questions");
+const answerRouter = require("./routes/answers");
 
 app.use("/questions", questionsRouter);
+app.use("/answers",answerRouter);
 
 app.listen(port, () => {
   console.log(`Running at \`http://localhost:${port}\`...`);
