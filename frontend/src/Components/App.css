@@ -20,7 +20,7 @@ label{
 .header {
   display: flex;
   flex-flow: wrap;
-  background-color: rgb(219, 215, 215);
+  background-color: #DCDCDC;
   width: 100%;
   margin-right: auto;
 }

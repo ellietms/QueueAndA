@@ -9,7 +9,7 @@ const MainPageSearch = ({handleSearchValue,value}) => {
             onChange={(event) => handleSearchValue(event.target.value)}
             /> */}
         <input class="form-control" type="text" placeholder="Search" aria-label="Search"  value={value} onChange={(event) => handleSearchValue(event.target.value)}/>
-        <i class="fas fa-search text-white ml-2 " ></i>
+        <i class="fas fa-search fa-lg text-white ml-2 mt-2" ></i>
         </div>
         </form>
     )

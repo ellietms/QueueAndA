@@ -8,7 +8,7 @@ import Question from "./Question";
 import AnswerNo from "./AnswerNo";
 
 
-const QuestionCard = ({ questions, specificModule, searchValue, noAnswer }) => {
+const QuestionCard = ({ questions, specificModule, searchValue, noAnswer, currentQuestions }) => {
   
   return questions
     .filter(
@@ -41,7 +41,7 @@ const QuestionCard = ({ questions, specificModule, searchValue, noAnswer }) => {
                 <TitleOfQuestion title={question.title} />
               </div>
               <div className="pl-3 pb-4">
-                <Question question={question.question} />
+                {/* <Question question={question.question} /> */}
                 <AnswerNo answerNo={question.answers.length} />
               </div>
               <div className="d-flex date-main">

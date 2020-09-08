@@ -48,6 +48,8 @@ const MainPage = () => {
           specificModule={specificModule}
           searchValue={searchValue}
           noAnswer={noAnswer}
+          currentQuestions={currentQuestions}
+
         />
       );
     } else if (state.display === "second") {
