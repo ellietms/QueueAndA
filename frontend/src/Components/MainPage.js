@@ -12,7 +12,7 @@ import Pagination from "react-js-pagination";
 const MainPage = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQsPage, setCurrentQsPage] = useState(1);
-  const [questionsPerPage] = useState(3);
+  const [questionsPerPage] = useState(5);
   const [state, setState] = useState({ display: "first" });
   const [clicked, setClicked] = useState(true);
 
@@ -70,13 +70,13 @@ const MainPage = () => {
           /> */}
           <div className="pagination">
             <Pagination
-              prevPageText='prev'
-              nextPageText='next'      
-               activePage={ currentQsPage }
-               itemsCountPerPage={ 5 }
-               totalItemsCount={ questions.length }
-               pageRangeDisplayed={ 3 }
-               onChange={paginate}
+                prevPageText='prev'
+                nextPageText='next'      
+                activePage={ currentQsPage }
+                itemsCountPerPage={ questionsPerPage }
+                totalItemsCount={ questions.length }
+                pageRangeDisplayed={ 3 }
+                onChange={ paginate }
             />
          </div>
 
