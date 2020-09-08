@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SubmitButton from "./SubmitButton";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
@@ -10,11 +10,28 @@ const QuestionForm = () => {
     question: "",
     category: "",
   });
+
+  useEffect(() => {
+    window.tinyMCE.remove("#TextArea");
+    window.tinyMCE.init({
+      selector: '#TextArea',
+      menubar: false,
+      plugins: 'link emoticons lists codesample ',
+      toolbar: 'styleselect |fontselect fontsizeselect bold italic underline blockquote| forecolor backcolor emoticons link | bullist numlist codesample ',
+      fontsize_formats: '8pt 10pt 12pt 14pt 16pt 18pt 24pt',
+      font_formats: 'Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva'
+    });
+  },[]);
+
   const addNewQuestion = (event) => {
     event.preventDefault();
+    const questionValue = {
+      ...newQuestion,
+      question: window.tinyMCE.get("TextArea").getContent(),
+    };
     event.target.reset();
     axios
-      .post("https://queueanda.herokuapp.com/questions/ask", newQuestion)
+      .post("https://queueanda.herokuapp.com/questions/ask", questionValue)
       .then(response => {
         console.log(response);
         window.location.assign("/");
@@ -63,6 +80,7 @@ const QuestionForm = () => {
               id="category"
               onChange={(event) => handleCategory(event)}
             >
+              <option value=" ">Please Choose the Category</option>
               <option value={"Html"}>Html</option>
               <option value={"Css"}>Css</option>
               <option value={"Javascript"}>Javascript</option>
@@ -88,13 +106,11 @@ const QuestionForm = () => {
             <label htmlFor="textArea" className="h4 p-2">
               Question
             </label>
-            <textarea
-              className="form-control"
-              id="TextArea"
-              rows="3"
-              onChange={(event) => handleQuestion(event)}
-            ></textarea>
+          <div
+            id="TextArea"            
+          />        
           </div>
+          
           <div className="pb-3">
             <SubmitButton />
           </div>
