@@ -13,11 +13,7 @@ const AnswerBoxes = ({ answer }) => {
 		</div>
 	) : (
 		<div>
-			<Comment
-				display={displayComponent === 'compComment'}
-				answerId={answer._id}
-				displayState={setDisplayComponent}
-			/>
+			<Comment answerId={answer._id} displayState={setDisplayComponent} />
 		</div>
 	);
 };

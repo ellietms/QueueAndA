@@ -7,7 +7,7 @@ import axios from 'axios';
 function Comment(props) {
 
   const [ newComment, setNewComment ] = useState({
-		userEmail: '',
+		userName: '',
 		comment: ''
   });
   
@@ -21,7 +21,7 @@ function Comment(props) {
     clearData();
 	}
 	function clearData() {
-    setNewComment({ userEmail: '', comment: '' });
+    setNewComment({ userName: '', comment: '' });
     props.displayState(null)
 	}
 
@@ -39,7 +39,7 @@ function Comment(props) {
           <label htmlFor="Name" className="mr-auto pt-2">
             Name:
           </label>
-          <input type="text" className="form-control" id="Name" onChange={handelForm} value={newComment.userEmail} name="userEmail"/>
+          <input type="text" className="form-control" id="Name" onChange={handelForm} value={newComment.userName} name="userName"/>
         </div>
         <div className="form-group">
           <label htmlFor="textArea">Comment</label>

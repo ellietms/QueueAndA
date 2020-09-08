@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import AnswerBoxes from "./AnswerBoxes";
+import ShowComment from "./ShowComment";
 
 const Answers = ({questionDetails,searchValue}) => {
   return (
@@ -12,6 +13,7 @@ const Answers = ({questionDetails,searchValue}) => {
               <div className="container" key={index}>
                 <div>
                   <AnswerBoxes answer={answer} />
+                  <ShowComment commentProps={answer.comments}/> 
                 </div>
               </div>
             );

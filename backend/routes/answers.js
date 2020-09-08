@@ -1,6 +1,13 @@
 const router = require("express").Router();
 const Answer = require("../models/answer.model");
 const Comment = require("../models/comment.model");
+const { request, response } = require("express");
+
+router.route("/:id/comment").get((request, response) => {
+  const answerId = request.params.Id;
+  Answer.findById(answerId)
+  .populate("comments")
+})
 
 
 
