@@ -3,24 +3,22 @@ import SubmitButton from './SubmitButton';
 import 'bootstrap/dist/css/bootstrap.css';
 import axios from 'axios';
 
-function CommentForm(props) {
-	console.log("id",props.questionId);
+function CommentForm({answerId,questionId}) {
 	const [ newComment, setNewComment ] = useState({
 		userName: '',
 		comment: ''
 	});
 
-	function submitHandler(e) {
-		e.preventDefault();
+	function submitHandler(event) {
+		event.preventDefault();
 		axios
-			.post(`https://queueanda.herokuapp.com/answers/${props.answerId}/comment`, newComment)
-			.then((response) => {console.log(response);})
+			.post(`https://queueanda.herokuapp.com/answers/${answerId}/comment`, newComment)
+			.then((response) => {console.log(response);window.location.assign(`/questions/${questionId}`)})
 			.catch((err) => console.log(err));
 		clearData();
 	}
 	function clearData() {
 		setNewComment({ userName: '', comment: '' });
-		props.displayState(false);
 	}
 
 	const handelForm = (event) => {
