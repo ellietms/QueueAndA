@@ -39,7 +39,7 @@ const SelectedQs = ({ questions, specificModule, searchValue, noAnswer, currentQ
                 <div className="d-flex justify-content-between pl-2">
                   <TitleOfQuestion title={question.title} />
                 </div>
-                <div className="pl-3 pb-4">
+                <div className="pl-3 pb-4" >
                   <Question question={question.question} />
                   <AnswerNo answerNo={question.answers.length} />
                 </div>

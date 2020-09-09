@@ -10,19 +10,19 @@
   color: #2F4F4F;
 }
 .pagination > li > a{
-  border: 1px solid #e5e500
+  border: 1px solid #20B2AA
   ;
   padding: 5px 10px;
   outline: none;
   cursor: pointer;
 }
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
-  background-color: #FFDAB9 ;
+  background-color: #fc7907 ;
   border-color: #2F4F4F;
   outline: none ;
 }
 .pagination > li > a, .pagination > li > span{
-  color: #e5e500
+  color: #1E90FF
 
 }
 .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
