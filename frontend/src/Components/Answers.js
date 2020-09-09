@@ -2,16 +2,19 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import AnswerBoxes from "./AnswerBoxes";
 
+
 const Answers = ({questionDetails,searchValue}) => {
+  console.log("Q",questionDetails)
   return (
     <div className="container">
-      {questionDetails ? (
+      {questionDetails.answers ? (
         <div>
-          {questionDetails.filter(answer => answer.answer.toLowerCase().includes(searchValue.toLowerCase()) || searchValue === "" ).map((answer, index) => {
+          {questionDetails.answers.filter(answer => answer.answer.toLowerCase().includes(searchValue.toLowerCase()) || searchValue === "" ).map((answer, index) => {
             return (
               <div className="container" key={index}>
                 <div>
-                  <AnswerBoxes answer={answer} />
+                  <AnswerBoxes answer={answer}
+                   questionDetails={questionDetails}/>
                 </div>
               </div>
             );
