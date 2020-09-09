@@ -21,7 +21,7 @@ const MainPage = () => {
   const [noAnswer, setNoAnswer] = useState("");
   useEffect(() => {
     axios
-      .get("https://queueanda.herokuapp.com/questions")
+      .get("https://status200.herokuapp.com/questions")
       .then((response) => {
         setQuestions(response.data.questions);
       })

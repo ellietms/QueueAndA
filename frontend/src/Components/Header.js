@@ -14,7 +14,7 @@ const Header = ({handleSearchValue,value}) => {
             className="my-3 rounded-circle ml-4"
             alt=""
           />
-          <span className="logo my-3 pl-2 pt-1 pr-3">QueueAndA</span>
+          <span className="logo my-3 pl-3 pt-1 pr-3 text-white">QueueAndA</span>
       </Link>    
         <MainPageSearch value={value} handleSearchValue={handleSearchValue}/>  
     </div>
