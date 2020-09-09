@@ -1,19 +1,26 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import Comment from './Comment';
+import ReactHtmlParser from 'react-html-parser';
+import ShowComment from "./ShowComment";
+import CommentForm from './CommentForm';
 
-const AnswerBoxes = ({ answer }) => {
-	let [ displayComponent, setDisplayComponent ] = useState(null);
+const AnswerBoxes = ({ answer,questionDetails }) => {
+	console.log("answer",questionDetails._id);
+	let [ displayComponent, setDisplayComponent ] = useState(false);
 	return !displayComponent ? (
 		<div className="container answer_box my-4">
 			<label className="px-3 nameOfPerson">{answer.userEmail}</label>
-			<div className="answer_font px-3 py-2">{answer.answer}</div>
-			<div>{answer.createdAt}</div>
-			<button onClick={() => setDisplayComponent('compComment')}>comment</button>
+			<div className="answer_font px-3 py-2">{ReactHtmlParser(`${answer.answer}`)}</div>
+			<ShowComment commentProps={answer.comments} /> 
+			<button onClick={() => setDisplayComponent(!displayComponent)}>comment</button>
+			<div className="d-flex justify-content-end time">
+        Time:{answer.createdAt.split("T")[1].split(".")[0]}
+      </div>
 		</div>
 	) : (
 		<div>
-			<Comment answerId={answer._id} displayState={setDisplayComponent} />
+			<CommentForm answerId={answer._id} 
+			questionId={questionDetails._id} />
 		</div>
 	);
 };

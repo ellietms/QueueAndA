@@ -3,7 +3,8 @@ import SubmitButton from './SubmitButton';
 import 'bootstrap/dist/css/bootstrap.css';
 import axios from 'axios';
 
-function Comment(props) {
+function CommentForm(props) {
+	console.log("id",props.questionId);
 	const [ newComment, setNewComment ] = useState({
 		userName: '',
 		comment: ''
@@ -13,13 +14,13 @@ function Comment(props) {
 		e.preventDefault();
 		axios
 			.post(`https://queueanda.herokuapp.com/answers/${props.answerId}/comment`, newComment)
-			.then((response) => console.log(response))
+			.then((response) => {console.log(response);})
 			.catch((err) => console.log(err));
 		clearData();
 	}
 	function clearData() {
 		setNewComment({ userName: '', comment: '' });
-		props.displayState(null);
+		props.displayState(false);
 	}
 
 	const handelForm = (event) => {
@@ -61,4 +62,4 @@ function Comment(props) {
 	);
 }
 
-export default Comment;
+export default CommentForm;

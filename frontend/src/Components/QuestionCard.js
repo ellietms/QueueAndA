@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
+import ReactHtmlParser from 'react-html-parser';
 import Category from "./Category";
 import TitleOfQuestion from "./TitleOfQuestion";
 import "../Components/App.css";
@@ -41,7 +42,6 @@ const QuestionCard = ({ questions, specificModule, searchValue, noAnswer, curren
                 <TitleOfQuestion title={question.title} />
               </div>
               <div className="pl-3 pb-4">
-                {/* <Question question={question.question} /> */}
                 <AnswerNo answerNo={question.answers.length} />
               </div>
               <div className="d-flex date-main">
