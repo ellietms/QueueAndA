@@ -1,8 +1,7 @@
 body {
   margin: 0px 0px;
   padding: 0px 0px;
-  background-color: #323232
-  ;
+  background-color: transparent;
 }
 
 img {
@@ -22,9 +21,10 @@ label{
 .header {
   display: flex;
   flex-flow: wrap;
-  background-color:#ff0000	;
+  background-color:#efefef	;
   width: 100%;
   margin-right: auto;
+  /* color: black; */
 }
 
 .plain_header{
@@ -75,7 +75,7 @@ label{
 }
 
 .question_card {
-  background-color:#fff;
+  background-color:rgb(228, 228, 228);
   margin-top: 20px;
   padding-top: 30px;
 }
@@ -86,7 +86,7 @@ label{
   font-size: 18px;
   font-weight: bold;
   color: white;
-  background-color: #0095ff;
+  background-color: #e9391b;
   padding: 4px 4px;
 }
 
@@ -108,19 +108,14 @@ label{
 }
 
 .header_button {
-  border-radius: 8px;
-  border-color: white;
-  padding: 0px 0px;
+  /* border-top: 10px solid ; */
   /* font-size: 18px; */
-  font-weight: bold;
-  color: white;
-  background-color: #0095ff;
+  /* background-color:#ed4343; */
 }
 
 .header_button:hover {
-  border-radius: 8px;
-  background-color: #065794;
   color: white;
+  border-top: 10px solid #ed4343;
 }
 
 .pagination_button {
@@ -139,9 +134,7 @@ label{
 }
 
 .search_mainPage {
-  padding: 5px 10px;
-  width:150px;
-  border: 3px solid rgb(21, 60, 235);
+  border: 1px solid rgb(255, 244, 241);
 }
 
 .title_font {
@@ -273,12 +266,16 @@ label.title_font:hover {
   }
 
 .header_button {
-  font-size: 18px; 
-  font-weight: bold;
-  margin-left: 20px;
-  padding-left: 5px;
-  padding-right: 3px;
+  padding: 0px 0px;
+  /* font-size: 18px; */
+  /* background-color:#ed4343; */
 }
+
+.header_button:hover {
+  color: white;
+  border-top: 10px solid #ed4343;;
+}
+
 .text {
   font-size: 30px;
 }
@@ -290,5 +287,10 @@ label.title_font:hover {
 }
 .search_mainPage {
   width: 500px;
+  margin-left:20%;
+  margin-right: auto;
+}
+img{
+  margin-left: 10%;
 }
 }
