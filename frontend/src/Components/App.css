@@ -211,6 +211,7 @@ label.title_font:hover {
   background-color: rgb(235, 231, 231);
   border-radius: 10px;
   width: 80%;
+  overflow:scroll;
 }
 
 .nameOfPerson {
@@ -258,6 +259,27 @@ label.title_font:hover {
   font-weight: bold;
   color: rgb(131, 131, 131);
   padding-bottom: 10px;
+}
+
+.comment{
+  font-weight: bold;
+  color: #7e898d;
+  border-bottom: 1px solid rgb(200, 198, 198);
+  margin-top: 4px;
+  overflow:scroll;
+}
+
+.title_comment{
+  font-weight: bold;
+  color: #2f3133;
+  padding-bottom: 5px;
+}
+
+.comment_button{
+  margin-left: auto;
+  display: flex;
+  color: #065794;
+  cursor: pointer;
 }
 
 @media only screen and (min-width:1000px){ 

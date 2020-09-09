@@ -6,9 +6,12 @@ const ShowComment = ({commentProps}) => {
 		<div>
 			{commentProps.map((comment, index) => {
 				return (
-					<p key={index} className="container answer_box my-4">
+					<div key={index} className="container comment">
+						<div>
+						<i className="fas fa-comments pr-1"></i>	
 						{comment.comment}
-					</p>
+						</div>
+					</div>
 				);
 			})}
 		</div>
