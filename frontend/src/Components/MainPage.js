@@ -19,7 +19,7 @@ const MainPage = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("https://status200.herokuapp.com/questions")
+      .get("https://queueanda.herokuapp.com/questions")
       .then((response) => {
         setQuestions(response.data.questions);
         setIsLoading(false);
