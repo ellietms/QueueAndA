@@ -12,7 +12,7 @@ function Comment(props) {
 	function submitHandler(e) {
 		e.preventDefault();
 		axios
-			.post(`http://localhost:5000/answers/${props.answerId}/comment`, newComment)
+			.post(`https://queueanda.herokuapp.com/answers/${props.answerId}/comment`, newComment)
 			.then((response) => console.log(response))
 			.catch((err) => console.log(err));
 		clearData();

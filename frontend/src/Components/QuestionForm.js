@@ -45,10 +45,7 @@ const QuestionForm = () => {
   const handleTitle = (event) => {
     setNewQuestion({ ...newQuestion, title: event.target.value });
   };
-
-  const handleQuestion = (event) => {
-    setNewQuestion({ ...newQuestion, question: event.target.value });
-  };
+  
   const handleCategory = (event) => {
     setNewQuestion({ ...newQuestion, category: event.target.value });
   };
