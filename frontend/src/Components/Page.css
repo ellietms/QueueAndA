@@ -10,7 +10,7 @@
   color: #2F4F4F;
 }
 .pagination > li > a{
-  border: 1px solid #e5e500
+  border: 1px solid #008B8B
   ;
   padding: 5px 10px;
   outline: none;
@@ -22,7 +22,7 @@
   outline: none ;
 }
 .pagination > li > a, .pagination > li > span{
-  color: #e5e500
+  color: #000000
 
 }
 .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{

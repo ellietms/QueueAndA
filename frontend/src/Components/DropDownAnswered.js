@@ -5,7 +5,7 @@ const DropDownAnswered = ({ showQuestionWithNoAnswer }) => {
   return (
     
      <select
-        className="border-0 bg-transparent ml-2 text-white"
+        className="border-0 bg-transparent ml-2 text-dark"
         onChange={(event) => showQuestionWithNoAnswer(event.target.value)}
       >
         <option value={""} className='text-white bg-dark'>All Questions</option>

@@ -6,7 +6,7 @@ import "../App";
 const Button = () => {
   return (
       <button type="button" className="btn header_button py-2">
-        <Link to="/ask" style={{ textDecoration: "none",color:"white"}}>
+        <Link to="/ask" style={{ textDecoration: "none",color:"black"}}>
           Ask a question
         </Link>
       </button>

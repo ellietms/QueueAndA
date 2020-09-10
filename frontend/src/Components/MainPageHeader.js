@@ -14,7 +14,7 @@ const MainPageHeader = ({handleSearchValue,value,setSpecificModule,setNoAnswer})
             className="d-flex align-top my-3 mx-1 rounded-circle"
             alt="Q&A logo"
           />
-          <span className="navbar-brand mb-0 logo my-3 text-white">QueueAndA</span>
+          <span className="navbar-brand mb-0 logo my-3 text-danger">QueueAndA</span>
         <MainPageSearch value={value} handleSearchValue={handleSearchValue}/> 
         </div>
         <div className="d-flex ml-auto my-3">

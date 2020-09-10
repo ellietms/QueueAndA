@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 const DropDownCategories = ({showSpecificModule}) => {
   return (
       <select
-        className="border-0 bg-transparent ml-2 text-white"
+        className="border-0 bg-transparent ml-2 text-dark"
         onChange={(event) => showSpecificModule(event.target.value)}
       >
         <option value={""} className='text-white bg-dark'>
