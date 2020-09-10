@@ -6,6 +6,7 @@ import TitleOfQuestion from "./TitleOfQuestion";
 import "../Components/App.css";
 import Question from "./Question";
 import AnswerNo from "./AnswerNo";
+import QuestionView from "./QuestionView"
 
 const SelectedQs = ({ questions, specificModule, searchValue, noAnswer, currentQuestions  }) => {
   
@@ -26,6 +27,7 @@ const SelectedQs = ({ questions, specificModule, searchValue, noAnswer, currentQ
           question.answers.length.toString(10) === noAnswer || noAnswer === ""
       )
       .map((question, index) => {
+        console.log(question);
         return (
           <Link
             to={`/questions/${question._id}`}
@@ -42,6 +44,7 @@ const SelectedQs = ({ questions, specificModule, searchValue, noAnswer, currentQ
                 <div className="pl-3 pb-4">
                   <Question question={question.question} />
                   <AnswerNo answerNo={question.answers.length} />
+                  <QuestionView question={question} />
                 </div>
                 <div className="d-flex date-main">
                   Date:{question.createdAt.split("T")[0]}
