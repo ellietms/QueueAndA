@@ -1,15 +1,16 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import ReactHtmlParser from "react-html-parser";
 
 const ShowComment = ({commentProps}) => {
 	return (
 		<div>
 			{commentProps.map((comment, index) => {
 				return (
-					<div key={index} className="container comment">
+					<div key={index} className="container comment bg-dark text-primary small">
 						<div>
 						<i className="fas fa-comments pr-1"></i>	
-						{comment.comment}
+						{ReactHtmlParser(`${comment.comment}`)}
 						</div>
 					</div>
 				);
