@@ -6,6 +6,8 @@ import TitleOfQuestion from "./TitleOfQuestion";
 import "../Components/App.css";
 import Question from "./Question";
 import AnswerNo from "./AnswerNo";
+import QuestionView from "./QuestionView";
+import DataTime from "./DataTime";
 
 const SelectedQs = ({ questions, specificModule, searchValue, noAnswer, currentQuestions  }) => {
   
@@ -27,29 +29,24 @@ const SelectedQs = ({ questions, specificModule, searchValue, noAnswer, currentQ
       )
       .map((question, index) => {
         return (
-          <Link
-            to={`/questions/${question._id}`}
-            style={{ textDecoration: "none", color: "black" }}
-          >
-            <div className="">
-              <div key={index} className="container question_card">
-                <div className="pt-4 pl-3">
-                  <Category category={question.category} />
-                </div>
-                <div className="d-flex justify-content-between pl-2">
-                  <TitleOfQuestion title={question.title} />
-                </div>
-                <div className="pl-3 pb-4">
-                  <Question question={question.question} />
-                  <AnswerNo answerNo={question.answers.length} />
-                </div>
-                <div className="d-flex date-main">
-                  Date:{question.createdAt.split("T")[0]}
-                </div>
-                <div className="mb-2" />
-              </div>
+          <div key={index} className="container question_card">
+            <div className="pt-4 pl-3">
+              <Category category={question.category} />
             </div>
-          </Link>
+            <Link to={`/questions/${question._id}`} style={{ textDecoration: 'none', color: 'black' }}>
+              <div className="d-flex justify-content-between pl-2">
+                <TitleOfQuestion title={question.title} />
+              </div>
+              <div className="pl-3 pb-4">
+                <Question question={question.question} />
+              </div>
+            </Link>
+            <AnswerNo answerNo={question.answers.length} />
+            <QuestionView question={question.view} />
+            <div className="d-flex date-main">
+            <DataTime datatime={question.createdAt}/>
+          </div>
+          </div>
         );
       });
   };
