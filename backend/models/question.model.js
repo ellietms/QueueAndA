@@ -11,6 +11,7 @@ const questionSchema = new Schema(
        type: Schema.Types.ObjectId, ref: "Answer"
     }],
     resolved: { type: Boolean, default: false },
+    view: {type: Number, required:true },
   },
   {
     timestamps: true,

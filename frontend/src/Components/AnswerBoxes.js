@@ -7,10 +7,10 @@ const AnswerBoxes = ({ answer }) => {
       <label className="px-3 nameOfPerson">{answer.userEmail}</label>
       <div className="answer_font px-3 py-2">{answer.answer}</div>
       <div className="d-flex justify-content-end date">
-        Date:{answer.createdAt.split("T")[0]}
+      <i class='far fa-calendar-alt'> {answer.createdAt.split("T")[0]}</i>
       </div>
       <div className="d-flex justify-content-end time">
-        Time:{answer.createdAt.split("T")[1].split(".")[0]}
+      <i class='far fa-clock'>{answer.createdAt.split("T")[1].split(".")[0]}</i>
       </div>
     </div>
   );
