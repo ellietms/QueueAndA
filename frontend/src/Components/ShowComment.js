@@ -7,7 +7,7 @@ const ShowComment = ({commentProps}) => {
 		<div>
 			{commentProps.map((comment, index) => {
 				return (
-					<div key={index} className="container comment bg-dark text-primary small">
+					<div key={index} className="container comment bg-white text-primary small">
 						<div>
 						<i className="fas fa-comments pr-1"></i>	
 						{ReactHtmlParser(`${comment.comment}`)}

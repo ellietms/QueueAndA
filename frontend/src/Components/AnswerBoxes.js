@@ -9,8 +9,8 @@ const AnswerBoxes = ({ answer, questionDetails }) => {
   let answerBox;
   if (displayComponent === false) {
     answerBox = (
-      <div className="container answer_box my-4 bg-dark text-warning">
-        <label className="px-3 nameOfPerson text-danger">{answer.userEmail}</label>
+      <div className="container answer_box my-4 bg-secondary text-white">
+        <label className="px-3 nameOfPerson text-success">{answer.userEmail}</label>
         <div className="answer_font px-3 py-2">
           {ReactHtmlParser(`${answer.answer}`)}
         </div>
@@ -29,8 +29,8 @@ const AnswerBoxes = ({ answer, questionDetails }) => {
   } else {
     answerBox = (
       <div>
-        <div className="container answer_box my-4 bg-dark text-warning">
-          <label className="px-3 nameOfPerson text-danger">{answer.userEmail}</label>
+        <div className="container answer_box my-4 bg-secondary text-white">
+          <label className="px-3 nameOfPerson text-success">{answer.userEmail}</label>
           <div className="answer_font px-3 py-2 ">
             {ReactHtmlParser(`${answer.answer}`)}
           </div>
