@@ -10,7 +10,9 @@ const AnswerBoxes = ({ answer, questionDetails }) => {
   if (displayComponent === false) {
     answerBox = (
       <div className="container answer_box my-4 bg-secondary text-white">
-        <label className="px-3 nameOfPerson text-success">{answer.userEmail}</label>
+        <label className="px-3 nameOfPerson text-success">
+          {answer.userEmail}
+        </label>
         <div className="answer_font px-3 py-2">
           {ReactHtmlParser(`${answer.answer}`)}
         </div>
@@ -22,8 +24,10 @@ const AnswerBoxes = ({ answer, questionDetails }) => {
           ></i>
         </button>
         <div className="d-flex justify-content-end time py-3">
-          <i class='far fa-clock'>{answer.createdAt.split("T")[1].split(".")[0]}</i>
-          <i class='far fa-calendar-alt'> {answer.createdAt.split("T")[0]}</i>
+          <i class="far fa-clock">
+            {answer.createdAt.split("T")[1].split(".")[0]}
+          </i>
+          <i class="far fa-calendar-alt"> {answer.createdAt.split("T")[0]}</i>
         </div>
       </div>
     );
@@ -31,7 +35,9 @@ const AnswerBoxes = ({ answer, questionDetails }) => {
     answerBox = (
       <div>
         <div className="container answer_box my-4 bg-secondary text-white">
-          <label className="px-3 nameOfPerson text-success">{answer.userEmail}</label>
+          <label className="px-3 nameOfPerson text-success">
+            {answer.userEmail}
+          </label>
           <div className="answer_font px-3 py-2 ">
             {ReactHtmlParser(`${answer.answer}`)}
           </div>

@@ -9,34 +9,34 @@ img {
   height: 40px;
 }
 
-i{
+i {
   padding: 0px 0px;
   margin: 0px 0px;
 }
 
-label{
+label {
   margin: 0px 0px;
 }
 
 .header {
   display: flex;
   flex-flow: wrap;
-  background-color:#efefef	;
+  background-color: #efefef;
   width: 100%;
   margin-right: auto;
   /* color: black; */
 }
 
-.plain_header{
-    display: flex;
-    flex-flow: wrap;
-    background-color: rgb(219, 215, 215);
-    width: 100%;
-    margin-right: auto;
+.plain_header {
+  display: flex;
+  flex-flow: wrap;
+  background-color: rgb(219, 215, 215);
+  width: 100%;
+  margin-right: auto;
 }
 
-.plain_header:hover{
-  color:rgb(59, 75, 221);
+.plain_header:hover {
+  color: rgb(59, 75, 221);
 }
 
 .logo {
@@ -70,17 +70,17 @@ label{
   border-radius: 10px;
 }
 
-.Answer_form{
+.Answer_form {
   margin-top: 100px;
 }
 
 .question_card {
-  background-color:rgb(228, 228, 228);
+  background-color: rgb(228, 228, 228);
   margin-top: 20px;
   padding-top: 30px;
   width: 100%;
   height: 50vh;
-  overflow:auto;
+  overflow: auto;
 }
 
 .ask_button {
@@ -129,10 +129,10 @@ label{
   padding: 0px 0px;
 }
 
-.pagination_button:hover{
+.pagination_button:hover {
   border-radius: 8px;
   background-color: #065794;
-  color: white;	
+  color: white;
   cursor: pointer;
 }
 
@@ -146,15 +146,15 @@ label{
   font-weight: bolder;
 }
 
-.question_needs_answer{
+.question_needs_answer {
   font-size: 30px;
   color: rgb(32, 23, 138);
-  text-align:center ;
+  text-align: center;
   font-weight: bolder;
-  margin:30px 2px;
+  margin: 30px 2px;
 }
 
-.question_has_answer{
+.question_has_answer {
   font-size: 30px;
   color: rgb(32, 23, 138);
   font-weight: bolder;
@@ -184,7 +184,7 @@ label.title_font:hover {
   margin-top: auto;
 }
 
-.answer_form_top_text{
+.answer_form_top_text {
   font-size: 30px;
   color: rgb(32, 23, 138);
   font-weight: bolder;
@@ -214,7 +214,7 @@ label.title_font:hover {
   background-color: rgb(235, 231, 231);
   border-radius: 10px;
   width: 80%;
-  overflow:auto;
+  overflow: auto;
 }
 
 .nameOfPerson {
@@ -264,64 +264,64 @@ label.title_font:hover {
   padding-bottom: 10px;
 }
 
-.comment{
+.comment {
   font-weight: bold;
   color: #7e898d;
   border-bottom: 1px solid rgb(200, 198, 198);
   margin-top: 4px;
   width: 100%;
   height: 20vh;
-  overflow:auto;
+  overflow: auto;
 }
 
-.title_comment{
+.title_comment {
   font-weight: bold;
   color: #2f3133;
   padding-bottom: 5px;
 }
 
-.comment_button{
+.comment_button {
   margin-left: auto;
   display: flex;
   color: #065794;
   cursor: pointer;
 }
-.view{
+.view {
   font-size: 15px;
   color: rgb(57, 55, 55);
   padding-left: 90%;
 }
-@media only screen and (min-width:1000px){ 
-  .search_mainPage{
+@media only screen and (min-width: 1000px) {
+  .search_mainPage {
     width: 300px;
   }
 
-.header_button {
-  padding: 0px 0px;
-  /* font-size: 18px; */
-  /* background-color:#ed4343; */
-}
+  .header_button {
+    padding: 0px 0px;
+    /* font-size: 18px; */
+    /* background-color:#ed4343; */
+  }
 
-.header_button:hover {
-  color: white;
-  border-top: 10px solid #ed4343;;
-}
+  .header_button:hover {
+    color: white;
+    border-top: 10px solid #ed4343;
+  }
 
-.text {
-  font-size: 30px;
-}
-.pagination_button {
-  margin-left: auto;
-  width: 8cm;
-  text-align: center;
-  padding: 6px 5px;
-}
-.search_mainPage {
-  width: 500px;
-  margin-left:20%;
-  margin-right: auto;
-}
-img{
-  margin-left: 10%;
-}
+  .text {
+    font-size: 30px;
+  }
+  .pagination_button {
+    margin-left: auto;
+    width: 8cm;
+    text-align: center;
+    padding: 6px 5px;
+  }
+  .search_mainPage {
+    width: 500px;
+    margin-left: 20%;
+    margin-right: auto;
+  }
+  img {
+    margin-left: 10%;
+  }
 }

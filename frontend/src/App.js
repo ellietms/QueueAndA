@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "../src/App";
-import MainPage from './Components/MainPage';
+import MainPage from "./Components/MainPage";
 import "bootstrap/dist/css/bootstrap.css";
 import AskQuestionPage from "./Components/AskQuestionPage";
 import ShowQuestionPage from "./Components/ShowQuestionPage";

@@ -19,12 +19,18 @@ const Pagination = ({ questionsPerPage, totalQs, paginate, next, prev }) => {
           <span className="sr-only">First Page</span>
         </span>
         <li className="page-item">
-          <span  onClick={(e) => {e.preventDefault(); prev()}} className="page-link">
+          <span
+            onClick={(e) => {
+              e.preventDefault();
+              prev();
+            }}
+            className="page-link"
+          >
             Previous
           </span>
         </li>
 
-        {pageNumbers.map((number,index) => (
+        {pageNumbers.map((number, index) => (
           <li key={index} className="page-item ">
             <span
               onClick={(e) => {
@@ -39,7 +45,13 @@ const Pagination = ({ questionsPerPage, totalQs, paginate, next, prev }) => {
         ))}
 
         <li className="page-item">
-          <span onClick={(e) => {e.preventDefault(); next()}} className="page-link">
+          <span
+            onClick={(e) => {
+              e.preventDefault();
+              next();
+            }}
+            className="page-link"
+          >
             Next
           </span>
         </li>

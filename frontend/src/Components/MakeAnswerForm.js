@@ -2,9 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import AnswerForm from "./AnswerForm";
 
-
-
-const MakeAnswerForm = ({id}) => {
+const MakeAnswerForm = ({ id }) => {
   return (
     <div className="Answer_form">
       <span className="answer_form_top_text">
