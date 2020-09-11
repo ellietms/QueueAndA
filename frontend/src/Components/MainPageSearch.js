@@ -3,10 +3,10 @@ import "bootstrap/dist/css/bootstrap.css";
 
 const MainPageSearch = ({ handleSearchValue, value }) => {
   return (
-    <form class="ml-auto">
-      <div className="pt-1">
+    <form class="form-inline mr-auto">
+      <div className="md-form my-0">
         <input
-          className="secondPage_search"
+          className="search_mainPage"
           type="text"
           placeholder="Search"
           aria-label="Search"

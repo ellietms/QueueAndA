@@ -1,3 +1,7 @@
+html{
+  width: revert;
+}
+
 body {
   margin: 0px 0px;
   padding: 0px 0px;
@@ -345,7 +349,7 @@ label.title_font:hover {
 
 @media only screen and (min-width: 500px) and (max-width: 799px) {
   select {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .header {
@@ -365,9 +369,6 @@ label.title_font:hover {
     padding-top: 20px;
     font-weight: bold;
     font-size: 15px;
-  }
-  img{
-    margin-left:4%;
   }
   .margin_headerBtn {
     padding: 5px 5px;
@@ -457,10 +458,7 @@ label.title_font:hover {
     text-align: center;
     padding: 6px 5px;
   }
-
-  img {
-    margin-left: 1%;
-  }
+  
   .title_font {
     font-size: 25px;
   }
