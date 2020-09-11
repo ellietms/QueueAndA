@@ -7,10 +7,13 @@ const questionSchema = new Schema(
     title: { type: String, required: true },
     question: { type: String, required: true },
     category: { type: String, required: true },
-    answers: [{ 
-      type: Schema.Types.ObjectId, ref: "Answer"
-    }],
-    view: {type: Number, required: true },
+    answers: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Answer",
+      },
+    ],
+    view: { type: Number, required: true },
     resolved: { type: Boolean, default: false },
   },
   {

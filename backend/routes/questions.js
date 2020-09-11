@@ -24,7 +24,7 @@ router.route("/").get((request, response) => {
 //create new Question :
 router.route("/ask").post((request, response) => {
   const newQuestion = new Question(request.body);
-  newQuestion.view = 0 
+  newQuestion.view = 0;
   newQuestion
     .save()
     .then((question) => response.json({ question }))
@@ -41,11 +41,10 @@ router.route("/:questionId").get((request, response) => {
         path: "comments",
       },
     })
-    .then(questionWithId => { 
-      response.json({ questionWithId })
-      questionWithId.view = questionWithId.view + 1  
-      questionWithId
-      .save();
+    .then((questionWithId) => {
+      response.json({ questionWithId });
+      questionWithId.view = questionWithId.view + 1;
+      questionWithId.save();
     })
     .catch((error) => {
       response.status(500).json({ error });
@@ -66,7 +65,7 @@ router.route("/:id/answer").post((request, response) => {
             from: "QueueAndA.uk@gmail.com",
             to: question.userEmail,
             subject: "Notification From QueueAndA",
-            html:`<div><img src="https://www.newsshopper.co.uk/resources/images/2669419.jpg"/><h1>QueueAndA</h1><br><h3>Hi, your question has been answered by someone.</h3><h3>Your question is: </h3><h2>${question.question}</h2><h3>You can follow the link and get answer. </h3><h3><a href="https://cyf-queueanda.netlify.app/question/${question.id}">QueueAndA</a></h3></div>`
+            html: `<div><img src="https://www.newsshopper.co.uk/resources/images/2669419.jpg"/><h1>QueueAndA</h1><br><h3>Hi, your question has been answered by someone.</h3><h3>Your question is: </h3><h2>${question.question}</h2><h3>You can follow the link and get answer. </h3><h3><a href="https://cyf-queueanda.netlify.app/question/${question.id}">QueueAndA</a></h3></div>`,
           };
           transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
