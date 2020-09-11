@@ -30,7 +30,13 @@ select{
   width: 100%;
   margin-right: auto;
 }
-
+.search_mainPage {
+  border: 1px solid rgb(255, 244, 241);
+  width: 180px;
+  padding:5px 5px;
+  border-radius: 10px;
+  background-color: rgb(250, 250, 250);
+}
 
 .plain_header {
   display: flex;
@@ -55,14 +61,99 @@ select{
   justify-content: space-between;
 }
 
+.ask_button {
+  border-radius: 8px;
+  border-color: white;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  background-color: #e9391b;
+  padding: 4px 4px;
+}
+
 .Questions_amount{
   color:#8b1609;
   font-size: 30px;
   padding-top: 35px;
   font-weight: bolder;
   font-family: 'Bebas Neue', cursive;
+  margin-left: 20px;
 }
 
+.question_card {
+  background-color: rgb(255, 255, 255);
+  border-top: 1px solid #e9391b;
+  margin-top: 20px;
+  padding-top: 10px;
+  width: 80%;
+  overflow: auto;
+  height: 300px;
+}
+
+.title_font{
+  font-size: 15px;
+  color: rgb(216, 63, 36);
+  font-weight: bolder;
+  margin-left: 10px;
+  padding-top: 5px;
+  overflow:auto;
+  height:50px;
+}
+
+.question_font {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(109, 10, 10);
+  overflow: auto;
+  margin-left: 10px;
+  height:100px;
+}
+
+.has_answers {
+  color: rgb(66, 8, 8);
+  width: fit-content;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+.no_answers {
+  color: rgb(66, 8, 8);
+  width: fit-content;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+.view {
+  color: rgb(66, 8, 8);
+  width: fit-content;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: 2px;
+}
+
+.No_view{
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 2px;
+}
+
+.date {
+  font-weight: bold;
+  color: rgb(66, 8, 8);
+}
+
+.dataTime_container{
+  margin-left:2px;
+}
+.view_container{
+  display: flex;
+  flex-direction: column;
+  height: 8px;
+}
 .text {
   font-size: 15px;
   margin-top: 30px;
@@ -89,24 +180,6 @@ select{
   margin-top: 100px;
 }
 
-.question_card {
-  background-color: rgb(228, 228, 228);
-  margin-top: 20px;
-  padding-top: 30px;
-  width: 100%;
-  height: 50vh;
-  overflow: auto;
-}
-
-.ask_button {
-  border-radius: 8px;
-  border-color: white;
-  font-size: 18px;
-  font-weight: bold;
-  color: black;
-  background-color: #e9391b;
-  padding: 4px 4px;
-}
 
 .button {
   border-radius: 8px;
@@ -125,7 +198,7 @@ select{
   color: white;
 }
 
-.header_button {
+.header_button{
   color: black;
   font-weight: bold;
   font-size: smaller;
@@ -153,22 +226,9 @@ select{
   cursor: pointer;
 }
 
-.search_mainPage {
-  border: 1px solid rgb(255, 244, 241);
-  width: 180px;
-  padding:5px 5px;
-  border-radius: 10px;
-  background-color: rgb(250, 250, 250);
-}
 
-.title_font{
-  font-size: 30px;
-  color: rgb(216, 63, 36);
-  font-weight: bolder;
-  margin-left: 10px;
-}
 
-.question_needs_answer {
+/* .question_needs_answer {
   font-size: 30px;
   color: rgb(32, 23, 138);
   text-align: center;
@@ -182,7 +242,7 @@ select{
   font-weight: bolder;
   margin: 40px;
   margin-left: 10%;
-}
+} */
 
 label.title_font:hover {
   text-decoration: none;
@@ -190,12 +250,7 @@ label.title_font:hover {
   cursor: pointer;
 }
 
-.question_font {
-  font-size: 25px;
-  font-weight: bold;
-  color: rgb(53, 47, 47);
-  overflow: auto;
-}
+
 
 .title_Answer {
   font-size: 30px;
@@ -204,6 +259,7 @@ label.title_font:hover {
   margin-left: 15%;
   margin-bottom: 10px;
   margin-top: auto;
+  overflow: auto;
 }
 
 .answer_form_top_text {
@@ -253,38 +309,6 @@ label.title_font:hover {
   margin-left: auto;
 }
 
-.has_answers {
-  color: rgb(11, 124, 11);
-  width: fit-content;
-  padding: 10px 6px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.no_answers {
-  color: red;
-  width: fit-content;
-  padding: 10px 6px;
-  font-size: 20px;
-  font-weight: bold;
-}
-.time {
-  margin-right: 20px;
-  font-weight: bold;
-  color: rgb(131, 131, 131);
-}
-
-.date {
-  font-weight: bold;
-  color: rgb(131, 131, 131);
-}
-
-.date-main {
-  font-size: 17px;
-  font-weight: bold;
-  color: rgb(131, 131, 131);
-  padding-bottom: 10px;
-}
 
 .comment {
   font-weight: bold;
@@ -308,11 +332,7 @@ label.title_font:hover {
   color: #065794;
   cursor: pointer;
 }
-.view {
-  font-size: 15px;
-  color: rgb(57, 55, 55);
-  padding-left: 90%;
-}
+
 @media only screen and (min-width: 500px) and (max-width : 799px){
   
   select{

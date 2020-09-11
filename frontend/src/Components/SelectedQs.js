@@ -48,8 +48,10 @@ const SelectedQs = ({
               <Question question={question.question} />
             </div>
           </Link>
+          <div className="d-flex flex-column view_container ">
           <AnswerNo answerNo={question.answers.length} />
           <QuestionView question={question.view} />
+          </div>
           <div className="d-flex date-main">
             <DataTime datatime={question.createdAt} />
           </div>

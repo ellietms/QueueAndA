@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 const QuestionView = ({ question }) => {
   return (
     <div className="view">
-      <p>{question} View</p>
+      <p><span className="No_view">{question}</span>View</p>
     </div>
   );
 };
