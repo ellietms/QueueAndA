@@ -4,9 +4,9 @@ import "bootstrap/dist/css/bootstrap.css";
 const MainPageSearch = ({ handleSearchValue, value }) => {
   return (
     <form class="form-inline mr-auto">
-      <div className="md-form my-0">
+      <div className="md-form my-0 ">
         <input
-          class="form-control"
+          className="search_mainPage"
           type="text"
           placeholder="Search"
           aria-label="Search"

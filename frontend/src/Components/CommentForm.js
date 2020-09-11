@@ -50,14 +50,13 @@ const CommentForm = (props) => {
   };
   return (
     <div>
-      <a
+      <span
         className="btn btn-link"
-        href=""
         data-toggle="modal"
         data-target="#ModalExample"
       >
         Add A Comment
-      </a>
+      </span>
 
       <div id="ModalExample" className="modal fade">
         <div className="modal-dialog">
@@ -66,7 +65,7 @@ const CommentForm = (props) => {
               <h4 className="modal-title text-xs-center">Comment Box</h4>
             </div>
             <div className="modal-body">
-              <form role="form" onSubmit={submitHandler}>
+              <form  onSubmit={submitHandler}>
                 <input type="hidden" name="_token" value="" />
                 <div className="form-group">
                   <label className="control-label">Name:</label>
