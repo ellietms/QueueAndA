@@ -82,7 +82,7 @@ select{
 
 .question_card {
   background-color: rgb(255, 255, 255);
-  border-top: 1px solid #e9391b;
+  border-top: 1px solid #a01800;
   margin-top: 20px;
   padding-top: 10px;
   width: 80%;
@@ -218,17 +218,20 @@ select{
   font-size: 12px;
   padding: 0px 0px;
 }
+.pagination > li > a {
+  border: 1px solid #a31607;
+}
 
 .pagination_button:hover {
   border-radius: 8px;
-  background-color: #065794;
+  background-color: #a31607;
   color: white;
   cursor: pointer;
+  text-decoration: none;
 }
 
 
-
-/* .question_needs_answer {
+.question_needs_answer {
   font-size: 30px;
   color: rgb(32, 23, 138);
   text-align: center;
@@ -242,7 +245,7 @@ select{
   font-weight: bolder;
   margin: 40px;
   margin-left: 10%;
-} */
+}
 
 label.title_font:hover {
   text-decoration: none;
@@ -467,5 +470,5 @@ label.title_font:hover {
   .Questions_amount{
     margin-left:100px;
   }
-  
+
 }
