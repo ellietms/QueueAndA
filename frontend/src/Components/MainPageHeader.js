@@ -10,7 +10,7 @@ const MainPageHeader = ({handleSearchValue,value,setSpecificModule,setNoAnswer})
     <div className="header">
           <img
             src="https://www.newsshopper.co.uk/resources/images/2669419.jpg"
-            className="d-flex align-top my-3 mx-1 rounded-circle"
+            className="d-flex align-top my-3 rounded-circle"
             alt="Q&A logo"
           />
           <span className="navbar-brand mb-0 logo my-3">QueueAndA</span>

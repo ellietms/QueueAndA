@@ -7,7 +7,7 @@ import "../App";
 const Button = () => {
   const Link = styled(NavLink)`     
   textDecoration: "none";
-  color:black
+  color:black;
 
    &:hover {
    color: red;
