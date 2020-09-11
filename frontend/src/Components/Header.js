@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import MainPageSearch from "./MainPageSearch";
+import SecondPageSearch from './SecondPageSearch';
 import { Link } from "react-router-dom";
 
 const Header = ({ handleSearchValue, value }) => {
@@ -17,7 +17,7 @@ const Header = ({ handleSearchValue, value }) => {
         />
         <span className="logo">QueueAndA</span>
       </Link>
-      <MainPageSearch value={value} handleSearchValue={handleSearchValue} />
+      <SecondPageSearch value={value} handleSearchValue={handleSearchValue} />
     </div>
   );
 };
