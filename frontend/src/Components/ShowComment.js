@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import DataTime from "./DataTime";
 
 const ShowComment = ({commentProps}) => {
 	return (
@@ -10,6 +11,7 @@ const ShowComment = ({commentProps}) => {
 						<div>
 						<i className="fas fa-comments pr-1"></i>	
 						{comment.comment}
+						<DataTime datatime={comment.createdAt}/>
 						</div>
 					</div>
 				);

@@ -4,7 +4,6 @@ import AnswerBoxes from "./AnswerBoxes";
 
 
 const Answers = ({questionDetails,searchValue}) => {
-  console.log("Q",questionDetails)
   return (
     <div className="container">
       {questionDetails.answers ? (
@@ -14,7 +13,7 @@ const Answers = ({questionDetails,searchValue}) => {
               <div className="container" key={index}>
                 <div>
                   <AnswerBoxes answer={answer}
-                   questionDetails={questionDetails}/>
+                  questionDetails={questionDetails}/>
                 </div>
               </div>
             );

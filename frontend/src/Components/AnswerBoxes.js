@@ -22,7 +22,8 @@ const AnswerBoxes = ({ answer, questionDetails }) => {
           add comment
         </div>
         <div className="d-flex justify-content-end time py-3">
-          Time:{answer.createdAt.split("T")[1].split(".")[0]}
+          <i class='far fa-clock'>{answer.createdAt.split("T")[1].split(".")[0]}</i>
+          <i class='far fa-calendar-alt'> {answer.createdAt.split("T")[0]}</i>
         </div>
       </div>
     );
