@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import ReactHtmlParser from "react-html-parser";
+import DataTime from "./DataTime";
 
 const ShowComment = ({commentProps}) => {
 	return (
@@ -11,6 +12,7 @@ const ShowComment = ({commentProps}) => {
 						<div>
 						<i className="fas fa-comments pr-1"></i>	
 						{ReactHtmlParser(`${comment.comment}`)}
+						<DataTime datatime={comment.createdAt}/>
 						</div>
 					</div>
 				);
