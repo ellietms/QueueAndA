@@ -15,7 +15,7 @@ const MainPageHeader = ({handleSearchValue,value,setSpecificModule,setNoAnswer})
           />
           <span className="navbar-brand mb-0 logo my-3">QueueAndA</span>
         <MainPageSearch value={value} handleSearchValue={handleSearchValue}/> 
-        <div className="d-flex margin_headerBtn">
+        <div className="d-flex margin_headerBtn p-1">
         <DropDownAnswered 
            showQuestionWithNoAnswer={(question) => setNoAnswer(question)}/>
         <DropDownCategories showSpecificModule={(category) => setSpecificModule(category)}/> 

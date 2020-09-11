@@ -48,8 +48,7 @@ const MainPage = () => {
       ) : (
         <div className="container">
           <div
-            className="container text  my-auto"
-            style={{ color: "rgb(150, 158, 231)" }}
+            className="container my-auto Questions_amount"
           >
             {questions.length} Questions
           </div>

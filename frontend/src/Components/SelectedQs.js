@@ -10,7 +10,6 @@ import QuestionView from "./QuestionView";
 import DataTime from "./DataTime";
 
 const SelectedQs = ({
-  questions,
   specificModule,
   searchValue,
   noAnswer,
