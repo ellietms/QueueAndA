@@ -6,6 +6,7 @@ const Select = styled.select`
   cursor:pointer;
   margin-right:20px;
   font-weight:bold;
+  color:#a31607;
 }
   &:hover {
     color: red;

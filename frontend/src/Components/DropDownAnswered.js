@@ -7,7 +7,7 @@ const Select = styled.select`
   cursor:pointer;
   margin-right:20px;
   font-weight:bold;
-  transition: all 0.5s;
+  color:#a31607;
 }
   &:hover {
     color: red;
