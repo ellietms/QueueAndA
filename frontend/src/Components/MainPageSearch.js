@@ -13,7 +13,6 @@ const MainPageSearch = ({ handleSearchValue, value }) => {
           value={value}
           onChange={(event) => handleSearchValue(event.target.value)}
         />
-        <i class="fas fa-search fa-1x text-white ml-2 mt-2"></i>
       </div>
     </form>
   );

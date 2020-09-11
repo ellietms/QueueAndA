@@ -1,15 +1,26 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Link } from "react-router-dom";
+import {NavLink} from 'react-router-dom';
+import styled from 'styled-components';
 import "../App";
 
 const Button = () => {
+  const Link = styled(NavLink)`     
+  textDecoration: "none";
+  color:black
+
+  &:hover {
+    color: red;
+    textDecoration: "none";
+    display:block
+  }`
   return (
-    <button type="button" className="btn header_button py-2">
-      <Link to="/ask" style={{ textDecoration: "none", color: "black" }}>
-        Ask a question
-      </Link>
+    <Link to="/ask">
+    <button type="button" className="btn header_button">
+        Ask question
     </button>
+     </Link>
   );
 };
 

@@ -1,10 +1,22 @@
 import React from "react";
+import styled from 'styled-components';
 import "bootstrap/dist/css/bootstrap.css";
+
+const Select = styled.select`     
+  cursor:pointer;
+  margin-right:20px;
+  font-weight:bold;
+}
+  &:hover {
+    color: red;
+    border-top:1px solid #ed4343;;
+  }`
+
 
 const DropDownCategories = ({ showSpecificModule }) => {
   return (
-    <select
-      className="border-0 bg-transparent ml-2 text-dark"
+    <Select
+      className="border-0 bg-transparent ml-2"
       onChange={(event) => showSpecificModule(event.target.value)}
     >
       <option value={""} className="text-white bg-dark">
@@ -34,7 +46,7 @@ const DropDownCategories = ({ showSpecificModule }) => {
       <option value={"other"} className="text-white bg-dark">
         other
       </option>
-    </select>
+    </Select>
   );
 };
 

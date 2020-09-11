@@ -17,15 +17,13 @@ const MainPageHeader = ({handleSearchValue,value,setSpecificModule,setNoAnswer})
           <span className="navbar-brand mb-0 logo my-3 text-danger">QueueAndA</span>
         <MainPageSearch value={value} handleSearchValue={handleSearchValue}/> 
         </div>
-        <div className="d-flex ml-auto my-3">
+        <div className="d-flex ml-auto">
         <AskButton/>
         <DropDownAnswered 
            showQuestionWithNoAnswer={(question) => setNoAnswer(question)}/>
         <DropDownCategories showSpecificModule={(category) => setSpecificModule(category)}/> 
-        </div>
-        </div>
-    //   </nav>
-    // </div>
+      </div>
+    </div>
   );
 };
 
