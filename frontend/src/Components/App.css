@@ -359,9 +359,9 @@ label.title_font:hover {
   cursor: pointer;
 }
 
-/* .add_comment{
+.add_comment{
   magin-left:200px;
-} */
+}
 
 @media only screen and (min-width: 500px) and (max-width: 799px) {
   select {
