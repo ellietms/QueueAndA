@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import Category from "./Category";
 import TitleOfQuestion from "./TitleOfQuestion";
 import "../Components/App.css";
-import Question from "./Question";
+import QuestionSecondPage from "./QuestionSecondPage";
 
 const QuestionBox = ({ questionDetails }) => {
   return (
@@ -12,11 +12,11 @@ const QuestionBox = ({ questionDetails }) => {
         <div className="pt-4 pl-3">
           <Category category={questionDetails.category} />
         </div>
-        <div className="d-flex justify-content-between pl-2">
+        <div className="d-flex justify-content-between pl-2 ">
           <TitleOfQuestion title={questionDetails.title} />
         </div>
         <div className="pl-3 pb-4">
-          <Question question={questionDetails.question} />
+          <QuestionSecondPage question={questionDetails.question} />
         </div>
         <div className="mb-2"></div>
       </div>

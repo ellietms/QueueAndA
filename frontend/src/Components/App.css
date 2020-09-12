@@ -73,7 +73,6 @@ select {
 }
 
 
-
 .ask_button {
   display: flex;
   justify-content: space-between;
@@ -125,6 +124,15 @@ select {
   overflow: auto;
   margin-left: 10px;
   height: 100px;
+}
+
+.question_font_second_page{
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(109, 10, 10);
+  overflow: auto;
+  margin-left: 10px;
+  height: fit-content;
 }
 
 .has_answers {
@@ -249,7 +257,7 @@ select {
 
 .question_needs_answer {
   font-size: 30px;
-  color: rgb(32, 23, 138);
+  color: rgb(107, 9, 9)0);
   text-align: center;
   font-weight: bolder;
   margin: 30px 2px;
@@ -257,10 +265,10 @@ select {
 
 .question_has_answer {
   font-size: 30px;
-  color: rgb(32, 23, 138);
+  color: rgb(95, 22, 20);
   font-weight: bolder;
   margin: 40px;
-  margin-left: 10%;
+  margin-left: 13%;
 }
 
 label.title_font:hover {
@@ -296,8 +304,9 @@ label.title_font:hover {
 }
 
 .question_box {
-  background-color: rgb(235, 231, 231);
-  border-radius: 10px;
+  border-top: 1px solid rgb(92, 17, 17);
+  border-bottom: 1px solid rgb(92, 17, 17);
+  width:50%;
 }
 
 .answer_font {
@@ -306,7 +315,7 @@ label.title_font:hover {
 }
 
 .answer_box {
-  background-color: rgb(235, 231, 231);
+  background-color:white;
   border-radius: 10px;
   width: 80%;
   overflow: auto;
