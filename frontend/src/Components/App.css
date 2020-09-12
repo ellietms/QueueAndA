@@ -63,7 +63,7 @@ select {
 .plain_header {
   display: flex;
   flex-flow: wrap;
-  background-color: rgb(219, 215, 215);
+  background-color: #efefef;
   width: 100%;
   margin-right: auto;
 }
@@ -299,7 +299,7 @@ label.title_font:hover {
 
 .title_question {
   font-size: 30px;
-  color: rgb(29, 80, 63);
+  color: rgb(58, 19, 13);
   font-weight: bolder;
   cursor: pointer;
 }
