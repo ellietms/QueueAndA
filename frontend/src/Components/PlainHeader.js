@@ -16,7 +16,7 @@ const PlainHeader = () => {
           className="d-inline-block align-top my-2 ml-4 rounded-circle"
           alt=""
         />
-        <span className="navbar-brand mb-0 logo ml-1 my-2 mr-2 text-white">
+        <span className="navbar-brand mb-0 logo ml-1 my-2 mr-2">
           QueueAndA
         </span>
       </div>
