@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import SubmitButton from "./SubmitButton";
+import './notification.css';
 
 const AnswerForm = ({ id }) => {
   const [newAnswer, setNewAnswer] = useState({
