@@ -198,8 +198,9 @@ select {
 }
 
 .form_style {
-  background-color: rgb(235, 231, 231);
+  background-color: rgb(70, 17, 17);
   border-radius: 10px;
+  color:white;
 }
 
 .Answer_form {
@@ -214,7 +215,7 @@ select {
   font-size: 18px;
   font-weight: bold;
   color: white;
-  background-color: #0095ff;
+  background-color: #143044;
 }
 
 .button:hover {
@@ -289,9 +290,9 @@ label.title_font:hover {
 
 .answer_form_top_text {
   font-size: 30px;
-  color: rgb(32, 23, 138);
+  color: rgb(124, 34, 27);
   font-weight: bolder;
-  margin-left: 10%;
+  margin-left: 4%;
   padding-bottom: 20px;
   margin-top: auto;
 }
@@ -541,5 +542,7 @@ label.title_font:hover {
     overflow: auto;
     margin-left:100px;
   }
-  
+.answer_form_top_text {
+  margin-left: 10%;
+}
 }
