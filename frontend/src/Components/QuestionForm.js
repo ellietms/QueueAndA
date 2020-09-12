@@ -12,9 +12,9 @@ const QuestionForm = () => {
   });
 
   useEffect(() => {
-    window.tinyMCE.remove("#TextArea");
+    window.tinyMCE.remove("#TextArea1");
     window.tinyMCE.init({
-      selector: "#TextArea",
+      selector: "#TextArea1",
       menubar: false,
       plugins: "link emoticons lists codesample ",
       toolbar:
@@ -29,7 +29,7 @@ const QuestionForm = () => {
     event.preventDefault();
     const questionValue = {
       ...newQuestion,
-      question: window.tinyMCE.get("TextArea").getContent(),
+      question: window.tinyMCE.get("TextArea1").getContent(),
     };
     event.target.reset();
     axios
@@ -105,7 +105,7 @@ const QuestionForm = () => {
             <label htmlFor="textArea" className="h4 p-2">
               Question
             </label>
-            <div id="TextArea" />
+            <div id="TextArea1" />
           </div>
 
           <div className="pb-3">
