@@ -20,7 +20,7 @@ const AnswerBoxes = ({ answer, questionDetails }) => {
         <button className="btn btn-info mt-5">
           <i
             className="far fa-comment-dots fa-2x "
-            onClick={() => setDisplayComponent(!displayComponent)}
+            onClick={() => {setDisplayComponent(!displayComponent);}}
           ></i>
         </button>
         <div className="d-flex justify-content-end time py-3">

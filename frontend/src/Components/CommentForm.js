@@ -51,7 +51,7 @@ const CommentForm = (props) => {
   return (
     <div>
       <span
-        className="btn btn-link"
+        className="btn btn-link add_comment "
         data-toggle="modal"
         data-target="#ModalExample"
       >
