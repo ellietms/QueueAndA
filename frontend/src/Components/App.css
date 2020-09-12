@@ -1,4 +1,4 @@
-html{
+html {
   width: revert;
 }
 
@@ -40,9 +40,9 @@ select {
   border-radius: 10px;
   background-color: rgb(250, 250, 250);
 }
-.secondPage_header{
+.secondPage_header {
   background-color: #efefef;
-  padding: 10px 5px; 
+  padding: 10px 5px;
 }
 
 .logo {
@@ -53,7 +53,7 @@ select {
   margin-right: 10px;
 }
 
-.secondPage_search{
+.secondPage_search {
   border: 1px solid rgb(253, 253, 253);
   width: 150px;
   border-radius: 10px;
@@ -67,9 +67,6 @@ select {
   width: 100%;
   margin-right: auto;
 }
-
-
-
 
 .ask_button {
   display: flex;
@@ -124,7 +121,7 @@ select {
   height: 100px;
 }
 
-.question_font_second_page{
+.question_font_second_page {
   font-size: 20px;
   font-weight: bold;
   color: rgb(109, 10, 10);
@@ -198,7 +195,7 @@ select {
 .form_style {
   background-color: rgb(70, 17, 17);
   border-radius: 10px;
-  color:white;
+  color: white;
 }
 
 .Answer_form {
@@ -305,7 +302,7 @@ label.title_font:hover {
 .question_box {
   border-top: 1px solid rgb(92, 17, 17);
   border-bottom: 1px solid rgb(92, 17, 17);
-  width:50%;
+  width: 50%;
 }
 
 .answer_font {
@@ -314,11 +311,11 @@ label.title_font:hover {
 }
 
 .answer_box {
-  background-color:white;
+  background-color: white;
   width: 80%;
   overflow: auto;
-  border-top:2px solid rgb(85, 26, 26);
-  border-bottom:2px solid rgb(85, 26, 26);
+  border-top: 2px solid rgb(85, 26, 26);
+  border-bottom: 2px solid rgb(85, 26, 26);
 }
 
 .nameOfPerson {
@@ -342,7 +339,7 @@ label.title_font:hover {
   margin-top: 4px;
   width: 80%;
   overflow: auto;
-  margin-left:30px;
+  margin-left: 30px;
 }
 
 .title_comment {
@@ -357,13 +354,10 @@ label.title_font:hover {
   color: #065794;
   cursor: pointer;
 }
-.comment_icon{
-  background-color:rgb(92, 4, 4);
-  color:white;
+.comment_icon {
+  background-color: rgb(92, 4, 4);
+  color: white;
 }
-/* .add_comment{
-  magin-left:200px;
-} */
 
 @media only screen and (min-width: 500px) and (max-width: 799px) {
   select {
@@ -408,7 +402,7 @@ label.title_font:hover {
   .dataTime_container {
     margin-left: 30px;
   }
-  .secondPage_header{
+  .secondPage_header {
     background-color: #efefef;
     padding: 10px 5px;
   }
@@ -417,13 +411,13 @@ label.title_font:hover {
     font-weight: bold;
     color: #66180f;
   }
-  .secondPage_search{
+  .secondPage_search {
     border: 1px solid rgb(255, 244, 241);
     width: 300px;
     border-radius: 10px;
     padding-left: auto;
     background-color: rgb(250, 250, 250);
-    padding:5px 5px;
+    padding: 5px 5px;
   }
   /* .secondPage_timeDate{
     /* display:flex;
@@ -432,7 +426,7 @@ label.title_font:hover {
     padding:10px;
     margin-top:50px;
     } */
-} 
+}
 
 @media only screen and (min-width: 800px) {
   .search_mainPage {
@@ -483,7 +477,7 @@ label.title_font:hover {
     text-align: center;
     padding: 6px 5px;
   }
-  
+
   .title_font {
     font-size: 25px;
   }
@@ -493,7 +487,7 @@ label.title_font:hover {
   .dataTime_container {
     margin-left: 25px;
   }
-  .secondPage_header{
+  .secondPage_header {
     background-color: #efefef;
     padding: 10px 5px;
   }
@@ -502,11 +496,11 @@ label.title_font:hover {
     font-weight: bold;
     color: #66180f;
   }
-  .secondPage_search{
+  .secondPage_search {
     border: 1px solid rgb(255, 244, 241);
     width: 300px;
     border-radius: 10px;
-    padding:5px 5px;
+    padding: 5px 5px;
     background-color: rgb(250, 250, 250);
   }
 }
@@ -541,9 +535,9 @@ label.title_font:hover {
     margin-top: 4px;
     width: 80%;
     overflow: auto;
-    margin-left:100px;
+    margin-left: 100px;
   }
-.answer_form_top_text {
-  margin-left: 10%;
-}
+  .answer_form_top_text {
+    margin-left: 10%;
+  }
 }
