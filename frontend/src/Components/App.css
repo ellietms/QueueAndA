@@ -68,9 +68,7 @@ select {
   margin-right: auto;
 }
 
-.plain_header:hover {
-  color: rgb(59, 75, 221);
-}
+
 
 
 .ask_button {
@@ -359,7 +357,10 @@ label.title_font:hover {
   color: #065794;
   cursor: pointer;
 }
-
+.comment_icon{
+  background-color:rgb(92, 4, 4);
+  color:white;
+}
 /* .add_comment{
   magin-left:200px;
 } */

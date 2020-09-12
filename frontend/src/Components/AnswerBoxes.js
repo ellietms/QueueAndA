@@ -17,9 +17,9 @@ const AnswerBoxes = ({ answer, questionDetails }) => {
           {ReactHtmlParser(`${answer.answer}`)}
         </div>
         <ShowComment commentProps={answer.comments} />
-        <button className="btn btn-info mt-5">
+        <button className="btn comment_icon mt-5">
           <i
-            className="far fa-comment-dots fa-2x "
+            className="far fa-comment-dots fa-2x  "
             onClick={() => {setDisplayComponent(!displayComponent);}}
           ></i>
         </button>
