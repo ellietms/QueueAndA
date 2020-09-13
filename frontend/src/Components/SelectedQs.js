@@ -17,23 +17,7 @@ const SelectedQs = ({
   currentQuestions,
 }) => {
 
-    return currentQuestions
-    .filter(
-      (question) =>
-        question.category === specificModule || specificModule === ""
-    )
-    .filter(
-      (question) =>
-        searchValue === "" ||
-        question.title.toLowerCase().includes(searchValue.toLowerCase()) ||
-        question.question.toLowerCase().includes(searchValue.toLowerCase()) ||
-        question.category.toLowerCase().includes(searchValue.toLowerCase())
-    )
-    .filter(
-      (question) =>
-        question.answers.length.toString(10) === noAnswer || noAnswer === ""
-    )
-    .map((question, index) => {
+    return currentQuestions.map((question, index) => {
 
             return (
         
