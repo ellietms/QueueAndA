@@ -11,9 +11,6 @@ import DataTime from "./DataTime";
 
 
 const SelectedQs = ({
-  specificModule,
-  searchValue,
-  noAnswer,
   currentQuestions,
 }) => {
 

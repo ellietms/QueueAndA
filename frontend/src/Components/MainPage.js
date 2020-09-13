@@ -18,7 +18,7 @@ const MainPage = () => {
   const [noAnswer, setNoAnswer] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    const baseUrl = "https://queueanda.herokuapp.com"
+    const baseUrl = "https://queueanda.herokuapp.com";
     axios
       .get(`${baseUrl}/questions`,{params:{category:specificModule,searchValue,noAnswer}})
       .then((response) => {
@@ -56,9 +56,6 @@ const MainPage = () => {
           </div>
 
           <SelectedQs
-            specificModule={specificModule}
-            searchValue={searchValue}
-            noAnswer={noAnswer}
             currentQuestions={currentQuestions}
           />
 

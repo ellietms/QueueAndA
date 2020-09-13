@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import ReactHtmlParser from "react-html-parser";
 import ShowComment from "./ShowComment";

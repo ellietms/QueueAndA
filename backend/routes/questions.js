@@ -13,29 +13,29 @@ const transporter = nodemailer.createTransport({
 // all the questions:
 router.route("/").get((request, response) => {
   console.log(request.query);
-  const query = {}
-  if(request.query.category){
-    query.category = request.query.category
+  const query = {};
+  if (request.query.category) {
+    query.category = request.query.category;
   }
- if(request.query.searchValue){
-  let regex = new RegExp(request.query.searchValue,'i');
-  query.$or = [{title: regex },{question: regex},{category:regex}]
-  // { $and: [ { $or: [{title: regex },{description: regex}]} ] } 
- }
+  if (request.query.searchValue) {
+    let regex = new RegExp(request.query.searchValue, "i");
+    query.$or = [{ title: regex }, { question: regex }, { category: regex }];
+  }
   Question.find(query)
     .sort({
       createdAt: -1,
     })
     .populate("answers")
     .then((questions) => {
-      if(request.query.noAnswer === "true"){
-        const filteredQuestions = questions.filter((question) => question.answers.length === 0)
-        response.json({ questions: filteredQuestions })
+      if (request.query.noAnswer === "true") {
+        const filteredQuestions = questions.filter(
+          (question) => question.answers.length === 0
+        );
+        response.json({ questions: filteredQuestions });
+      } else {
+        response.json({ questions });
       }
-      else{
-      response.json({questions})
-      }
-  })
+    })
     .catch((err) => response.send({ Error: err }));
 });
 
