@@ -15,17 +15,19 @@ const MainPage = () => {
 
   const [specificModule, setSpecificModule] = useState("");
   const [searchValue, setSearchValue] = useState("");
-  const [noAnswer, setNoAnswer] = useState("");
+  const [noAnswer, setNoAnswer] = useState(false);
   useEffect(() => {
     setIsLoading(true);
+    const baseUrl = "https://queueanda.herokuapp.com";
     axios
-      .get("https://queueanda.herokuapp.com/questions")
+      .get(`${baseUrl}/questions`,{params:{category:specificModule,searchValue,noAnswer}})
       .then((response) => {
         setQuestions(response.data.questions);
         setIsLoading(false);
+        setCurrentQsPage(1);
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [specificModule,searchValue,noAnswer]);
 
   const indexOfLastQs = currentQsPage * questionsPerPage;
   const indexOfFirstQs = indexOfLastQs - questionsPerPage;
@@ -54,10 +56,6 @@ const MainPage = () => {
           </div>
 
           <SelectedQs
-            specificModule={specificModule}
-            searchValue={searchValue}
-            noAnswer={noAnswer}
-            
             currentQuestions={currentQuestions}
           />
 
