@@ -361,9 +361,10 @@ label.title_font:hover {
   background-color:rgb(92, 4, 4);
   color:white;
 }
-/* .add_comment{
-  magin-left:200px;
-} */
+
+span.btn.btn-link.add_comment{
+  margin-left: 10%;
+}
 
 @media only screen and (min-width: 500px) and (max-width: 799px) {
   select {
