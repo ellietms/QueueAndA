@@ -9,13 +9,15 @@ import AnswerNo from "./AnswerNo";
 import QuestionView from "./QuestionView";
 import DataTime from "./DataTime";
 
+
 const SelectedQs = ({
   specificModule,
   searchValue,
   noAnswer,
   currentQuestions,
 }) => {
-  return currentQuestions
+
+    return currentQuestions
     .filter(
       (question) =>
         question.category === specificModule || specificModule === ""
@@ -32,7 +34,9 @@ const SelectedQs = ({
         question.answers.length.toString(10) === noAnswer || noAnswer === ""
     )
     .map((question, index) => {
-      return (
+
+            return (
+        
         <div key={index} className="container question_card">
           <div className="pt-4 pl-3">
             <Category category={question.category} />
@@ -56,6 +60,7 @@ const SelectedQs = ({
             <DataTime datatime={question.createdAt} />
           </div>
         </div>
+        
       );
     });
 };

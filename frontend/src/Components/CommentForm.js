@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
+import './notification.css';
 
 const CommentForm = (props) => {
   const [newComment, setNewComment] = useState({
@@ -9,9 +10,9 @@ const CommentForm = (props) => {
   });
 
   useEffect(() => {
-    window.tinyMCE.remove("#TextArea");
+    window.tinyMCE.remove("#TextArea2");
     window.tinyMCE.init({
-      selector: "#TextArea",
+      selector: "#TextArea2",
       menubar: false,
       plugins: "link emoticons lists codesample ",
       toolbar:
@@ -23,7 +24,7 @@ const CommentForm = (props) => {
     e.preventDefault();
     const commentValue = {
       ...newComment,
-      comment: window.tinyMCE.get("TextArea").getContent(),
+      comment: window.tinyMCE.get("TextArea2").getContent(),
     };
     axios
       .post(
@@ -82,7 +83,7 @@ const CommentForm = (props) => {
                 </div>
                 <div className="form-group">
                   <label className="control-label">Comment</label>
-                  <div id="TextArea" />
+                  <div id="TextArea2" />
                 </div>
 
                 <div className="form-group">
