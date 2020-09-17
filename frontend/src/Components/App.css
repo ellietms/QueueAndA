@@ -109,6 +109,8 @@ select {
   margin-top: 20px;
   padding-top: 10px;
   width: 80%;
+  height:300px;
+  overflow: scroll;
 }
 .question_card:hover {
   transform: scale(1.03);
@@ -117,30 +119,28 @@ select {
 }
 
 .title_font {
-  font-size: 15px;
-  color: rgb(98, 15, 3);
+  font-size: 12px;
+  color: rgb(90, 84, 79);
   font-weight: bolder;
   margin-left: 10px;
   padding-top: 5px;
-  height: 60px;
+  height: fit-content;
   text-overflow: ellipsis;
-  width: 200px;
+  width: auto;
   white-space: nowrap;
   overflow: hidden;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 .question_font {
   font-size: 15px;
   font-weight: bold;
-  color: rgb(109, 10, 10);
+  color: rgb(10, 1, 1);
   margin-left: 10px;
   text-overflow: ellipsis;
   width:80%;
-  height: auto;
-  white-space: nowrap;
-  overflow: hidden;
+  white-space: wrap;
   transition: 200ms;
-  overflow: auto;
 }
 
 .question_font_second_page {
@@ -198,7 +198,8 @@ select {
 .view_container {
   display: flex;
   flex-direction: column;
-  height: 8px;
+  height: 20px;
+  padding-bottom: 4px;
 }
 
 .text {
@@ -247,7 +248,6 @@ select {
 }
 
 .header_button {
-  color: black;
   font-weight: bold;
   font-size: smaller;
   color: #a31607;
@@ -373,24 +373,27 @@ span.answer_form_top_text {
   margin-top: 4px;
   width: 80%;
   overflow: auto;
-  margin-left: 30px;
+  margin-left: auto;
+  margin-bottom: 10px;
 }
 
 .title_comment {
   font-weight: bold;
   color: #2f3133;
   padding-bottom: 5px;
-}
+} 
 
-.comment_button {
+ .comment_button {
   margin-left: auto;
   display: flex;
   color: #065794;
   cursor: pointer;
 }
+
 .comment_icon {
   background-color: rgb(92, 4, 4);
   color: white;
+  margin-left: 10%;
 }
 
 span.btn.btn-link.add_comment {
@@ -522,7 +525,6 @@ span.btn.btn-link.add_comment {
   }
   .title_font {
     font-size: 25px;
-    color: rgb(98, 15, 3);
     font-weight: bolder;
     margin-left: 10px;
     padding-top: 5px;

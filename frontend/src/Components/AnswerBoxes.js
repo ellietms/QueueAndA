@@ -14,8 +14,11 @@ const AnswerBoxes = ({ answer, questionDetails }) => {
             {ReactHtmlParser(`${answer.answer}`)}
           </div>
           <ShowComment commentProps={answer.comments} />
-          <div className="d-flex justify-content-end time">
-            Time:{answer.createdAt.split("T")[1].split(".")[0]}
+          <div className="d-flex justify-content-end mt-5">
+          <i class="far fa-calendar-alt date"> {answer.createdAt.split("T")[0]}</i>
+            <i class="far fa-clock date pl-2">
+                {answer.createdAt.split("T")[1].split(".")[0].split(":").slice(0,2).join(':')}
+            </i>
           </div>
         </div>
         <CommentForm answerId={answer._id} questionId={questionDetails._id} />
