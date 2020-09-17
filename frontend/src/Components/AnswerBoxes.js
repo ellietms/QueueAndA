@@ -20,8 +20,10 @@ const AnswerBoxes = ({ answer, questionDetails }) => {
                 {answer.createdAt.split("T")[1].split(".")[0].split(":").slice(0,2).join(':')}
             </i>
           </div>
+          <div className="commentForm_container">
+          <CommentForm answerId={answer._id} questionId={questionDetails._id} />
+          </div>
         </div>
-        <CommentForm answerId={answer._id} questionId={questionDetails._id} />
       </div>
     );
  

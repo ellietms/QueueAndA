@@ -51,12 +51,12 @@ const CommentForm = (props) => {
   };
   return (
     <div>
-      <button className="btn comment_icon"
+      <button className="comment_icon"
       data-toggle="modal"
       data-target="#ModalExample">
          <span className="h5">
           <i
-            className="far fa-comment-dots h6 "
+            className="far fa-comment-dots h8"
           >
           </i>comment</span> 
         </button>
