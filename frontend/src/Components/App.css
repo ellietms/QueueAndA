@@ -77,6 +77,7 @@ select {
   background-color: #efefef;
   width: 100%;
   margin-right: auto;
+  padding:5px 5px;
 }
 
 .ask_button {
@@ -120,7 +121,7 @@ select {
 
 .title_font {
   font-size: 12px;
-  color: rgb(90, 84, 79);
+  color: rgb(66, 15, 12);
   font-weight: bolder;
   margin-left: 10px;
   padding-top: 5px;
@@ -223,6 +224,7 @@ select {
   background-color: rgb(70, 17, 17);
   border-radius: 10px;
   color: white;
+  margin-bottom:100px;
 }
 
 .Answer_form {
@@ -398,6 +400,26 @@ span.answer_form_top_text {
 
 span.btn.btn-link.add_comment {
   margin-left: 10%;
+}
+
+.footer{
+  background-color: #efefef; 
+}
+footer.page-footer {
+  bottom: 0;
+  color:black;
+  text-decoration: none;
+}
+.text-center {
+  font-size:25px;
+  color:rgb(77, 8, 8)
+}
+.copyright{
+  color:rgb(77, 8, 8);
+  text-align:center;
+}
+a.copyRight2{
+  color:black;
 }
 
 @media only screen and (min-width: 500px) and (max-width: 799px) {

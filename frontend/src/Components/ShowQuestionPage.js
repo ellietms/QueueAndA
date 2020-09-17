@@ -6,6 +6,7 @@ import QuestionBox from "./QuestionBox";
 import Answers from "./Answers";
 import Checked from "./Checked";
 import MakeAnswerForm from "./MakeAnswerForm";
+import Footer from "./Footer";
 
 const ShowQuestionPage = (props) => {
   const [specificQuestion, setSpecificQuestions] = useState([]);
@@ -33,6 +34,7 @@ const ShowQuestionPage = (props) => {
       <div>
         <MakeAnswerForm id={props.match.params.id} />
       </div>
+      <Footer/>
     </div>
   );
 };

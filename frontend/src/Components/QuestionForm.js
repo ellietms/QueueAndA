@@ -54,11 +54,11 @@ const QuestionForm = () => {
   };
   return (
     <div className="container mt-5">
-      <label className="title_question mt-3">
+      <label className="title_question mt-2">
         <i className="fas fa-question-circle">Ask a Question</i>
       </label>
       <div className="container form_style">
-        <form className="m-5" onSubmit={addNewQuestion}>
+        <form className="m-3" onSubmit={addNewQuestion}>
           <div className="form-group">
             <label htmlFor="Email" className="h4 mt-1 p-2">
               Email address
