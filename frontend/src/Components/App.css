@@ -28,6 +28,24 @@ select {
   font-size: small;
 }
 
+.button {
+  border-radius: 8px;
+  border-color: white;
+  margin: 10px 10px;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #7e0303;
+}
+
+.button:hover {
+  border-radius: 8px;
+  background-color: #df0505;
+  color: white;
+  margin-bottom: 60px;
+}
+
 .header {
   display: flex;
   flex-flow: wrap;
