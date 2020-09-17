@@ -10,13 +10,13 @@ const Button = () => {
   color:black;
 
    &:hover {
-   color: red;
+   color: #a52a04;
    textDecoration: "none";
    display:block
    }`
   return (
-    <Link to="/ask" >
-    <button type="button" className="header_button askbtn">
+    <Link to="/ask" style={{textDecoration: "none"}}>
+    <button type="button" className="header_button askbtn ask_hover">
         Ask question
     </button>
      </Link>
