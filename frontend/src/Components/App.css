@@ -305,7 +305,7 @@ label.title_font:hover {
 .question_box {
   border-top: 1px solid rgb(92, 17, 17);
   border-bottom: 1px solid rgb(92, 17, 17);
-  width:50%;
+  width:80%;
 }
 
 .answer_font {
