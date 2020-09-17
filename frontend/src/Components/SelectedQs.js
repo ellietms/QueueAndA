@@ -32,11 +32,11 @@ const SelectedQs = ({ currentQuestions }) => {
         </div>
         <div className="d-flex date-main">
           <div className="d-flex justify-content-end secondPage_timeDate">
-            <i class="far fa-calendar-alt date">
+            <i className="far fa-calendar-alt date">
               {" "}
               {question.createdAt.split("T")[0]}
             </i>
-            <i class="far fa-clock date pl-2">
+            <i className="far fa-clock date pl-2">
               {question.createdAt
                 .split("T")[1]
                 .split(".")[0]
