@@ -232,7 +232,7 @@ select {
   margin-bottom: 60px;
 }
 
-.button {
+/* .button {
   border-radius: 8px;
   border-color: white;
   margin: 10px 10px;
@@ -247,13 +247,15 @@ select {
   border-radius: 8px;
   background-color: #a52a04;
   color: white;
-}
+} */
 
 .header_button {
+  font-size:small;
   font-weight: bold;
   font-size: smaller;
   color: #a31607;
   display: contents;
+  border:none;
 }
 
 .header_button:hover {

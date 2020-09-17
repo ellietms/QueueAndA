@@ -15,8 +15,8 @@ const Button = () => {
    display:block
    }`
   return (
-    <Link to="/ask">
-    <button type="button" className="btn header_button askbtn">
+    <Link to="/ask" >
+    <button type="button" className="header_button askbtn">
         Ask question
     </button>
      </Link>
