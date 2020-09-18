@@ -47,13 +47,17 @@ const CommentForm = (props) => {
       ...newComment,
       [event.target.name]: event.target.value,
     };
-    setNewComment(commentValue);
+     setNewComment(commentValue);
   };
+  const handleId = () => {
+    console.log("formId",props.answerId)
+  }
   return (
     <div>
       <button className="comment_icon"
       data-toggle="modal"
-      data-target="#ModalExample">
+      data-target="#ModalExample" 
+      onClick={handleId}>
          <span className="h5">
           <i
             className="far fa-comment-dots h8"

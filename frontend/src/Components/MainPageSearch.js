@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 const MainPageSearch = ({ handleSearchValue, value }) => {
   return (
-    <form class="form-inline mr-auto">
+    <form className="form-inline mr-auto">
       <div className="md-form my-0">
         <input
           className="search_mainPage"

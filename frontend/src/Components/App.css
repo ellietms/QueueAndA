@@ -1,17 +1,17 @@
-html {
+/* html {
   width: revert;
-  height:100%;
+  min-height:100vh;
 }
 
 body {
   margin: 0px 0px;
   padding: 0px 0px;
   background-color: transparent;
-}
+} */
 
 html, body {
   margin: 0;
-  height: 100%;
+  min-height:100vh;
 }
 
 img {
