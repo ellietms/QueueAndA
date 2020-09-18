@@ -396,9 +396,12 @@ span.answer_form_top_text {
 }
 
 .question_box {
+
   border-top: 3px solid rgb(92, 17, 17);
   border-bottom: 3px solid rgb(92, 17, 17);
   width: 80%;
+
+ 
 }
 
 .answer_font {
@@ -717,7 +720,9 @@ a.copyRight2 {
   .answer_form_top_text {
     margin-left: 150px;
   }
+
   .logo {
     padding-top: 2px;
   }
+
 }
