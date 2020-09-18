@@ -1,11 +1,17 @@
 html {
   width: revert;
+  height:100%;
 }
 
 body {
   margin: 0px 0px;
   padding: 0px 0px;
   background-color: transparent;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
 }
 
 img {
@@ -476,7 +482,7 @@ span.btn.btn-link.add_comment {
 
 .footer {
   background-color: #efefef;
-  cursor: pointer;
+  cursor: pointer;  
 }
 footer.page-footer {
   bottom: 0;
