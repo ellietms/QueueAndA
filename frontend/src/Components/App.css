@@ -67,6 +67,44 @@ select {
   padding: 10px 5px;
 }
 
+.md-form input:not([type]),
+.md-form input[type="text"]:not(.browser-default),
+.md-form input[type="password"]:not(.browser-default),
+.md-form input[type="email"]:not(.browser-default),
+.md-form input[type="url"]:not(.browser-default),
+.md-form input[type="time"]:not(.browser-default),
+.md-form input[type="date"]:not(.browser-default),
+.md-form input[type="datetime"]:not(.browser-default),
+.md-form input[type="datetime-local"]:not(.browser-default),
+.md-form input[type="tel"]:not(.browser-default),
+.md-form input[type="number"]:not(.browser-default),
+.md-form input[type="search"]:not(.browser-default),
+.md-form input[type="phone"]:not(.browser-default),
+.md-form input[type="search-md"],
+.md-form textarea.md-textarea {
+  border: none;
+  border-bottom: 1px solid #af1b16;
+}
+
+.md-form input:not([type]):focus:not([readonly]),
+.md-form input[type="text"]:not(.browser-default):focus:not([readonly]),
+.md-form input[type="password"]:not(.browser-default):focus:not([readonly]),
+.md-form input[type="email"]:not(.browser-default):focus:not([readonly]),
+.md-form input[type="url"]:not(.browser-default):focus:not([readonly]),
+.md-form input[type="time"]:not(.browser-default):focus:not([readonly]),
+.md-form input[type="date"]:not(.browser-default):focus:not([readonly]),
+.md-form input[type="datetime"]:not(.browser-default):focus:not([readonly]),
+.md-form input[type="datetime-local"]:not(.browser-default):focus:not([readonly]),
+.md-form input[type="tel"]:not(.browser-default):focus:not([readonly]),
+.md-form input[type="number"]:not(.browser-default):focus:not([readonly]),
+.md-form input[type="search"]:not(.browser-default):focus:not([readonly]),
+.md-form input[type="phone"]:not(.browser-default):focus:not([readonly]),
+.md-form input[type="search-md"]:focus:not([readonly]),
+.md-form textarea.md-textarea:focus:not([readonly]) {
+  border-bottom: 2px solid #851e1b;
+  box-shadow: 0 1px 0 0 rgb(204, 18, 18);
+}
+
 .logo {
   font-size: 18px;
   font-weight: bold;
@@ -418,7 +456,15 @@ span.answer_form_top_text {
 .comment_icon {
   background-color: rgb(92, 4, 4);
   color: white;
-  margin-left: 10%;
+  margin-right: 29px;
+  border-radius: 30px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.commentForm_container {
+  display: flex;
+  justify-content: flex-end;
 }
 
 span.btn.btn-link.add_comment {
@@ -479,11 +525,12 @@ a.copyRight2 {
     display: flex;
   }
   .search_mainPage {
-    border: 1px solid rgb(255, 244, 241);
+    border: 1px solid rgb(136, 33, 5);
     width: 150px;
     border-radius: 10px;
     background-color: rgb(250, 250, 250);
   }
+
   .title_font {
     font-size: 25px;
     color: rgb(98, 15, 3);
@@ -517,6 +564,10 @@ a.copyRight2 {
     padding-left: auto;
     background-color: rgb(250, 250, 250);
     padding: 5px 5px;
+  }
+  .comment_icon {
+    margin-right: 60px;
+    margin-bottom: 50px;
   }
 }
 
@@ -614,6 +665,11 @@ a.copyRight2 {
     overflow: unset;
     border-top: 2px solid rgb(85, 26, 26);
     border-bottom: 2px solid rgb(85, 26, 26);
+  }
+  .comment_icon {
+    margin-right: 100px;
+    margin-bottom: 50px;
+    padding: 4px 4px;
   }
 }
 

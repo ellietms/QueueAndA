@@ -8,7 +8,7 @@ const AnswerBoxes = ({ answer, questionDetails }) => {
   
   return (
       <div>
-        <div className="container answer_box my-4">
+        <div className="container answer_box">
           <label className="px-3 nameOfPerson">{answer.userEmail}</label>
           <div className="answer_font px-3 py-2 ">
             {ReactHtmlParser(`${answer.answer}`)}
@@ -20,11 +20,11 @@ const AnswerBoxes = ({ answer, questionDetails }) => {
                 {answer.createdAt.split("T")[1].split(".")[0].split(":").slice(0,2).join(':')}
             </i>
           </div>
-          <div className="commentForm_container">
-          <CommentForm answerId={answer._id} questionId={questionDetails._id} />
-          </div>
-        </div>
       </div>
+      <div className="mb-4 commentForm_container">
+       <CommentForm answerId={answer._id} questionId={questionDetails._id} />
+       </div>
+      </div> 
     );
  
 };
