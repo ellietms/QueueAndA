@@ -21,7 +21,7 @@ const DropDownAnswered = ({ showQuestionWithNoAnswer }) => {
         onChange={(event) => showQuestionWithNoAnswer(event.target.value)}
       >
         <option value={false} className='text-white bg-dark'>All Questions</option>
-        <option value={true} className='text-white bg-dark'> No answer</option>
+        <option value={true} className='text-white bg-dark'> No answers</option>
       </Select>          
   );
 };

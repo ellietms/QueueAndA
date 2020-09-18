@@ -6,6 +6,7 @@ import MainPageHeader from "./MainPageHeader";
 import SelectedQs from "./SelectedQs";
 import Loader from "./Loader";
 import Pagination from "react-js-pagination";
+import Footer from "./Footer";
 
 const MainPage = () => {
   const [questions, setQuestions] = useState([]);
@@ -48,7 +49,8 @@ const MainPage = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className="container">
+        <div>
+        <div  className="container">
           <div
             className="container my-auto Questions_amount"
           >
@@ -70,6 +72,8 @@ const MainPage = () => {
               onChange={paginate}
             />
           </div>
+          </div>
+         <Footer/>
         </div>
       )}
     </div>
