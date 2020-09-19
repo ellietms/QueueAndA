@@ -13,8 +13,9 @@ const AnswerForm = ({ id }) => {
   useEffect(init,[])
   
   function init() {
+    window.tinyMCE.remove("#answerTextArea");
     window.tinyMCE.init({      
-      selector : "#TextArea",     
+      selector : "#answerTextArea",     
       menubar: false,
       plugins: "link emoticons lists codesample ",
       toolbar:
@@ -24,18 +25,14 @@ const AnswerForm = ({ id }) => {
         "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva",
     }); 
   }
- // }, []);
-
-// init();
-// window.tinymce.execCommand('mceRemoveEditor', true, 'TextArea');
-// window.tinymce.execCommand('mceAddEditor', true, 'TextArea');
+ 
 
  
   function submitHandler(event) {
     event.preventDefault();
     const answerValue = {
       ...newAnswer,
-      answer: window.tinyMCE.get("TextArea").getContent(),
+      answer: window.tinyMCE.get("answerTextArea").getContent(),
     };
     axios
       .post(
@@ -82,7 +79,7 @@ const AnswerForm = ({ id }) => {
           <label htmlFor="textArea" className="h4 p-2">
             Answer
           </label>
-          <div id="TextArea" />
+          <div id="answerTextArea" />
           
         </div>
         
