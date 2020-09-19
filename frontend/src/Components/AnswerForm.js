@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import SubmitButton from "./SubmitButton";
-import './notification.css';
+import "./notification.css";
 
 const AnswerForm = ({ id }) => {
   const [newAnswer, setNewAnswer] = useState({
@@ -23,11 +23,9 @@ const AnswerForm = ({ id }) => {
       fontsize_formats: "8pt 10pt 12pt 14pt 16pt 18pt 24pt",
       font_formats:
         "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva",
-    }); 
+    });
   }
- 
 
- 
   function submitHandler(event) {
     event.preventDefault();
     const answerValue = {
@@ -60,6 +58,11 @@ const AnswerForm = ({ id }) => {
   };
 
   return (
+    <div>
+    <span className="answer_form_top_text">
+        <i className="far fa-lightbulb"></i>
+        Your Answer
+      </span>
     <div className="container form_style">
       <form onSubmit={submitHandler}>
         <div className="form-group">
@@ -82,9 +85,10 @@ const AnswerForm = ({ id }) => {
           <div id="answerTextArea" />
           
         </div>
-        
+
         <SubmitButton />
       </form>
+    </div>
     </div>
   );
 };

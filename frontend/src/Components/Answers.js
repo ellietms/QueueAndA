@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import AnswerBoxes from "./AnswerBoxes";
 
+
 const Answers = ({ questionDetails, searchValue }) => {
   return (
     <div className="container">
@@ -28,7 +29,7 @@ const Answers = ({ questionDetails, searchValue }) => {
             })}
         </div>
       ) : (
-        <div className="no_answers">Please Wait . . .</div>
+       " "
       )}
     </div>
   );
