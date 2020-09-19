@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import SubmitButton from "./SubmitButton";
@@ -10,7 +10,7 @@ const AnswerForm = ({ id }) => {
     answer: "",
   });
 
- // useEffect(() => {
+  useEffect(init,[])
   
   function init() {
     window.tinyMCE.init({      
@@ -26,9 +26,9 @@ const AnswerForm = ({ id }) => {
   }
  // }, []);
 
-init();
-window.tinymce.execCommand('mceRemoveEditor', true, 'TextArea');
-window.tinymce.execCommand('mceAddEditor', true, 'TextArea');
+// init();
+// window.tinymce.execCommand('mceRemoveEditor', true, 'TextArea');
+// window.tinymce.execCommand('mceAddEditor', true, 'TextArea');
 
  
   function submitHandler(event) {
@@ -43,7 +43,7 @@ window.tinymce.execCommand('mceAddEditor', true, 'TextArea');
         answerValue
       )
       .then((response) => {
-        console.log(response);
+        console.log("response", response);
         window.location.assign(`/questions/${id}`);
       })
       .catch((err) => console.log(err));
