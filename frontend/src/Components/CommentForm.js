@@ -10,21 +10,21 @@ const CommentForm = (props) => {
   });
 
   useEffect(() => {
-    window.tinyMCE.remove("#TextArea2");
+    window.tinyMCE.remove(`#comment-${props.answerId}`);
     window.tinyMCE.init({
-      selector: "#TextArea2",
+      selector: `#comment-${props.answerId}`,
       menubar: false,
       plugins: "link emoticons lists codesample ",
       toolbar:
         "styleselect |fontselect fontsizeselect bold italic underline blockquote| forecolor backcolor emoticons link | bullist numlist codesample ",
     });
-  }, []);
+  }, [props.answerId]);
 
   function submitHandler(e) {
     e.preventDefault();
     const commentValue = {
       ...newComment,
-      comment: window.tinyMCE.get("TextArea2").getContent(),
+      comment: window.tinyMCE.get(`comment-${props.answerId}`).getContent(),
     };
     axios
       .post(
@@ -53,14 +53,14 @@ const CommentForm = (props) => {
     <div>
       <button className="comment_icon"
       data-toggle="modal"
-      data-target="#ModalExample">
+      data-target={`#commentform-${props.answerId}`}>
          <span className="h5">
           <i
             className="far fa-comment-dots h8"
           >
           </i>comment</span> 
         </button>
-      <div id="ModalExample" className="modal fade">
+      <div id={`commentform-${props.answerId}`} className="modal fade">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
@@ -84,7 +84,7 @@ const CommentForm = (props) => {
                 </div>
                 <div className="form-group">
                   <label className="control-label">Comment</label>
-                  <div id="TextArea2" />
+                  <div id={`comment-${props.answerId}`} />
                 </div>
 
                 <div className="form-group">

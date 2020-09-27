@@ -50,7 +50,7 @@ const MainPage = () => {
         <Loader />
       ) : (
         <div>
-        <div  className="container">
+        <div  className="container main_page">
           <div
             className="container my-auto Questions_amount"
           >

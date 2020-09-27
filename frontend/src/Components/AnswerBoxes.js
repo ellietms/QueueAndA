@@ -5,7 +5,7 @@ import ShowComment from "./ShowComment";
 import CommentForm from "./CommentForm";
 
 const AnswerBoxes = ({ answer, questionDetails }) => {
-  
+
   return (
       <div>
         <div className="container answer_box">
