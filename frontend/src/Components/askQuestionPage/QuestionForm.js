@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import SubmitButton from "./SubmitButton";
+import SubmitButton from "../../SubmitButton";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
-import './notification.css';
+import '../notification.css';
 
 const QuestionForm = () => {
   const [newQuestion, setNewQuestion] = useState({

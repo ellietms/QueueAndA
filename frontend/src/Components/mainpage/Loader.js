@@ -1,5 +1,5 @@
 import React from "react";
-import "./Loader.css";
+import "../Loader.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 const Loader = () => {

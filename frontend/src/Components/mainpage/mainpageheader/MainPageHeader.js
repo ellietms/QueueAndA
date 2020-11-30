@@ -1,8 +1,8 @@
 import React from "react";
-import AskButton from './AskButton';
-import MainPageSearch from "./MainPageSearch";
-import DropDownAnswered from "./DropDownAnswered";
-import DropDownCategories from './DropDownCategories';
+import AskButton from '../mainpageheader/AskButton';
+import MainPageSearch from "../mainpageheader/MainPageSearch";
+import DropDownAnswered from "../mainpageheader/DropDownAnswered";
+import DropDownCategories from '../mainpageheader/DropDownCategories';
 import "bootstrap/dist/css/bootstrap.css";
 
 const MainPageHeader = ({handleSearchValue,value,setSpecificModule,setNoAnswer}) => {

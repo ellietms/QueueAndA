@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
-import "../App";
+import "../../../App";
 
 const Button = () => {
   const Link = styled(NavLink)`     

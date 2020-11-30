@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
-import Header from "./Header";
-import QuestionBox from "./QuestionBox";
-import Answers from "./Answers";
-import Checked from "./Checked";
-import MakeAnswerForm from "./MakeAnswerForm";
-import Footer from "./Footer";
+import Header from "../../Components/showquestionpage/header/Header.js";
+import QuestionBox from "../../Components/showquestionpage/question/QuestionBox.js";
+import Answers from "../../Components/showquestionpage/answers/Answers.js";
+import Checked from "../../Components/showquestionpage/Checked.js";
+import MakeAnswerForm from "./Makeanswerform/MakeAnswerForm";
+import Footer from "../../Components/Footer.js";
 
 const ShowQuestionPage = (props) => {
   const [specificQuestion, setSpecificQuestions] = useState([]);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
-import './notification.css';
+import '../../../notification.css';
 
 const CommentForm = (props) => {
   const [newComment, setNewComment] = useState({
