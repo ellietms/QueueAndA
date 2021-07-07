@@ -1,9 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Category from "./Category";
-import TitleOfQuestion from "./TitleOfQuestion";
-import "../Components/App.css";
-import QuestionSecondPage from "./QuestionSecondPage";
+import Category from "../../mainpage/selectedQs/Category";
+import TitleOfQuestion from "../../mainpage/selectedQs/TitleOfQuestion";
+import "../../App.css";
+import QuestionSecondPage from "../question/QuestionSecondPage";
 
 const QuestionBox = ({ questionDetails }) => {
   return (

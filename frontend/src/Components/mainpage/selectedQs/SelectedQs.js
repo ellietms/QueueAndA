@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
-import Category from "./Category";
-import TitleOfQuestion from "./TitleOfQuestion";
-import "../Components/App.css";
-import Question from "./Question";
-import AnswerNo from "./AnswerNo";
+import Category from "../selectedQs/Category";
+import TitleOfQuestion from "../selectedQs/TitleOfQuestion";
+import "../../App.css";
+import Question from "../selectedQs/Question";
+import AnswerNo from "../selectedQs/AnswerNo";
 import QuestionView from "./QuestionView";
 
 const SelectedQs = ({ currentQuestions }) => {

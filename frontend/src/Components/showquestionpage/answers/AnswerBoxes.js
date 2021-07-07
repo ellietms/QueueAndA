@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import ReactHtmlParser from "react-html-parser";
-import ShowComment from "./ShowComment";
-import CommentForm from "./CommentForm";
+import ShowComment from "../answers/comment/ShowComment";
+import CommentForm from "./comment/CommentForm";
 
 const AnswerBoxes = ({ answer, questionDetails }) => {
 

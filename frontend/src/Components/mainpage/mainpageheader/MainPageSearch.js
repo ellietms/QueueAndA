@@ -11,7 +11,7 @@ const MainPageSearch = ({ handleSearchValue, value }) => {
           placeholder="Search"
           aria-label="Search"
           value={value}
-          onChange={(event) => handleSearchValue(event.target.value)}
+          onChange={(event) => handleSearchValue(event)}
         />
       </div>
     </form>

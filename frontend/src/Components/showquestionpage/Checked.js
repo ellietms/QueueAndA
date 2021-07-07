@@ -1,7 +1,7 @@
 import React from "react";
-import "./App.css";
+import "../../Components/App.css";
 import "bootstrap/dist/css/bootstrap.css";
-import Loader from "./Loader";
+import Loader from "../../Components/mainpage/Loader.js";
 
 const Checked = ({ questionDetails }) => {
   let answers;

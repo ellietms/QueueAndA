@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import SecondPageSearch from './SecondPageSearch';
+import SecondPageSearch from '../header/SecondPageSearch';
 import { Link } from "react-router-dom";
 
 const Header = ({ handleSearchValue, value }) => {

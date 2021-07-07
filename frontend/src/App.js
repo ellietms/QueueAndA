@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "../src/App";
-import MainPage from "./Components/MainPage";
+import MainPage from "./Components/mainpage/MainPage";
 import "bootstrap/dist/css/bootstrap.css";
-import AskQuestionPage from "./Components/AskQuestionPage";
-import ShowQuestionPage from "./Components/ShowQuestionPage";
-import ShowComment from "./Components/ShowComment";
+import AskQuestionPage from "./Components/askQuestionPage/AskQuestionPage";
+import ShowQuestionPage from "./Components/showquestionpage/ShowQuestionPage.js";
+import ShowComment from "./Components/showquestionpage/answers/comment/ShowComment";
 
 function App() {
   return (
